@@ -1,20 +1,24 @@
 :root {
-  --primary-color: #5e35b1;
-  --secondary-color: #7e57c2;
-  --accent-color: #b39ddb;
-  --text-color: #333;
-  --bg-color: #fff;
-  --card-bg: #fff;
-  --shadow-color: rgba(94, 53, 177, 0.1);
+  --primary-color: #5e35b1;       /* Medium Purple */
+  --secondary-color: #7e57c2;     /* Light Purple */
+  --accent-color: #b39ddb;        /* Lavender */
+  --text-color: #333;             /* Dark Text */
+  --bg-color: #fff;               /* White Background */
+  --card-bg: #fff;                /* White Card Background */
+  --shadow-color: rgba(94, 53, 177, 0.1); /* Soft Purple Shadow */
   --section-spacing: 8rem;
 }
 
 .dark-mode {
-  --text-color: #fff;
-  --bg-color: #1a1a1a;
-  --card-bg: #2d2d2d;
-  --shadow-color: rgba(255, 255, 255, 0.1);
+  --primary-color: #7e57c2;       /* Neutral Gray for less purple saturation */
+  --secondary-color: #b39ddb;     /* Deep Gray */
+  --accent-color: #757575;        /* Muted Gray Accent */
+  --text-color: #e0e0e0;          /* Light Gray Text */
+  --bg-color: #1a1a1a;            /* Dark Background */
+  --card-bg: #2d2d2d;             /* Slightly lighter dark for cards */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Subtle Shadow for depth */
 }
+
 
 * {
   margin: 0;
@@ -24,11 +28,12 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
   transition: background-color 0.3s, color 0.3s;
 }
+
 
 nav {
   position: fixed;
