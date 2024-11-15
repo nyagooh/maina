@@ -72,7 +72,7 @@ nav {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   transition: width 0.3s;
 }
 
@@ -147,7 +147,7 @@ h2 {
 .social-icons {
   display: flex;
   gap: 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .social-icons a {
@@ -189,6 +189,7 @@ h2 {
 text-align: justify;
   margin: 0 auto; /* Center the paragraph */
   text-align: center;
+  
 }
 .skills-container {
   display: grid;
@@ -398,7 +399,17 @@ footer {
   text-align: center;
   margin-top: var(--section-spacing);
 }
-
+.social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+  font-size: 2rem;
+}
+.social-links a:hover{
+  color: var(--secondary-color);
+}
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
