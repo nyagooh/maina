@@ -2,7 +2,7 @@
 
 Welcome to my portfolio! I'm [Your Name], a passionate software engineer, web designer, and product manager. This repository showcases my work, skills, and projects that reflect my journey in the tech industry.
 
-![My Picture](public/Screenshot from 2024-11-15 03-34-00.png) <!-- Replace with the path to your image -->
+![My Picture](Screenshot from 2024-11-15 03-34-00.png) 
 
 ## About Me
 
@@ -19,7 +19,7 @@ I am dedicated to creating innovative solutions that enhance user experiences an
 Feel free to reach out if you would like to connect or collaborate!
 
 - Email: [your-email@example.com](mailto:annmaina614@gmail.com)
-- LinkedIn: [Your LinkedIn Profile]("https://www.linkedin.com/in/maina-anne-37797820b/")>
+- LinkedIn: [Your LinkedIn Profile]("https://www.linkedin.com/in/maina-anne-37797820b/")
 - GitHub: [Your GitHub Profile](https://github.com/nyagooh)
   <a href="https://github.com/nyagooh" target="_blank" ><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank"><i class="fab fa-linkedin"></i></a>
