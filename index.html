@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body class="light-mode">
+    <div id="particles-js"></div>
+    
+    <nav>
+      <div class="nav-content">
+        <h1>Portfolio</h1>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#blogs">Blog</a>
+          <a href="#contact" >Contact</a>
+        </div>
+        <button id="theme-toggle">🌙</button>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Hi, I'm Ann Maina</h1>
+        <h1 class="typing-title"></h1>
+        <div class="typed-text"></div>
+        <div class="cta-buttons">
+          <a href="/resume2.pdf" download class="btn">Download CV</a>
+          <div class="social-icons">
+            <a href="https://github.com/nyagooh" target="_blank" ><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@nyagooh" target="_blank"><i class="fab fa-medium"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <div class="about-text">
+          <p>I’m  a passionate software engineer, web designer, and product manager with a strong commitment to creating innovative solutions that enhance user experiences and drive business success. With a diverse skill set that bridges technical development and design, I thrive at the intersection of technology and creativity.
+            I am driven by a passion for technology and a desire to solve real-world problems through innovative solutions. Whether working independently or as part of a team, I strive to foster an environment of collaboration and open communication. In my spare time, you can find me exploring new technologies, contributing to open-source projects, or sharing insights on my blog.
+            Thank you for visiting my portfolio! I look forward to connecting with you and exploring opportunities where we can create impactful products together. Feel free to customize this text with your name, specific technologies you work with, or any personal touches that reflect your personality or experiences!
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="/background-Q6xxD.jpg" alt="Profile picture">
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-circle">
+          <svg viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="70"/>
+            <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
+          </svg>
+          <div class="skill-content">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg " alt ="Golang">
+            <span>90%</span>
+          </div>
+        </div>
+        <div class="skill-circle">
+          <svg viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="70"/>
+            <circle class="progress" cx="80" cy="80" r="70" data-percent="85"/>
+          </svg>
+          <div class="skill-content">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Javascript">
+            <span>85%</span>
+          </div>
+        </div>
+        <div class="skill-circle">
+          <svg viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="70"/>
+            <circle class="progress" cx="80" cy="80" r="70" data-percent="80"/>
+          </svg>
+          <div class="skill-content">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind css">
+            <span>80%</span>
+          </div>
+        </div>
+          <div class="skill-circle">
+            <svg viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="70"/>
+              <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
+            </svg>
+            <div class="skill-content">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma">
+              <span>85%</span>
+            </div>
+          </div>
+            <div class="skill-circle">
+              <svg viewBox="0 0 160 160">
+                <circle cx="80" cy="80" r="70"/>
+                <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
+              </svg>
+              <div class="skill-content">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg" alt="Docker">
+                <span>93%</span>
+              </div>
+            </div>
+              <div class="skill-circle">
+                <svg viewBox="0 0 160 160">
+                  <circle cx="80" cy="80" r="70"/>
+                  <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
+                </svg>
+                <div class="skill-content">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg" alt="Git">
+                  <span>86%</span>
+                </div>
+              </div>
+      </div>
+    </section>
+
+    <section id="services" data-aos="fade-up">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Front-end Development</h3>
+          <p>Develop responsive and interactive web applications using modern technologies for a seamless user experience.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>UI/UX Design</h3>
+          <p>Create engaging user interfaces and experiences that enhance usability and foster user satisfaction.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-server"></i>
+          <h3>Backend Development</h3>
+          <p>Build robust server-side applications and APIs that ensure seamless data processing and management.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-database"></i>
+          <h3>Data Visualization</h3>
+          <p>Transform complex data into clear insights through interactive charts and dashboards, enabling informed decision-making.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-pen"></i>
+          <h3>Technical writing</h3>
+          <p>Write Technical articles that conveys complex information in a clear and concise manner</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-users"></i>
+          <h3>Running Technical Communities</h3>
+          <p>Foster collaboration and knowledge sharing among tech enthusiasts through organized events and online platforms.</p>
+      </div>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="/Screenshot from 2024-11-15 02-06-23.png" alt="Project 1">
+          <div class="project-content">
+            <h3>A1 Professional Cleaning Website</h3>
+            <p>A full-stack e-commerce solution with React and Node.js</p>
+            <div class="project-links">
+              <a href="/https://a1professionalcleaning.dorik.io/" target="_blank"  class="btn">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="/peerfund (1).png" alt="Project 2">
+          <div class="project-content">
+            <h3>PeerFund</h3>
+            <p>A decentralized application that enables peer-to-peer funding using blockchain technology.</p>
+            <div class="project-links">
+              <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="/git.jpg" alt="Project 3">
+          <div class="project-content">
+            <h3>Git Project</h3>
+            <p>A collaborative platform for version control using Git that enhances team productivity.</p>
+            <div class="project-links">
+              <a href="https://github.com/nyagooh/git.git" target="_blank" class="btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="/caestudy..jpg" alt="Project 4">
+          <div class="project-content">
+            <h3>User Research Case study</h3>
+            <p>A React-based task management application with real-time updates</p>
+            <div class="project-links">
+              <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blogs" data-aos="fade-up">
+      <h2>Latest Blogs</h2>
+      <div class="blogs-grid">
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="/illustration1.jpg" alt="Blog 1">
+          </div>
+          <div class="blog-content">
+            <h3>Usability testing</h3>
+            <p>Usability testing is a testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it. 
+              The goal of usability testing is identifying problems in the design of the product or service, Uncovering opportunities to improve and Learning about the target user’s behavior and preferences.
+              User testing is a type of user research that helps you understand how people interact with your product</p>
+            <a href="https://medium.com/@nyagooh/usability-testing-67a400746dbc" target="_blank" class="btn">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="/illustration3.jpg" alt="Blog 1">
+          </div>
+          <div class="blog-content">
+            <h3>UX Design</h3>
+            <p>Hi😊😊
+              Here is what i gathered during my first class of UX,
+              UX design is studying user behavior and understanding user motivations with the goal of designing better digital experiences.</p>
+            <a href="https://medium.com/@nyagooh/ux-design-403997ea0605" target="_blank"  class="btn">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="/illustration2.jpg" alt="Blog 1">
+          </div>
+          <div class="blog-content">
+            <h3>Design thinking</h3>
+            <p>what is Design thinking? It is a non linear process that a team uses to understand users, challenge assumptions, redefine problems and create innovative solutions to prototype and test. 
+              it is most useful to tackle problems that are ill-defined or unknown.</p>
+            <a href="https://medium.com/@nyagooh/design-thinking-d720659c7a98" target="_blank" class="btn">Read More</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="/ui1.jpg" alt="Blog 2">
+          </div>
+          <div class="blog-content">
+            <h3>Information architecture</h3>
+            <p>what is information architecture? This is a field that plays a vital role in creating user-friendly, organized, and efficient digital experiences.
+               It involves structuring and labeling information to help users find what they need. It basically involves what information should go where, which elements are most important and should be given most priority.
+               Good AI contributes to better user experience, it should be logical and user friendly.</p>
+            <a href="https://medium.com/@nyagooh/information-architecture-ai-ce4b9a7f15e" target="_blank" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <div class="contact-container">
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="https://github.com/nyagooh" target="_blank" ><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://medium.com/@nyagooh" target="_blank"><i class="fab fa-medium"></i></a>
+        </div>
+        <p>&copy; 2024. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
