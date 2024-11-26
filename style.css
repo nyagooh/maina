@@ -51,7 +51,9 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
+.nav-content h1 {
+  color: var(--primary-color);
+}
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -105,25 +107,32 @@ h2 {
 .hero-content {
   max-width: 800px;
   z-index: 1;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  justify-content: center; /* Center elements vertically */
+  position: relative; /* Needed for absolute positioning of children if used */
 }
 
 .hero-content h1 {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Space between h1 and typed text */
   color: var(--primary-color);
 }
 
 .hero-content .typed-text {
   font-size: 1.5rem;
   color: var(--secondary-color);
-  min-height: 2em;
+  min-height: 2em; /* Ensures space is reserved */
+  overflow: hidden; /* Prevents overflow if text exceeds height */
+  display: inline-block; /* Keeps it in document flow */
 }
 
 .cta-buttons {
   margin-top: 1rem;
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -164,13 +173,14 @@ h2 {
   max-width: var(--container-width);
   margin: 0 auto;
   text-align: center;
-}
+}   
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  background-color: var(--card-bg);
+   grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
-  margin-top: 2rem;
+  padding: 70px 0 70px 0;
 }
 
 .about-image {
@@ -186,14 +196,19 @@ h2 {
 /* Limit the width of the paragraph */
 .about-text {
   max-width: 70%; /* Set a maximum width for the paragraph */
-text-align: justify;
+  text-align: justify;
   margin: 0 auto; /* Center the paragraph */
-  text-align: center;
+  text-align: start;
   
+}
+.about-text h4 {
+  color: var(--secondary-color);
+  padding-bottom: 20px;
 }
 .skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  background-color: var(--card-bg);
   gap: 2rem;
   padding: 2rem 0;
   max-width: var(--container-width);

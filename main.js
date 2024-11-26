@@ -8,17 +8,17 @@ AOS.init({
 
 // Typing animation
 const titles = [
-  "A Software Developer",
-  "A Product Manager",
-  "A Web Designer",
-  "A UX Designer"
+  "Software Developer",
+  "Product Manager",
+  "Web Designer",
+  "UX Designer"
 ];
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let typingDelay = 200;
-let erasingDelay = 100;
-let newTextDelay = 2000;
+let typingDelay = 100; // Typing speed
+let erasingDelay = 150; // Slower erasing speed
+let newTextDelay = 2000; // Delay before starting new text
 
 function typeText() {
   const titleElement = document.querySelector('.typing-title');
@@ -29,17 +29,18 @@ function typeText() {
     typingDelay = erasingDelay;
   } else {
     charIndex++;
-    typingDelay = 200;
+    typingDelay = 100;
   }
 
   titleElement.textContent = currentTitle.substring(0, charIndex);
 
   if (!isDeleting && charIndex === currentTitle.length) {
     isDeleting = true;
-    typingDelay = newTextDelay;
+    typingDelay = newTextDelay; // Wait before starting to delete
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
-    titleIndex = (titleIndex + 1) % titles.length;
+    titleIndex = (titleIndex + 1) % titles.length; // Move to next title
+    typingDelay = typingDelay; // Reset typing delay for new title
   }
 
   setTimeout(typeText, typingDelay);
@@ -55,7 +56,7 @@ particlesJS('particles-js', {
       value: 80,
       density: {
         enable: true,
-        value_area: 800
+        value_area: 1000
       }
     },
     color: {
@@ -65,24 +66,24 @@ particlesJS('particles-js', {
       type: 'circle'
     },
     opacity: {
-      value: 0.5,
+      value: 0.9,
       random: false
     },
     size: {
-      value: 3,
+      value: 2,
       random: true
     },
     line_linked: {
       enable: true,
       distance: 150,
       color: '#5e35b1',
-      opacity: 0.4,
+      opacity: 0.3,
       width: 1
     },
     move: {
       enable: true,
-      speed: 6,
-      direction: 'none',
+      speed: 4,
+      direction: 'circular',
       random: false,
       straight: false,
       out_mode: 'out',
