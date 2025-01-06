@@ -2,7 +2,7 @@ import AOS from 'aos';
 
 // Initialize AOS
 AOS.init({
-  duration: 1000,
+  duration: 800,
   once: true
 });
 
@@ -107,39 +107,37 @@ particlesJS('particles-js', {
   retina_detect: true
 });
 
-// Animate skill circles
-const observerCallback = (entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const circle = entry.target;
-      const percent = circle.getAttribute('data-percent');
-      const circumference = 2 * Math.PI * 70; // radius is 70
-      const offset = circumference - (percent / 100 * circumference);
-      circle.style.strokeDashoffset = offset;
-    }
+// Theme toggle
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+
+// Skill circle animations
+const animateSkills = () => {
+  const circles = document.querySelectorAll('.skill-circle circle.progress');
+  circles.forEach(circle => {
+    const percent = circle.getAttribute('data-percent');
+    circle.style.setProperty('--percent', percent);
   });
 };
 
-const observer = new IntersectionObserver(observerCallback, {
-  threshold: 0.5
-});
+// Initialize skill animations when the section is in view
+const skillsSection = document.getElementById('skills');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateSkills();
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
 
-document.querySelectorAll('.skill-circle circle.progress').forEach(circle => {
-  circle.style.strokeDasharray = 2 * Math.PI * 70;
-  observer.observe(circle);
-});
+observer.observe(skillsSection);
 
-// Dark mode toggle
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
-});
-
-// Form submission
-const contactForm = document.getElementById('contact-form');
+// Contact form submission
+const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   alert('Thank you for your message! I will get back to you soon.');
