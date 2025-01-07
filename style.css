@@ -1146,7 +1146,7 @@ nav {
 }
 
 .skill-progress circle.progress-bg {
-  stroke: rgba(255, 255, 255, 0.1);
+  stroke: rgba(0, 0, 0, 0.2);
 }
 
 .skill-progress circle.progress-bar {
@@ -1449,42 +1449,37 @@ footer {
 }
 
 .footer-nav a {
-  color: var(--text-color);
+  color: var(--text-light);
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
-  width: fit-content;
-  padding: 0.5rem 1rem 0.5rem 2rem;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.footer-nav a i {
-  font-size: 1rem;
-  color: var(--primary-color);
-  transition: all 0.3s ease;
+  padding-left: 1.2rem;
+  background: var(--card-bg);
 }
 
 .footer-nav a::before {
-  content: '';
+  content: '→';
   position: absolute;
   left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--gradient-1);
-  border-radius: 4px;
   opacity: 0;
   transform: translateX(-10px);
   transition: all 0.3s ease;
 }
 
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-1);
+  transition: width 0.3s ease;
+}
+
 .footer-nav a:hover {
-  background: var(--bg-color);
   color: var(--primary-color);
-  padding-left: 2.5rem;
+  padding-left: 1.5rem;
 }
 
 .footer-nav a:hover::before {
@@ -1492,22 +1487,35 @@ footer {
   transform: translateX(0);
 }
 
-.footer-nav a:hover i {
-  transform: scale(1.2);
+.footer-nav a:hover::after {
+  width: 100%;
 }
 
-.footer-nav .resume-link {
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-nav-list li {
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+}
+
+.footer-nav-list a {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-nav-list a:hover {
   color: var(--primary-color);
-  font-weight: 500;
-}
-
-.footer-nav .resume-link i:last-child {
-  margin-left: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-nav .resume-link:hover i:last-child {
-  transform: translateY(-2px);
+  transform: translateX(5px);
 }
 
 @media (max-width: 768px) {
@@ -1705,11 +1713,12 @@ footer {
 }
 
 .footer-nav a {
-  color: var(--text-color);
+  color: var(--text-light);
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
   padding-left: 1.2rem;
+  background: var(--card-bg);
 }
 
 .footer-nav a::before {
