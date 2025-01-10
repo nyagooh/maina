@@ -3,40 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Portfolio</title>
+    <title>Anne maina</title>
     <link rel="stylesheet" href="style.css" />
+<<<<<<< HEAD
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+=======
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+>>>>>>> e9ea7ea7f8bf4c19d4cdbdbc72be2409e38d5ef4
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body class="light-mode">
-    <div id="particles-js"></div>
-    
     <nav>
       <div class="nav-content">
-        <h1>Portfolio</h1>
+        <h1>Nyagooh</h1>
+        <div class="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#projects">Projects</a>
           <a href="#blogs">Blog</a>
-          <a href="#contact" >Contact</a>
+          <a href="#contact">Contact</a>
         </div>
         <button id="theme-toggle">🌙</button>
       </div>
     </nav>
 
     <section id="hero">
-      <div class="hero-content" data-aos="fade-up">
-        <h1>Hi, I'm Ann Maina</h1>
-        <h1 class="typing-title"></h1>
-        <div class="typed-text"></div>
-        <div class="cta-buttons">
-          <a href="/resume2.pdf" download class="btn">Download CV</a>
-          <div class="social-icons">
-            <a href="https://github.com/nyagooh" target="_blank" ><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://medium.com/@nyagooh" target="_blank"><i class="fab fa-medium"></i></a>
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+          <span class="greeting">Hello World! 👋</span>
+          <h1 class="animate__animated animate__fadeIn">I'm Ann Maina</h1>
+          <div class="typed-wrapper">
+            <span class="typed-prefix">I craft </span>
+            <span class="typed-text"></span>
+          </div>
+          <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+            A passionate software engineer and designer, transforming ideas into elegant digital experiences. Based in Kenya, working worldwide.
+          </p>
+          <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+            <a href="#projects" class="primary-btn">View My Work</a>
+            <a href="#contact" class="secondary-btn">Let's Connect</a>
+          </div>
+          <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
+            <a href="https://github.com/nyagooh" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@nyagooh" target="_blank" class="social-icon"><i class="fab fa-medium"></i></a>
+          </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+          <div class="image-container">
+            <img src="/background-Q6xxD.jpg" alt="Ann Maina">
           </div>
         </div>
       </div>
@@ -44,254 +70,495 @@
 
     <section id="about" data-aos="fade-up">
       <div class="about-container">
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>I’m  a passionate software engineer, web designer, and product manager with a strong commitment to creating innovative solutions that enhance user experiences and drive business success. With a diverse skill set that bridges technical development and design, I thrive at the intersection of technology and creativity.
-            I am driven by a passion for technology and a desire to solve real-world problems through innovative solutions. Whether working independently or as part of a team, I strive to foster an environment of collaboration and open communication. In my spare time, you can find me exploring new technologies, contributing to open-source projects, or sharing insights on my blog.
-            Thank you for visiting my portfolio! I look forward to connecting with you and exploring opportunities where we can create impactful products together. Feel free to customize this text with your name, specific technologies you work with, or any personal touches that reflect your personality or experiences!
-          </p>
-        </div>
         <div class="about-image">
-          <img src="/background-Q6xxD.jpg" alt="Profile picture">
+          <img src="/IMG_0244.JPG" alt="Anne Maina">
+          <div class="about-shape"></div>
+        </div>
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>I'm a passionate software engineer, web designer, and product manager with a strong commitment to creating innovative solutions that enhance user experiences and drive business success. With expertise in Go, JavaScript, and modern web technologies, I create efficient, scalable solutions and enjoy solving complex problems.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-text">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">20+</span>
+              <span class="stat-text">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">8+</span>
+              <span class="stat-text">Technical Articles</span>
+            </div>
+          </div>
+          <div class="about-buttons">
+            <button class="download-cv">
+              <span class="button-text">Download CV</span>
+              <span class="button-icon">
+                <i class="fas fa-download"></i>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="skills" data-aos="fade-up">
-      <h2>Skills</h2>
+      <h2>My Skills</h2>
       <div class="skills-container">
-        <div class="skill-circle">
-          <svg viewBox="0 0 160 160">
-            <circle cx="80" cy="80" r="70"/>
-            <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
-          </svg>
-          <div class="skill-content">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg " alt ="Golang">
-            <span>90%</span>
-          </div>
-        </div>
-        <div class="skill-circle">
-          <svg viewBox="0 0 160 160">
-            <circle cx="80" cy="80" r="70"/>
-            <circle class="progress" cx="80" cy="80" r="70" data-percent="85"/>
-          </svg>
-          <div class="skill-content">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Javascript">
-            <span>85%</span>
-          </div>
-        </div>
-        <div class="skill-circle">
-          <svg viewBox="0 0 160 160">
-            <circle cx="80" cy="80" r="70"/>
-            <circle class="progress" cx="80" cy="80" r="70" data-percent="80"/>
-          </svg>
-          <div class="skill-content">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind css">
-            <span>80%</span>
-          </div>
-        </div>
-          <div class="skill-circle">
-            <svg viewBox="0 0 160 160">
-              <circle cx="80" cy="80" r="70"/>
-              <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
-            </svg>
-            <div class="skill-content">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma">
-              <span>85%</span>
-            </div>
-          </div>
-            <div class="skill-circle">
-              <svg viewBox="0 0 160 160">
-                <circle cx="80" cy="80" r="70"/>
-                <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
+        <div class="skills-grid">
+          <div class="skill-circle" data-percent="95" data-skill="go">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
               </svg>
-              <div class="skill-content">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg" alt="Docker">
-                <span>93%</span>
+              <div class="skill-icon">
+                <i class="fab fa-golang"></i>
               </div>
             </div>
-              <div class="skill-circle">
-                <svg viewBox="0 0 160 160">
-                  <circle cx="80" cy="80" r="70"/>
-                  <circle class="progress" cx="80" cy="80" r="70" data-percent="90"/>
-                </svg>
-                <div class="skill-content">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg" alt="Git">
-                  <span>86%</span>
-                </div>
+            <div class="skill-name">Go</div>
+            <div class="percent">
+              <span class="number" data-value="95">0</span>%
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="90" data-skill="js">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+              </svg>
+              <div class="skill-icon">
+                <i class="fab fa-js"></i>
               </div>
+            </div>
+            <div class="skill-name">JavaScript</div>
+            <div class="percent">
+              <span class="number" data-value="90">0</span>%
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="85" data-skill="python">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+              </svg>
+              <div class="skill-icon">
+                <i class="fab fa-python"></i>
+              </div>
+            </div>
+            <div class="skill-name">Python</div>
+            <div class="percent">
+              <span class="number" data-value="85">0</span>%
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="90" data-skill="react">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+              </svg>
+              <div class="skill-icon">
+                <i class="fab fa-react"></i>
+              </div>
+            </div>
+            <div class="skill-name">React</div>
+            <div class="percent">
+              <span class="number" data-value="90">0</span>%
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="85" data-skill="vue">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+              </svg>
+              <div class="skill-icon">
+                <i class="fab fa-vuejs"></i>
+              </div>
+            </div>
+            <div class="skill-name">Vue.js</div>
+            <div class="percent">
+              <span class="number" data-value="85">0</span>%
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="95" data-skill="docker">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+              </svg>
+              <div class="skill-icon">
+                <i class="fab fa-docker"></i>
+              </div>
+            </div>
+            <div class="skill-name">Docker</div>
+            <div class="percent">
+              <span class="number" data-value="95">0</span>%
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="90" data-skill="aws">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+              </svg>
+              <div class="skill-icon">
+                <i class="fab fa-aws"></i>
+              </div>
+            </div>
+            <div class="skill-name">AWS</div>
+            <div class="percent">
+              <span class="number" data-value="90">0</span>%
+            </div>
+          </div>
+
+          <div class="skill-circle" data-percent="95" data-skill="git">
+            <div class="skill-progress">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+              </svg>
+              <div class="skill-icon">
+                <i class="fab fa-git-alt"></i>
+              </div>
+            </div>
+            <div class="skill-name">Git</div>
+            <div class="percent">
+              <span class="number" data-value="95">0</span>%
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="services" data-aos="fade-up">
       <h2>Services</h2>
-      <div class="services-grid">
+      <div class="services-container">
         <div class="service-card">
-          <i class="fas fa-code"></i>
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
           <h3>Front-end Development</h3>
           <p>Develop responsive and interactive web applications using modern technologies for a seamless user experience.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-mobile-alt"></i>
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
           <h3>UI/UX Design</h3>
           <p>Create engaging user interfaces and experiences that enhance usability and foster user satisfaction.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-server"></i>
+          <div class="service-icon">
+            <i class="fas fa-server"></i>
+          </div>
           <h3>Backend Development</h3>
           <p>Build robust server-side applications and APIs that ensure seamless data processing and management.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-database"></i>
+          <div class="service-icon">
+            <i class="fas fa-database"></i>
+          </div>
           <h3>Data Visualization</h3>
           <p>Transform complex data into clear insights through interactive charts and dashboards, enabling informed decision-making.</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-pen"></i>
+          <div class="service-icon">
+            <i class="fas fa-pen"></i>
+          </div>
           <h3>Technical writing</h3>
           <p>Write Technical articles that conveys complex information in a clear and concise manner</p>
         </div>
         <div class="service-card">
-          <i class="fas fa-users"></i>
+          <div class="service-icon">
+            <i class="fas fa-users"></i>
+          </div>
           <h3>Running Technical Communities</h3>
           <p>Foster collaboration and knowledge sharing among tech enthusiasts through organized events and online platforms.</p>
-      </div>
+        </div>
       </div>
     </section>
 
     <section id="projects" data-aos="fade-up">
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <img src="/Screenshot from 2024-11-15 02-06-23.png" alt="Project 1">
+          <div class="project-image">
+            <img src="/Screenshot from 2024-11-15 02-06-23.png" alt="Project 1">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://a1professionalcleaning.dorik.io/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/a1-professional-cleaning.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
           <div class="project-content">
             <h3>A1 Professional Cleaning Website</h3>
             <p>A full-stack e-commerce solution with React and Node.js</p>
-            <div class="project-links">
-              <a href="/https://a1professionalcleaning.dorik.io/" target="_blank"  class="btn">Live Demo</a>
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>Css</span>
+              <span>HTML</span>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/peerfund (1).png" alt="Project 2">
+          <div class="project-image">
+            <img src="/peerfund (1).png" alt="Project 2">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
           <div class="project-content">
             <h3>PeerFund</h3>
             <p>A decentralized application that enables peer-to-peer funding using blockchain technology.</p>
-            <div class="project-links">
-              <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="btn">GitHub</a>
+            <div class="project-tags">
+              <span>Blockchain</span>
+              <span>Golang</span>
+              <span>Javascript</span>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/git.jpg" alt="Project 3">
+          <div class="project-image">
+            <img src="/git.jpg" alt="Project 3">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/nyagooh/git.git" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/git.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
           <div class="project-content">
             <h3>Git Project</h3>
             <p>A collaborative platform for version control using Git that enhances team productivity.</p>
-            <div class="project-links">
-              <a href="https://github.com/nyagooh/git.git" target="_blank" class="btn">GitHub</a>
+            <div class="project-tags">
+              <span>Git</span>
+              <span>GitHub</span>
             </div>
           </div>
         </div>
         <div class="project-card">
-          <img src="/caestudy..jpg" alt="Project 4">
+          <div class="project-image">
+            <img src="/caestudy..jpg" alt="Project 4">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
           <div class="project-content">
             <h3>User Research Case study</h3>
-            <p>A React-based task management application with real-time updates</p>
-            <div class="project-links">
-              <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="btn">GitHub</a>
+            <p>A Research on users and their needs in a user research project</p>
+            <div class="project-tags">
+              <span>Figjam</span>
+              <span>User Journey</span>
+              <span>User Personas</span>
+              <span>User flow</span>
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-button">
+        <a href="#" class="view-more">View More Projects <i class="fas fa-arrow-right"></i></a>
       </div>
     </section>
 
     <section id="blogs" data-aos="fade-up">
-      <h2>Latest Blogs</h2>
+      <h2>Latest Blog Posts</h2>
       <div class="blogs-grid">
-        <div class="blog-card">
+        <article class="blog-card">
           <div class="blog-image">
             <img src="/illustration1.jpg" alt="Blog 1">
+            <span class="blog-category">UI/UX</span>
           </div>
           <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Jan 6, 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
             <h3>Usability testing</h3>
-            <p>Usability testing is a testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it. 
-              The goal of usability testing is identifying problems in the design of the product or service, Uncovering opportunities to improve and Learning about the target user’s behavior and preferences.
-              User testing is a type of user research that helps you understand how people interact with your product</p>
-            <a href="https://medium.com/@nyagooh/usability-testing-67a400746dbc" target="_blank" class="btn">Read More</a>
+            <p>Usability testing is testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it.</p>
+            <a href="https://medium.com/@nyagooh/usability-testing-67a400746dbc" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
-        </div>
-        <div class="blog-card">
+        </article>
+        <article class="blog-card">
           <div class="blog-image">
-            <img src="/illustration3.jpg" alt="Blog 1">
+            <img src="/illustration3.jpg" alt="Blog 2">
+            <span class="blog-category">UI/UX</span>
           </div>
           <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Jan 4, 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
             <h3>UX Design</h3>
-            <p>Hi😊😊
-              Here is what i gathered during my first class of UX,
-              UX design is studying user behavior and understanding user motivations with the goal of designing better digital experiences.</p>
-            <a href="https://medium.com/@nyagooh/ux-design-403997ea0605" target="_blank"  class="btn">Read More</a>
+            <p>A comprehensive guide to UX design principles and best practices for creating user-friendly digital experiences.</p>
+            <a href="https://medium.com/@nyagooh/ux-design-403997ea0605" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
-        </div>
-        <div class="blog-card">
+        </article>
+        <article class="blog-card">
           <div class="blog-image">
-            <img src="/illustration2.jpg" alt="Blog 1">
+            <img src="/illustration2.jpg" alt="Blog 3">
+            <span class="blog-category">UI/UX</span>
           </div>
           <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Jan 2, 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
             <h3>Design thinking</h3>
-            <p>what is Design thinking? It is a non linear process that a team uses to understand users, challenge assumptions, redefine problems and create innovative solutions to prototype and test. 
-              it is most useful to tackle problems that are ill-defined or unknown.</p>
-            <a href="https://medium.com/@nyagooh/design-thinking-d720659c7a98" target="_blank" class="btn">Read More</a>
+            <p>What is Design thinking? It is a non-linear process that a team uses to understand users, challenge assumptions, redefine problems and create innovative solutions.</p>
+            <a href="https://medium.com/@nyagooh/design-thinking-d720659c7a98" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
-        </div>
-        <div class="blog-card">
+        </article>
+        <article class="blog-card">
           <div class="blog-image">
-            <img src="/ui1.jpg" alt="Blog 2">
+            <img src="/ui1.jpg" alt="Blog 4">
+            <span class="blog-category">UI/UX</span>
           </div>
           <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Jan 1, 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
             <h3>Information architecture</h3>
-            <p>what is information architecture? This is a field that plays a vital role in creating user-friendly, organized, and efficient digital experiences.
-               It involves structuring and labeling information to help users find what they need. It basically involves what information should go where, which elements are most important and should be given most priority.
-               Good AI contributes to better user experience, it should be logical and user friendly.</p>
-            <a href="https://medium.com/@nyagooh/information-architecture-ai-ce4b9a7f15e" target="_blank" class="btn">Read More</a>
+            <p>A deep dive into information architecture and its vital role in creating user-friendly, organized, and efficient digital experiences.</p>
+            <a href="https://medium.com/@nyagooh/information-architecture-ai-ce4b9a7f15e" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
-        </div>
+        </article>
+      </div>
+      <div class="section-button">
+        <a href="#" class="view-more">View All Posts <i class="fas fa-arrow-right"></i></a>
       </div>
     </section>
 
     <section id="contact" data-aos="fade-up">
-      <h2>Contact Me</h2>
+      <h2>Get in Touch</h2>
       <div class="contact-container">
-        <form id="contact-form" class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <div class="contact-info-grid">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>annmaina614@gmail.com</p>
+            <a href="mailto:annmaina614@gmail.com" class="contact-link">Send Email</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <p>+254724318117</p>
+            <a href="tel:+254724318117" class="contact-link">Call Now</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p>Nairobi, Kenya</p>
+            <a href="https://maps.google.com/?q=Nairobi,Kenya" target="_blank" class="contact-link">View on Map</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-header">
+            <h3>Send Message</h3>
+            <p>Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <div class="input-container">
+              <i class="fas fa-user"></i>
+              <input type="text" id="name" name="name" autocomplete="name" />
+            </div>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <div class="input-container">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" name="email" autocomplete="email" />
+            </div>
           </div>
-          <button type="submit" class="btn">Send Message</button>
+          <div class="form-group">
+            <div class="input-container">
+              <i class="fas fa-pen"></i>
+              <input type="text" id="subject" name="subject" autocomplete="Subject">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-container">
+              <i class="fas fa-comment-alt"></i>
+              <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span class="button-text">Send Message</span>
+            <span class="button-icon">
+              <i class="fas fa-paper-plane"></i>
+            </span>
+          </button>
         </form>
       </div>
     </section>
 
     <footer>
       <div class="footer-content">
-        <div class="social-links">
-          <a href="https://github.com/nyagooh" target="_blank" ><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://medium.com/@nyagooh" target="_blank"><i class="fab fa-medium"></i></a>
+        <div class="footer-section">
+          <h3>Anne Maina</h3>
+          <p>Software Engineer & Web Designer</p>
+          <div class="social-links">
+            <a href="https://github.com/nyagooh" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://medium.com/@nyagooh" target="_blank" class="social-link" aria-label="Medium">
+              <i class="fab fa-medium"></i>
+            </a>
+            <a href="https://twitter.com/nyagooh" target="_blank" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
         </div>
-        <p>&copy; 2024. All rights reserved.</p>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+            <ul class="footer-nav-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#blogs">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> annmaina614@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +254724318117</p>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Anne Maina. All rights reserved.</p>
+        <div class="footer-shape"></div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="module" src="/main.js"></script>
+    <!--<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script> -->
   </body>
 </html>
