@@ -50,28 +50,6 @@ function startSkillCounters() {
     }
 }
 
-// Dark mode toggle
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Check for saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    body.classList.add(savedTheme);
-    updateThemeIcon(savedTheme === 'dark-mode');
-}
-
-function updateThemeIcon(isDark) {
-    themeToggle.textContent = isDark ? '☀️' : '🌙';
-}
-
-themeToggle.addEventListener('click', () => {
-    const isDark = body.classList.toggle('dark-mode');
-    body.classList.remove(isDark ? 'light-mode' : 'dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
-    updateThemeIcon(isDark);
-});
-
 // Create animated background
 function createBackgroundAnimation() {
     const container = document.createElement('div');
@@ -173,8 +151,27 @@ if (downloadBtn) {
     });
 }
 
-// Initialize animations
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS
+    AOS.init();
+
+    // Start skill counters
     startSkillCounters();
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark-mode');
+        body.classList.remove(isDark ? 'light-mode' : 'dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
+    });
+
+    // Create animated background
     createBackgroundAnimation();
 });
