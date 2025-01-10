@@ -50,39 +50,6 @@ function startSkillCounters() {
     }
 }
 
-// Create animated background
-function createBackgroundAnimation() {
-    const container = document.createElement('div');
-    container.className = 'background-animation';
-    document.body.appendChild(container);
-
-    function createParticle() {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        
-        // Random starting position
-        const startX = Math.random() * 100;
-        particle.style.setProperty('--x', `${startX}%`);
-        
-        // Set animation properties
-        particle.style.setProperty('--duration', `${20 + Math.random() * 10}s`);
-        particle.style.setProperty('--delay', `${-Math.random() * 20}s`);
-        
-        container.appendChild(particle);
-        
-        // Remove and recreate particle after animation
-        setTimeout(() => {
-            particle.remove();
-            createParticle();
-        }, (20 + Math.random() * 10) * 1000);
-    }
-
-    // Create initial particles
-    for (let i = 0; i < 40; i++) {
-        createParticle();
-    }
-}
-
 // Mobile Menu Toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
@@ -172,6 +139,4 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
     });
 
-    // Create animated background
-    createBackgroundAnimation();
 });
