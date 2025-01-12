@@ -1,8 +1,8 @@
 # My Portfolio
 
-Welcome to my [Portfolio](https://maina-kotech.vercel.app/)! I'm Ann maina, a passionate software engineer, web designer, and product manager. This repository showcases my work, skills, and projects that reflect my journey in the tech industry.
+Welcome to my [Portfolio](https://maina-hai2.onrender.com/)! I'm Ann Maina, a passionate software engineer, web designer, and product manager. This repository showcases my work, skills, and projects that reflect my journey in the tech industry.
 
-![My Picture](public/pic1.png) 
+![My Picture](hepublic/Screenshot%20from%202025-01-12%2011-07-56.png)
 
 ## About Me
 
