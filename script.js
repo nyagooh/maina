@@ -85,15 +85,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        body.classList.add(savedTheme);
-    }
-
-    themeToggle.addEventListener('click', () => {
-        const isDark = body.classList.toggle('dark-mode');
-        body.classList.remove(isDark ? 'light-mode' : 'dark-mode');
+    
+    // Function to update theme and icon
+    function updateTheme(isDark) {
+        // Update body classes
+        body.classList.toggle('dark-mode', isDark);
+        body.classList.toggle('light-mode', !isDark);
+        
+        // Update toggle button icon
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        
+        // Save theme preference
         localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
+    }
+    
+    // Set initial theme based on saved preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+        updateTheme(savedTheme === 'dark-mode');
+    } else {
+        updateTheme(prefersDark);
+    }
+    
+    // Handle theme toggle click
+    themeToggle.addEventListener('click', () => {
+        const isDark = !body.classList.contains('dark-mode');
+        updateTheme(isDark);
+    });
+    
+    // Optional: Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            updateTheme(e.matches);
+        }
     });
 
 });
