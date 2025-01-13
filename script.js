@@ -50,21 +50,52 @@ function startSkillCounters() {
     }
 }
 
-// Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+// Hamburger Menu
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenuBtn.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenuBtn.classList.remove('active');
-        navLinks.classList.remove('active');
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Initialize AOS
+    AOS.init();
+
+    // Start skill counters
+    startSkillCounters();
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark-mode');
+        body.classList.remove(isDark ? 'light-mode' : 'dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
+    });
+
 });
 
 // Contact Form Submission
@@ -107,36 +138,34 @@ if (contactForm) {
 const downloadBtn = document.querySelector('.download-cv');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
-        // Replace 'resume.pdf' with your actual CV file path
-        const cvUrl = '/resume2.pdf';
-        const link = document.createElement('a');
-        link.href = cvUrl;
-        link.download = 'Anne_Maina_CV.pdf'; // Replace with your preferred filename
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        const cvUrl = 'public/mainaresume (3).pdf';
+        
+        // Fetch the PDF file
+        fetch(cvUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('CV file not found');
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                // Create a URL for the blob
+                const url = window.URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'Anne_Maina_CV.pdf';
+                
+                // Append link to body, click it, and remove it
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Clean up the URL object
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                console.error('Error downloading CV:', error);
+                alert('Sorry, the CV file is currently unavailable. Please try again later.');
+            });
     });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize AOS
-    AOS.init();
-
-    // Start skill counters
-    startSkillCounters();
-
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        body.classList.add(savedTheme);
-    }
-
-    themeToggle.addEventListener('click', () => {
-        const isDark = body.classList.toggle('dark-mode');
-        body.classList.remove(isDark ? 'light-mode' : 'dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
-    });
-
-});
