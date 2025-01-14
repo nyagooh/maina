@@ -122,6 +122,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Content Protection
+    // Disable right click
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Disable keyboard shortcuts and key combinations
+    document.addEventListener('keydown', function(e) {
+        // Prevent Ctrl+S, Ctrl+U (view source), Ctrl+P (print)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'p')) {
+            e.preventDefault();
+            return false;
+        }
+        // Prevent Ctrl+Shift+I (developer tools)
+        if (e.ctrlKey && e.shiftKey && e.key === 'i') {
+            e.preventDefault();
+            return false;
+        }
+        // Prevent F12 (developer tools)
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Disable text selection for specific elements
+    const protectedElements = document.querySelectorAll('.hero-text, .about-content, .projects-grid, .blogs-grid');
+    protectedElements.forEach(element => {
+        element.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    });
+
+    // Add watermark to copied text
+    document.addEventListener('copy', function(e) {
+        // Allow copying in form inputs
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+            return;
+        }
+        
+        e.preventDefault();
+        const selection = window.getSelection();
+        const copyText = selection.toString();
+        const watermark = '\n\nSource: ' + window.location.href;
+        const finalText = copyText + watermark;
+        
+        e.clipboardData.setData('text/plain', finalText);
+    });
 });
 
 // Contact Form Submission
