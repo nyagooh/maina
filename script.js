@@ -125,41 +125,39 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Contact Form Submission
-const contactForm = document.querySelector('#contact form');
+const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent the default form submission
+
         const formData = new FormData(contactForm);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message')
-        };
+        const jsonData = {};
 
-        try {
-            // Replace with your actual form submission endpoint
-            const response = await fetch('https://api.example.com/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
+        formData.forEach((value, key) => {
+            jsonData[key] = value;
+        });
 
+        fetch(contactForm.action, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        })
+        .then(response => {
             if (response.ok) {
-                alert('Message sent successfully!');
+                alert('Thank you for your message! We will get back to you soon.');
                 contactForm.reset();
             } else {
-                throw new Error('Failed to send message');
+                alert('Failed to send message.');
             }
-        } catch (error) {
-            alert('Error sending message. Please try again later.');
+        })
+        .catch(error => {
             console.error('Error:', error);
-        }
+            alert('An error occurred while sending the message.');
+        });
     });
 }
-
 // Download CV
 const downloadBtn = document.querySelector('.download-cv');
 if (downloadBtn) {
