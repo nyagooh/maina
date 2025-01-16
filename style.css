@@ -1077,7 +1077,10 @@ nav {
   font-size: 2rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  background: rgba(var(--primary-rgb), 0.1);
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  display: inline-block;
 }
 
 .stat-text {
@@ -1231,9 +1234,9 @@ nav {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3rem;
-  justify-items: center;
+  padding: 2rem;
 }
 
 .skill-circle {
@@ -1303,21 +1306,20 @@ nav {
 }
 
 .skill-name {
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--text-color);
-  font-size: 1.4rem;
-  font-weight: 600;
   margin: 1rem 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .percent {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--primary-color);
-  background: rgba(var(--primary-rgb), 0.1);
-  padding: 0.4rem 1.2rem;
-  border-radius: 20px;
-  display: inline-block;
+  text-align: center;
+  margin-top: 0.5rem;
+  display: block;
 }
 
 /* Skills Section Dark Mode Adjustment */
@@ -1350,8 +1352,66 @@ nav {
 .skill-circle[data-skill="docker"] .progress-bar,
 .skill-circle[data-skill="aws"] .progress-bar,
 .skill-circle[data-skill="git"] .progress-bar {
-  stroke: #ffffff;
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+  stroke: var(--primary-color);
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 2rem 1rem;
+  }
+
+  .skill-circle {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill-progress {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+    margin: 1.2rem 0;
+  }
+
+  .percent {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  .skill-circle {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .skill-progress {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+  }
+
+  .skill-name {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+  }
+
+  .percent {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    display: block;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1580,6 +1640,115 @@ nav {
 
   .percent {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #hero {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .image-container {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .typed-wrapper {
+    font-size: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .skill-circle {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .skill-circle {
+    width: auto;
+    padding: 1rem;
+  }
+
+  .skill-progress {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+  }
+
+  .skill-icon {
+    font-size: 1.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .percent {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skill-circle {
+    width: auto;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  .skill-progress {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.2rem;
+  }
+
+  .skill-icon {
+    font-size: 1.8rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .percent {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
   }
 }
 
