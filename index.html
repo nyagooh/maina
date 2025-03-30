@@ -1,94 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anne maina</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- Tailwind CSS CDN with dark mode support -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind Configuration
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['DM Sans', 'sans-serif'],
+            },
+            colors: {
+              dark: {
+                DEFAULT: '#111827', // --bg-darker from style.css
+                800: '#1f2937',     // --bg-dark from style.css
+                700: '#374151'      // slightly lighter shade for cards
+              }
+            }
+          }
+        }
+      }
+
+      // Dark mode initialization
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
-  <body class="light-mode">
-    <nav>
-      <div class="nav-content">
-        <h1>Nyagooh</h1>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#blogs">Blog</a>
-          <a href="#contact">Contact</a>
+  <body class="bg-white text-gray-800 dark:bg-dark dark:text-gray-100 font-['DM_Sans'] overflow-x-hidden select-none transition-all duration-300">
+    <nav class="fixed w-full py-4 px-8 bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50 dark:bg-dark dark:bg-opacity-90 transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-8 flex justify-between items-center">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-indigo-400 bg-clip-text text-transparent">Nyagooh</h1>
+        <div class="hidden md:flex gap-8">
+          <a href="#about" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">About</a>
+          <a href="#services" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">Services</a>
+          <a href="#projects" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">Projects</a>
+          <a href="#blogs" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">Blog</a>
+          <a href="#contact" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">Contact</a>
         </div>
-        <div class="nav-right">
-          <div class="mobile-menu-btn">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="flex items-center gap-4">
+          <div class="md:hidden cursor-pointer z-50">
+            <div class="w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1.5 transition-all duration-300"></div>
+            <div class="w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1.5 transition-all duration-300"></div>
+            <div class="w-6 h-0.5 bg-gray-800 dark:bg-gray-100 transition-all duration-300"></div>
           </div>
-          <button id="theme-toggle">🌙</button>
+          <button id="theme-toggle" class="text-2xl bg-transparent border-none cursor-pointer p-2 ml-4">🌙</button>
         </div>
       </div>
     </nav>
 
-    <section id="hero">
-      <div class="hero-content">
-        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
-          <span class="greeting">Hello World! 👋</span>
-          <h1 class="animate__animated animate__fadeIn">I'm Ann Maina</h1>
-          <div class="typed-wrapper">
-            <span class="typed-prefix">I craft </span>
+    <section id="hero" class="min-h-screen pt-32 pb-16 px-4 md:px-8 lg:px-16">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div class="w-full md:w-1/2 mb-12 md:mb-0 md:pr-8" data-aos="fade-right" data-aos-duration="1000">
+          <span class="inline-block bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 px-4 py-2 rounded-full text-sm font-medium mb-4">Hello World! 👋</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate__animated animate__fadeIn">I'm Ann Maina</h1>
+          <div class="text-2xl md:text-3xl text-indigo-500 dark:text-indigo-400 mb-6">
+            <span>I craft </span>
             <span class="typed-text"></span>
           </div>
-          <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+          <p class="text-gray-600 dark:text-gray-300 text-lg mb-8" data-aos="fade-up" data-aos-delay="200">
             A passionate software engineer and designer, transforming ideas into elegant digital experiences. Based in Kenya, working worldwide.
           </p>
-          <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
-            <a href="#projects" class="primary-btn">View My Work</a>
-            <a href="#contact" class="secondary-btn">Let's Connect</a>
+          <div class="flex flex-wrap gap-4 mb-8" data-aos="fade-up" data-aos-delay="400">
+            <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-400 hover:from-indigo-600 hover:to-indigo-500 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">View My Work</a>
+            <a href="#contact" class="px-6 py-3 bg-transparent border-2 border-indigo-500 text-indigo-500 dark:text-indigo-400 dark:border-indigo-400 hover:bg-indigo-500 hover:text-white font-medium rounded-lg transition-all duration-300">Let's Connect</a>
           </div>
-          <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
-            <a href="https://github.com/nyagooh" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="https://medium.com/@nyagooh" target="_blank" class="social-icon"><i class="fab fa-medium"></i></a>
+          <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="600">
+            <a href="https://github.com/nyagooh" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-indigo-100 text-gray-700 hover:text-indigo-600 dark:bg-gray-800 dark:hover:bg-indigo-900 dark:text-gray-300 dark:hover:text-indigo-400 transition-all duration-300"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-indigo-100 text-gray-700 hover:text-indigo-600 dark:bg-gray-800 dark:hover:bg-indigo-900 dark:text-gray-300 dark:hover:text-indigo-400 transition-all duration-300"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@nyagooh" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-indigo-100 text-gray-700 hover:text-indigo-600 dark:bg-gray-800 dark:hover:bg-indigo-900 dark:text-gray-300 dark:hover:text-indigo-400 transition-all duration-300"><i class="fab fa-medium"></i></a>
           </div>
         </div>
-        <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
-          <div class="image-container">
-            <img src="public/background-Q6xxD.jpg" alt="Ann Maina">
+        <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500">
+            <img src="public/background-Q6xxD.jpg" alt="Ann Maina" class="w-full h-auto object-cover">
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" data-aos="fade-up">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="public/IMG_0244.JPG" alt="Anne Maina">
-          <div class="about-shape"></div>
+    <section id="about" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-dark" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <img src="public/IMG_0244.JPG" alt="Anne Maina" class="rounded-lg shadow-xl z-10 relative">
+          <div class="absolute -bottom-6 -right-6 w-full h-full bg-indigo-100 dark:bg-indigo-900 rounded-lg -z-10"></div>
         </div>
-        <div class="about-content">
-          <h2>About Me</h2>
-          <p>I'm a passionate software engineer, web designer, and product manager with a strong commitment to creating innovative solutions that enhance user experiences and drive business success. With expertise in Go, JavaScript, and modern web technologies, I create efficient, scalable solutions and enjoy solving complex problems.</p>
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-number">3+</span>
-              <span class="stat-text">Years Experience</span>
+        <div class="space-y-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6">About Me</h2>
+          <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">I'm a passionate software engineer, web designer, and product manager with a strong commitment to creating innovative solutions that enhance user experiences and drive business success. With expertise in Go, JavaScript, and modern web technologies, I create efficient, scalable solutions and enjoy solving complex problems.</p>
+          <div class="grid grid-cols-3 gap-4 my-8">
+            <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">3+</span>
+              <span class="text-gray-600 dark:text-gray-300">Years Experience</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-number">20+</span>
-              <span class="stat-text">Projects Completed</span>
+            <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">20+</span>
+              <span class="text-gray-600 dark:text-gray-300">Projects Completed</span>
             </div>
-            <div class="stat-item">
-              <span class="stat-number">8+</span>
-              <span class="stat-text">Technical Articles</span>
+            <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">8+</span>
+              <span class="text-gray-600 dark:text-gray-300">Technical Articles</span>
             </div>
           </div>
-          <div class="about-buttons">
-            <button class="download-cv">
-              <span class="button-text">Download CV</span>
-              <span class="button-icon">
+          <div>
+            <button class="flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+              <span class="mr-2">Download CV</span>
+              <span>
                 <i class="fas fa-download"></i>
               </span>
             </button>
@@ -97,108 +125,108 @@
       </div>
     </section>
 
-    <section id="skills" data-aos="fade-up">
-      <h2>My Skills</h2>
-      <div class="skills-container">
-        <div class="skills-grid">
-          <div class="skill-circle" data-percent="95" data-skill="go">
-            <div class="skill-progress">
-              <svg viewBox="0 0 100 100">
-                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+    <section id="skills" class="py-20 px-4 md:px-8 lg:px-16 dark:bg-dark" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">My Skills</h2>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center transition-transform duration-300 hover:transform hover:scale-105" data-percent="95" data-skill="go">
+            <div class="relative w-24 h-24 mb-4">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle class="text-gray-200 dark:text-gray-600 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40"></circle>
+                <circle class="text-indigo-500 dark:text-indigo-400 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="12.56"></circle>
               </svg>
-              <div class="skill-icon">
+              <div class="absolute inset-0 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl">
                 <i class="fab fa-golang"></i>
               </div>
             </div>
-            <div class="skill-name">Go</div>
-            <div class="percent">
-              <span class="number" data-value="95">0</span>%
+            <div class="font-medium text-gray-800 dark:text-white text-lg">Go</div>
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold">
+              <span class="number" data-value="95">95</span>%
             </div>
           </div>
 
-          <div class="skill-circle" data-percent="90" data-skill="js">
-            <div class="skill-progress">
-              <svg viewBox="0 0 100 100">
-                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center transition-transform duration-300 hover:transform hover:scale-105" data-percent="90" data-skill="js">
+            <div class="relative w-24 h-24 mb-4">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle class="text-gray-200 dark:text-gray-600 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40"></circle>
+                <circle class="text-indigo-500 dark:text-indigo-400 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="25.12"></circle>
               </svg>
-              <div class="skill-icon">
+              <div class="absolute inset-0 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl">
                 <i class="fab fa-js"></i>
               </div>
             </div>
-            <div class="skill-name">JavaScript</div>
-            <div class="percent">
-              <span class="number" data-value="90">0</span>%
+            <div class="font-medium text-gray-800 dark:text-white text-lg">JavaScript</div>
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold">
+              <span class="number" data-value="90">90</span>%
             </div>
           </div>
 
-          <div class="skill-circle" data-percent="85" data-skill="python">
-            <div class="skill-progress">
-              <svg viewBox="0 0 100 100">
-                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center transition-transform duration-300 hover:transform hover:scale-105" data-percent="85" data-skill="python">
+            <div class="relative w-24 h-24 mb-4">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle class="text-gray-200 dark:text-gray-600 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40"></circle>
+                <circle class="text-indigo-500 dark:text-indigo-400 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="37.68"></circle>
               </svg>
-              <div class="skill-icon">
+              <div class="absolute inset-0 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl">
                 <i class="fab fa-python"></i>
               </div>
             </div>
-            <div class="skill-name">Python</div>
-            <div class="percent">
-              <span class="number" data-value="85">0</span>%
+            <div class="font-medium text-gray-800 dark:text-white text-lg">Python</div>
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold">
+              <span class="number" data-value="85">85</span>%
             </div>
           </div>
 
-          <div class="skill-circle" data-percent="90" data-skill="react">
-            <div class="skill-progress">
-              <svg viewBox="0 0 100 100">
-                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center transition-transform duration-300 hover:transform hover:scale-105" data-percent="90" data-skill="react">
+            <div class="relative w-24 h-24 mb-4">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle class="text-gray-200 dark:text-gray-600 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40"></circle>
+                <circle class="text-indigo-500 dark:text-indigo-400 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="25.12"></circle>
               </svg>
-              <div class="skill-icon">
+              <div class="absolute inset-0 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl">
                 <i class="fab fa-react"></i>
               </div>
             </div>
-            <div class="skill-name">React</div>
-            <div class="percent">
-              <span class="number" data-value="90">0</span>%
+            <div class="font-medium text-gray-800 dark:text-white text-lg">React</div>
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold">
+              <span class="number" data-value="90">90</span>%
             </div>
           </div>
 
-          <div class="skill-circle" data-percent="85" data-skill="vue">
-            <div class="skill-progress">
-              <svg viewBox="0 0 100 100">
-                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center transition-transform duration-300 hover:transform hover:scale-105" data-percent="85" data-skill="vue">
+            <div class="relative w-24 h-24 mb-4">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle class="text-gray-200 dark:text-gray-600 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40"></circle>
+                <circle class="text-indigo-500 dark:text-indigo-400 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="37.68"></circle>
               </svg>
-              <div class="skill-icon">
+              <div class="absolute inset-0 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl">
                 <i class="fab fa-vuejs"></i>
               </div>
             </div>
-            <div class="skill-name">Vue.js</div>
-            <div class="percent">
-              <span class="number" data-value="85">0</span>%
+            <div class="font-medium text-gray-800 dark:text-white text-lg">Vue.js</div>
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold">
+              <span class="number" data-value="85">85</span>%
             </div>
           </div>
 
-          <div class="skill-circle" data-percent="95" data-skill="docker">
-            <div class="skill-progress">
-              <svg viewBox="0 0 100 100">
-                <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
+          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center transition-transform duration-300 hover:transform hover:scale-105" data-percent="95" data-skill="docker">
+            <div class="relative w-24 h-24 mb-4">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle class="text-gray-200 dark:text-gray-600 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40"></circle>
+                <circle class="text-indigo-500 dark:text-indigo-400 stroke-current" stroke-width="8" fill="transparent" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="12.56"></circle>
               </svg>
-              <div class="skill-icon">
+              <div class="absolute inset-0 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl">
                 <i class="fab fa-docker"></i>
               </div>
             </div>
-            <div class="skill-name">Docker</div>
-            <div class="percent">
-              <span class="number" data-value="95">0</span>%
+            <div class="font-medium text-gray-800 dark:text-white text-lg">Docker</div>
+            <div class="text-indigo-600 dark:text-indigo-400 font-bold">
+              <span class="number" data-value="95">95</span>%
             </div>
           </div>
 
-          <div class="skill-circle" data-percent="90" data-skill="aws">
-            <div class="skill-progress">
+          <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col items-center transition-transform duration-300 hover:transform hover:scale-105" data-percent="90" data-skill="aws">
+            <div class="relative w-24 h-24 mb-4">
               <svg viewBox="0 0 100 100">
                 <circle class="progress-bg" cx="50" cy="50" r="40"></circle>
                 <circle class="progress-bar" cx="50" cy="50" r="40"></circle>
@@ -232,273 +260,273 @@
       </div>
     </section>
 
-    <section id="services" data-aos="fade-up">
-      <h2>Services</h2>
-      <div class="services-container">
-        <div class="service-card">
-          <div class="service-icon">
+    <section id="services" class="py-20 px-4 md:px-8 lg:px-16 bg-white dark:bg-dark" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Services</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
             <i class="fas fa-code"></i>
           </div>
-          <h3>Front-end Development</h3>
-          <p>Develop responsive and interactive web applications using modern technologies for a seamless user experience.</p>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Front-end Development</h3>
+          <p class="text-gray-600 dark:text-gray-300">Develop responsive and interactive web applications using modern technologies for a seamless user experience.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
+        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
             <i class="fas fa-mobile-alt"></i>
           </div>
-          <h3>UI/UX Design</h3>
-          <p>Create engaging user interfaces and experiences that enhance usability and foster user satisfaction.</p>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">UI/UX Design</h3>
+          <p class="text-gray-600 dark:text-gray-300">Create engaging user interfaces and experiences that enhance usability and foster user satisfaction.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
+        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
             <i class="fas fa-server"></i>
           </div>
-          <h3>Backend Development</h3>
-          <p>Build robust server-side applications and APIs that ensure seamless data processing and management.</p>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Backend Development</h3>
+          <p class="text-gray-600 dark:text-gray-300">Build robust server-side applications and APIs that ensure seamless data processing and management.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
+        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
             <i class="fas fa-database"></i>
           </div>
-          <h3>Data Visualization</h3>
-          <p>Transform complex data into clear insights through interactive charts and dashboards, enabling informed decision-making.</p>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Data Visualization</h3>
+          <p class="text-gray-600 dark:text-gray-300">Transform complex data into clear insights through interactive charts and dashboards, enabling informed decision-making.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
+        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
             <i class="fas fa-pen"></i>
           </div>
-          <h3>Technical writing</h3>
-          <p>Write Technical articles that conveys complex information in a clear and concise manner</p>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Technical writing</h3>
+          <p class="text-gray-600 dark:text-gray-300">Write Technical articles that conveys complex information in a clear and concise manner</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
+        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
             <i class="fas fa-users"></i>
           </div>
-          <h3>Running Technical Communities</h3>
-          <p>Foster collaboration and knowledge sharing among tech enthusiasts through organized events and online platforms.</p>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Running Technical Communities</h3>
+          <p class="text-gray-600 dark:text-gray-300">Foster collaboration and knowledge sharing among tech enthusiasts through organized events and online platforms.</p>
         </div>
       </div>
     </section>
 
-    <section id="projects" data-aos="fade-up">
-      <h2>Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="public/Screenshot from 2024-11-15 02-06-23.png" alt="Project 1">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://a1professionalcleaning.dorik.io/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/nyagooh/a1-professional-cleaning.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+    <section id="projects" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-dark" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Featured Projects</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative overflow-hidden group">
+            <img src="public/Screenshot from 2024-11-15 02-06-23.png" alt="Project 1" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex space-x-4">
+                <a href="https://a1professionalcleaning.dorik.io/" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/a1-professional-cleaning.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>A1 Professional Cleaning Website</h3>
-            <p>A full-stack e-commerce solution with React and Node.js</p>
-            <div class="project-tags">
-              <span>JavaScript</span>
-              <span>Css</span>
-              <span>HTML</span>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">A1 Professional Cleaning Website</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A full-stack e-commerce solution with React and Node.js</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Css</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">HTML</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="public/peerfund (1).png" alt="Project 2">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+        <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative overflow-hidden group">
+            <img src="public/peerfund (1).png" alt="Project 2" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>PeerFund</h3>
-            <p>A decentralized application that enables peer-to-peer funding using blockchain technology.</p>
-            <div class="project-tags">
-              <span>Blockchain</span>
-              <span>Golang</span>
-              <span>Javascript</span>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">PeerFund</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A decentralized application that enables peer-to-peer funding using blockchain technology.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Blockchain</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Golang</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Javascript</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="public/git.jpg" alt="Project 3">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://github.com/nyagooh/git.git" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/nyagooh/git.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+        <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative overflow-hidden group">
+            <img src="public/git.jpg" alt="Project 3" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/nyagooh/git.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/git.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>Git Project</h3>
-            <p>A collaborative platform for version control using Git that enhances team productivity.</p>
-            <div class="project-tags">
-              <span>Git</span>
-              <span>GitHub</span>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Git Project</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A collaborative platform for version control using Git that enhances team productivity.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Git</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">GitHub</span>
             </div>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="public/caestudy..jpg" alt="Project 4">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+        <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative overflow-hidden group">
+            <img src="public/caestudy..jpg" alt="Project 4" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>User Research Case study</h3>
-            <p>A Research on users and their needs in a user research project</p>
-            <div class="project-tags">
-              <span>Figjam</span>
-              <span>User Journey</span>
-              <span>User Personas</span>
-              <span>User flow</span>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">User Research Case study</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A Research on users and their needs in a user research project</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Figjam</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">User Journey</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">User Personas</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">User flow</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-button">
-        <a href="#" class="view-more">View More Projects <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </section>
-
-    <section id="blogs" data-aos="fade-up">
-      <h2>Latest Blog Posts</h2>
-      <div class="blogs-grid">
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="public/illustration1.jpg" alt="Blog 1">
-            <span class="blog-category">UI/UX</span>
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span><i class="far fa-calendar"></i> Jan 6, 2025</span>
-              <span><i class="far fa-clock"></i> 5 min read</span>
-            </div>
-            <h3>Usability testing</h3>
-            <p>Usability testing is testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it.</p>
-            <a href="https://medium.com/@nyagooh/usability-testing-67a400746dbc" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="public/illustration3.jpg" alt="Blog 2">
-            <span class="blog-category">UI/UX</span>
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span><i class="far fa-calendar"></i> Jan 4, 2025</span>
-              <span><i class="far fa-clock"></i> 5 min read</span>
-            </div>
-            <h3>UX Design</h3>
-            <p>A comprehensive guide to UX design principles and best practices for creating user-friendly digital experiences.</p>
-            <a href="https://medium.com/@nyagooh/ux-design-403997ea0605" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="public/illustration2.jpg" alt="Blog 3">
-            <span class="blog-category">UI/UX</span>
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span><i class="far fa-calendar"></i> Jan 2, 2025</span>
-              <span><i class="far fa-clock"></i> 5 min read</span>
-            </div>
-            <h3>Design thinking</h3>
-            <p>What is Design thinking? It is a non-linear process that a team uses to understand users, challenge assumptions, redefine problems and create innovative solutions.</p>
-            <a href="https://medium.com/@nyagooh/design-thinking-d720659c7a98" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <article class="blog-card">
-          <div class="blog-image">
-            <img src="public/ui1.jpg" alt="Blog 4">
-            <span class="blog-category">UI/UX</span>
-          </div>
-          <div class="blog-content">
-            <div class="blog-meta">
-              <span><i class="far fa-calendar"></i> Jan 1, 2025</span>
-              <span><i class="far fa-clock"></i> 5 min read</span>
-            </div>
-            <h3>Information architecture</h3>
-            <p>A deep dive into information architecture and its vital role in creating user-friendly, organized, and efficient digital experiences.</p>
-            <a href="https://medium.com/@nyagooh/information-architecture-ai-ce4b9a7f15e" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-      </div>
-      <div class="section-button">
-        <a href="#" class="view-more">View All Posts <i class="fas fa-arrow-right"></i></a>
+      <div class="flex justify-center mt-12">
+        <a href="#" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2">View More Projects <i class="fas fa-arrow-right"></i></a>
       </div>
     </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>Get in Touch</h2>
-      <div class="contact-container">
-        <div class="contact-info-grid">
-          <div class="contact-item">
-            <div class="contact-icon">
+    <section id="blogs" class="py-20 px-4 md:px-8 lg:px-16 bg-white dark:bg-dark" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Latest Blog Posts</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative">
+            <img src="public/illustration1.jpg" alt="Blog 1" class="w-full h-56 object-cover">
+            <span class="absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">UI/UX</span>
+          </div>
+          <div class="p-6">
+            <div class="flex text-gray-500 dark:text-gray-400 text-sm mb-3 gap-4">
+              <span class="flex items-center"><i class="far fa-calendar mr-2"></i> Jan 6, 2025</span>
+              <span class="flex items-center"><i class="far fa-clock mr-2"></i> 5 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Usability testing</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Usability testing is testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it.</p>
+            <a href="https://medium.com/@nyagooh/usability-testing-67a400746dbc" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 inline-flex items-center transition-colors duration-300">Read More <i class="fas fa-arrow-right ml-2"></i></a>
+          </div>
+        </article>
+        <article class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative">
+            <img src="public/illustration3.jpg" alt="Blog 2" class="w-full h-56 object-cover">
+            <span class="absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">UI/UX</span>
+          </div>
+          <div class="p-6">
+            <div class="flex text-gray-500 dark:text-gray-400 text-sm mb-3 gap-4">
+              <span class="flex items-center"><i class="far fa-calendar mr-2"></i> Jan 4, 2025</span>
+              <span class="flex items-center"><i class="far fa-clock mr-2"></i> 5 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">UX Design</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A comprehensive guide to UX design principles and best practices for creating user-friendly digital experiences.</p>
+            <a href="https://medium.com/@nyagooh/ux-design-403997ea0605" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 inline-flex items-center transition-colors duration-300">Read More <i class="fas fa-arrow-right ml-2"></i></a>
+          </div>
+        </article>
+        <article class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative">
+            <img src="public/illustration2.jpg" alt="Blog 3" class="w-full h-56 object-cover">
+            <span class="absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">UI/UX</span>
+          </div>
+          <div class="p-6">
+            <div class="flex text-gray-500 dark:text-gray-400 text-sm mb-3 gap-4">
+              <span class="flex items-center"><i class="far fa-calendar mr-2"></i> Jan 2, 2025</span>
+              <span class="flex items-center"><i class="far fa-clock mr-2"></i> 5 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Design thinking</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">What is Design thinking? It is a non-linear process that a team uses to understand users, challenge assumptions, redefine problems and create innovative solutions.</p>
+            <a href="https://medium.com/@nyagooh/design-thinking-d720659c7a98" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 inline-flex items-center transition-colors duration-300">Read More <i class="fas fa-arrow-right ml-2"></i></a>
+          </div>
+        </article>
+        <article class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative">
+            <img src="public/ui1.jpg" alt="Blog 4" class="w-full h-56 object-cover">
+            <span class="absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">UI/UX</span>
+          </div>
+          <div class="p-6">
+            <div class="flex text-gray-500 dark:text-gray-400 text-sm mb-3 gap-4">
+              <span class="flex items-center"><i class="far fa-calendar mr-2"></i> Jan 1, 2025</span>
+              <span class="flex items-center"><i class="far fa-clock mr-2"></i> 5 min read</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Information architecture</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A deep dive into information architecture and its vital role in creating user-friendly, organized, and efficient digital experiences.</p>
+            <a href="https://medium.com/@nyagooh/information-architecture-ai-ce4b9a7f15e" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 inline-flex items-center transition-colors duration-300">Read More <i class="fas fa-arrow-right ml-2"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="flex justify-center mt-12">
+        <a href="#" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2">View All Posts <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-dark" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Get in Touch</h2>
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-dark-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl mb-4">
               <i class="fas fa-envelope"></i>
             </div>
-            <h3>Email</h3>
-            <p>annmaina614@gmail.com</p>
-            <a href="mailto:annmaina614@gmail.com" class="contact-link">Send Email</a>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Email</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">annmaina614@gmail.com</p>
+            <a href="mailto:annmaina614@gmail.com" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">Send Email</a>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
+          <div class="bg-white dark:bg-dark-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl mb-4">
               <i class="fas fa-phone"></i>
             </div>
-            <h3>Phone</h3>
-            <p>+254724318117</p>
-            <a href="tel:+254724318117" class="contact-link">Call Now</a>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Phone</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">+254724318117</p>
+            <a href="tel:+254724318117" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">Call Now</a>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
+          <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center md:col-span-2">
+            <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl mb-4">
               <i class="fas fa-map-marker-alt"></i>
             </div>
-            <h3>Location</h3>
-            <p>Nairobi, Kenya</p>
-            <a href="https://maps.google.com/?q=Nairobi,Kenya" target="_blank" class="contact-link">View on Map</a>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Location</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Nairobi, Kenya</p>
+            <a href="https://maps.google.com/?q=Nairobi,Kenya" target="_blank" class="text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">View on Map</a>
           </div>
         </div>
-        <form class="contact-form" action="https://formspree.io/f/mpwwkezp" method="POST">
-          <div class="form-header">
-            <h3>Send Message</h3>
-            <p>Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
+        <form class="bg-white dark:bg-dark-700 rounded-xl p-8 shadow-lg" action="https://formspree.io/f/mpwwkezp" method="POST">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Send Message</h3>
+            <p class="text-gray-600 dark:text-gray-300">Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
           </div>
-          <div class="form-group">
-            <div class="input-container">
-              <i class="fas fa-user"></i>
-              <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required />
+          <div class="mb-4">
+            <div class="relative">
+              <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required class="w-full py-3 pl-10 pr-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300" />
             </div>
           </div>
-          <div class="form-group">
-            <div class="input-container">
-              <i class="fas fa-envelope"></i>
-              <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required />
+          <div class="mb-4">
+            <div class="relative">
+              <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email" required class="w-full py-3 pl-10 pr-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300" />
             </div>
           </div>
-          <div class="form-group">
-            <div class="input-container">
-              <i class="fas fa-pen"></i>
-              <input type="number" id="number" name="number" placeholder="Your Number" autocomplete="number" required />
+          <div class="mb-4">
+            <div class="relative">
+              <i class="fas fa-pen absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input type="number" id="number" name="number" placeholder="Your Number" autocomplete="number" required class="w-full py-3 pl-10 pr-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300" />
             </div>
           </div>
-          <div class="form-group">
-            <div class="input-container">
-              <i class="fas fa-comment-alt"></i>
-              <textarea name="message" placeholder="Your Message" required></textarea>
+          <div class="mb-6">
+            <div class="relative">
+              <i class="fas fa-comment-alt absolute left-3 top-4 text-gray-400"></i>
+              <textarea name="message" placeholder="Your Message" required class="w-full py-3 pl-10 pr-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 min-h-[120px]"></textarea>
             </div>
           </div>
-          <button type="submit" class="submit-btn">
-            <span class="button-text">Send Message</span>
-            <span class="button-icon">
+          <button type="submit" class="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-700 hover:to-indigo-600 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+            <span>Send Message</span>
+            <span>
               <i class="fas fa-paper-plane"></i>
             </span>
           </button>
@@ -506,51 +534,94 @@
       </div>
     </section>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Anne Maina</h3>
-          <p>Software Engineer & Web Designer</p>
-          <div class="social-links">
-            <a href="https://github.com/nyagooh" target="_blank" class="social-link" aria-label="GitHub">
-              <i class="fab fa-github"></i>
+    <footer class="bg-dark-800 text-white pt-16 pb-8 px-4 md:px-8 lg:px-16">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="col-span-1">
+          <h3 class="text-2xl font-bold mb-4"><span class="text-indigo-500">Anne</span> Maina</h3>
+          <p class="text-gray-400 mb-6">Software Engineer & Web Designer</p>
+          <div class="flex space-x-4">
+            <a href="https://github.com/nyagooh" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors duration-300" aria-label="GitHub">
+              <i class="fab fa-github text-white"></i>
             </a>
-            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="social-link" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors duration-300" aria-label="LinkedIn">
+              <i class="fab fa-linkedin text-white"></i>
             </a>
-            <a href="https://medium.com/@nyagooh" target="_blank" class="social-link" aria-label="Medium">
-              <i class="fab fa-medium"></i>
+            <a href="https://medium.com/@nyagooh" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors duration-300" aria-label="Medium">
+              <i class="fab fa-medium text-white"></i>
             </a>
-            <a href="https://twitter.com/@__nyagooh" target="_blank" class="social-link" aria-label="X (formerly Twitter)">
-              <i class="fa-brands fa-x-twitter"></i>
+            <a href="https://twitter.com/@__nyagooh" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors duration-300" aria-label="X (formerly Twitter)">
+              <i class="fa-brands fa-x-twitter text-white"></i>
             </a>
           </div>
         </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-            <ul class="footer-nav-list">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#blogs">Blog</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">About</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Services</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Projects</a></li>
+            <li><a href="#blogs" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Blog</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">Contact</a></li>
+          </ul>
         </div>
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> annmaina614@gmail.com</p>
-            <p><i class="fas fa-phone"></i> +254724318117</p>
-            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Contact Info</h3>
+          <div class="space-y-4">
+            <p class="flex items-center text-gray-400"><i class="fas fa-envelope text-indigo-500 mr-3"></i> annmaina614@gmail.com</p>
+            <p class="flex items-center text-gray-400"><i class="fas fa-phone text-indigo-500 mr-3"></i> +254724318117</p>
+            <p class="flex items-center text-gray-400"><i class="fas fa-map-marker-alt text-indigo-500 mr-3"></i> Nairobi, Kenya</p>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Anne Maina. All rights reserved.</p>
-        <div class="footer-shape"></div>
+      <div class="border-t border-gray-800 pt-6 max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2024 Anne Maina. All rights reserved.</p>
+        <div class="bg-gradient-to-r from-indigo-600 to-indigo-400 h-1 w-24 rounded-full hidden md:block"></div>
       </div>
     </footer>
+    <!-- Dark Mode Toggle Script -->
+    <script>
+      // Initialize AOS
+      document.addEventListener('DOMContentLoaded', () => {
+        AOS.init();
+      });
+
+      // Dark mode toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlElement = document.documentElement;
+      
+      // Function to update theme and icon
+      function updateTheme(isDark) {
+        // Update HTML classes for Tailwind dark mode
+        if (isDark) {
+          htmlElement.classList.add('dark');
+        } else {
+          htmlElement.classList.remove('dark');
+        }
+        
+        // Update toggle button icon
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        
+        // Save theme preference
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      }
+      
+      // Set initial theme based on saved preference or system preference
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme) {
+        updateTheme(savedTheme === 'dark');
+      } else {
+        updateTheme(prefersDark);
+      }
+      
+      // Handle theme toggle click
+      themeToggle.addEventListener('click', () => {
+        const isDark = !htmlElement.classList.contains('dark');
+        updateTheme(isDark);
+      });
+    </script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
