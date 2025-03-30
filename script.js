@@ -84,19 +84,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    const htmlElement = document.documentElement;
     
     // Function to update theme and icon
     function updateTheme(isDark) {
-        // Update body classes
-        body.classList.toggle('dark-mode', isDark);
-        body.classList.toggle('light-mode', !isDark);
+        // Update HTML classes for Tailwind dark mode
+        if (isDark) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
         
         // Update toggle button icon
         themeToggle.textContent = isDark ? '☀️' : '🌙';
         
         // Save theme preference
-        localStorage.setItem('theme', isDark ? 'dark-mode' : 'light-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
     
     // Set initial theme based on saved preference or system preference
@@ -104,14 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     if (savedTheme) {
-        updateTheme(savedTheme === 'dark-mode');
+        updateTheme(savedTheme === 'dark');
     } else {
         updateTheme(prefersDark);
     }
     
     // Handle theme toggle click
     themeToggle.addEventListener('click', () => {
-        const isDark = !body.classList.contains('dark-mode');
+        const isDark = !htmlElement.classList.contains('dark');
         updateTheme(isDark);
     });
     
