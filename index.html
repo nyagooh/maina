@@ -42,6 +42,7 @@
     <nav class="fixed w-full py-4 px-8 bg-white bg-opacity-80 backdrop-blur-md shadow-sm z-50 dark:bg-dark dark:bg-opacity-90 transition-all duration-300">
       <div class="max-w-6xl mx-auto px-8 flex justify-between items-center">
         <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-indigo-400 bg-clip-text text-transparent">Nyagooh</h1>
+        <!-- Desktop Navigation Menu -->
         <div class="hidden md:flex gap-8">
           <a href="#about" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">About</a>
           <a href="#services" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">Services</a>
@@ -50,12 +51,24 @@
           <a href="#contact" class="text-gray-800 dark:text-gray-100 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-indigo-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300">Contact</a>
         </div>
         <div class="flex items-center gap-4">
-          <div class="md:hidden cursor-pointer z-50">
-            <div class="w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1.5 transition-all duration-300"></div>
-            <div class="w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1.5 transition-all duration-300"></div>
-            <div class="w-6 h-0.5 bg-gray-800 dark:bg-gray-100 transition-all duration-300"></div>
-          </div>
+          <!-- Hamburger Menu Button -->
+          <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer z-50" aria-label="Toggle menu">
+            <span class="hamburger-line w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1.5 transition-all duration-300"></span>
+            <span class="hamburger-line w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1.5 transition-all duration-300"></span>
+            <span class="hamburger-line w-6 h-0.5 bg-gray-800 dark:bg-gray-100 transition-all duration-300"></span>
+          </button>
           <button id="theme-toggle" class="text-2xl bg-transparent border-none cursor-pointer p-2 ml-4">🌙</button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="fixed top-0 left-0 w-full h-0 bg-white dark:bg-dark-800 z-40 overflow-hidden transition-all duration-500 ease-in-out">
+        <div class="container mx-auto px-4 py-20 flex flex-col items-center justify-start">
+          <a href="#about" class="mobile-menu-item py-4 text-2xl font-medium text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 opacity-0 transform translate-y-8">About</a>
+          <a href="#services" class="mobile-menu-item py-4 text-2xl font-medium text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 opacity-0 transform translate-y-8">Services</a>
+          <a href="#projects" class="mobile-menu-item py-4 text-2xl font-medium text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 opacity-0 transform translate-y-8">Projects</a>
+          <a href="#blogs" class="mobile-menu-item py-4 text-2xl font-medium text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 opacity-0 transform translate-y-8">Blog</a>
+          <a href="#contact" class="mobile-menu-item py-4 text-2xl font-medium text-gray-800 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300 opacity-0 transform translate-y-8">Contact</a>
         </div>
       </div>
     </nav>
@@ -105,11 +118,11 @@
               <span class="text-gray-600 dark:text-gray-300">Years Experience</span>
             </div>
             <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">20+</span>
+              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">10+</span>
               <span class="text-gray-600 dark:text-gray-300">Projects Completed</span>
             </div>
             <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">8+</span>
+              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">5+</span>
               <span class="text-gray-600 dark:text-gray-300">Technical Articles</span>
             </div>
           </div>
@@ -145,59 +158,52 @@
         <!-- Skill Categories -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           <!-- Development Skills -->
-          <div class="relative group">
-            <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition-all duration-700 -z-10 transform group-hover:scale-105"></div>
-            <div class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-indigo-50 dark:border-indigo-900/30 transition-all duration-500 group-hover:shadow-indigo-500/10">
+          <div>
+            <div class="bg-white/80 dark:bg-dark-800/80 rounded-2xl p-8 border border-indigo-50 dark:border-indigo-900/30">
               <div class="flex items-center mb-8">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white mr-4 shadow-lg shadow-indigo-500/30">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500 flex items-center justify-center text-white mr-4">
                   <i class="fas fa-code text-xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">Development</h3>
+                <h3 class="text-2xl font-bold text-indigo-500 dark:text-indigo-400">Development</h3>
               </div>
               
               <!-- Development Skills -->
               <div class="space-y-8">
                 <!-- Go -->
-                <div class="transform transition-all duration-300 hover:translate-x-1">
-                  <div class="flex justify-between items-center mb-3">
+                <div>
+                  <div class="flex items-center mb-3">
                     <span class="text-gray-800 dark:text-white font-medium flex items-center">
                       <i class="fab fa-golang text-indigo-500 dark:text-indigo-400 mr-2"></i> Go
                     </span>
-                    <span class="text-indigo-600 dark:text-indigo-400 font-bold">95%</span>
                   </div>
                   <div class="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 relative" style="width: 95%">
-                      <div class="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-r from-transparent to-white/20 rounded-full"></div>
+                    <div class="h-full rounded-full bg-indigo-500 relative" style="width: 95%">
                     </div>
                   </div>
                 </div>
                 
                 <!-- JavaScript -->
-                <div class="transform transition-all duration-300 hover:translate-x-1">
-                  <div class="flex justify-between items-center mb-3">
+                <div>
+                  <div class="flex items-center mb-3">
                     <span class="text-gray-800 dark:text-white font-medium flex items-center">
                       <i class="fab fa-js text-indigo-500 dark:text-indigo-400 mr-2"></i> JavaScript
                     </span>
-                    <span class="text-indigo-600 dark:text-indigo-400 font-bold">90%</span>
                   </div>
                   <div class="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 relative" style="width: 90%">
-                      <div class="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-r from-transparent to-white/20 rounded-full"></div>
+                    <div class="h-full rounded-full bg-indigo-500 relative" style="width: 90%">
                     </div>
                   </div>
                 </div>
                 
-                <!-- Python -->
-                <div class="transform transition-all duration-300 hover:translate-x-1">
-                  <div class="flex justify-between items-center mb-3">
+                <!-- Tailwind CSS -->
+                <div>
+                  <div class="flex items-center mb-3">
                     <span class="text-gray-800 dark:text-white font-medium flex items-center">
-                      <i class="fab fa-python text-indigo-500 dark:text-indigo-400 mr-2"></i> Python
+                      <i class="fab fa-css3 text-indigo-500 dark:text-indigo-400 mr-2"></i> Tailwind CSS
                     </span>
-                    <span class="text-indigo-600 dark:text-indigo-400 font-bold">85%</span>
                   </div>
                   <div class="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 relative" style="width: 85%">
-                      <div class="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-r from-transparent to-white/20 rounded-full"></div>
+                    <div class="h-full rounded-full bg-indigo-500 relative" style="width: 95%">
                     </div>
                   </div>
                 </div>
@@ -206,59 +212,52 @@
           </div>
           
           <!-- Design Skills -->
-          <div class="relative group">
-            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition-all duration-700 -z-10 transform group-hover:scale-105"></div>
-            <div class="bg-white/80 dark:bg-dark-800/80 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-purple-50 dark:border-purple-900/30 transition-all duration-500 group-hover:shadow-purple-500/10">
+          <div>
+            <div class="bg-white/80 dark:bg-dark-800/80 rounded-2xl p-8 border border-purple-50 dark:border-purple-900/30">
               <div class="flex items-center mb-8">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white mr-4 shadow-lg shadow-purple-500/30">
+                <div class="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center text-white mr-4">
                   <i class="fas fa-paint-brush text-xl"></i>
                 </div>
-                <h3 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Design</h3>
+                <h3 class="text-2xl font-bold text-purple-500 dark:text-purple-400">Design</h3>
               </div>
               
               <!-- Design Skills -->
               <div class="space-y-8">
                 <!-- UI/UX -->
-                <div class="transform transition-all duration-300 hover:translate-x-1">
-                  <div class="flex justify-between items-center mb-3">
+                <div>
+                  <div class="flex items-center mb-3">
                     <span class="text-gray-800 dark:text-white font-medium flex items-center">
                       <i class="fas fa-desktop text-purple-500 dark:text-purple-400 mr-2"></i> UI/UX Design
                     </span>
-                    <span class="text-purple-600 dark:text-purple-400 font-bold">92%</span>
                   </div>
                   <div class="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 relative" style="width: 92%">
-                      <div class="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-r from-transparent to-white/20 rounded-full"></div>
+                    <div class="h-full rounded-full bg-purple-500 relative" style="width: 92%">
                     </div>
                   </div>
                 </div>
                 
-                <!-- Figma -->
-                <div class="transform transition-all duration-300 hover:translate-x-1">
-                  <div class="flex justify-between items-center mb-3">
+                <!-- Wireframing -->
+                <div>
+                  <div class="flex items-center mb-3">
                     <span class="text-gray-800 dark:text-white font-medium flex items-center">
-                      <i class="fab fa-figma text-purple-500 dark:text-purple-400 mr-2"></i> Figma
+                      <i class="fas fa-pencil-ruler text-purple-500 dark:text-purple-400 mr-2"></i> Wireframing
                     </span>
-                    <span class="text-purple-600 dark:text-purple-400 font-bold">95%</span>
                   </div>
                   <div class="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 relative" style="width: 95%">
-                      <div class="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-r from-transparent to-white/20 rounded-full"></div>
+                    <div class="h-full rounded-full bg-purple-500 relative" style="width: 95%">
                     </div>
                   </div>
                 </div>
                 
-                <!-- Graphic Design -->
-                <div class="transform transition-all duration-300 hover:translate-x-1">
-                  <div class="flex justify-between items-center mb-3">
+                <!-- Prototyping -->
+                <div>
+                  <div class="flex items-center mb-3">
                     <span class="text-gray-800 dark:text-white font-medium flex items-center">
-                      <i class="fas fa-bezier-curve text-purple-500 dark:text-purple-400 mr-2"></i> Graphic Design
+                      <i class="fas fa-project-diagram text-purple-500 dark:text-purple-400 mr-2"></i> Prototyping
                     </span>
-                    <span class="text-purple-600 dark:text-purple-400 font-bold">88%</span>
                   </div>
                   <div class="w-full h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <div class="h-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 relative" style="width: 88%">
-                      <div class="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-r from-transparent to-white/20 rounded-full"></div>
+                    <div class="h-full rounded-full bg-purple-500 relative" style="width: 90%">
                     </div>
                   </div>
                 </div>
@@ -268,51 +267,39 @@
         </div>
         
         <!-- Additional Skills -->
-        <div class="relative">
-          <!-- Decorative Elements -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-32 bg-gradient-to-r from-indigo-500/5 via-purple-500/10 to-pink-500/5 blur-3xl -z-10 rounded-full"></div>
-          
+        <div>
           <h3 class="text-center mb-10">
-            <span class="inline-block px-6 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 dark:from-indigo-500/20 dark:to-purple-500/20 rounded-full text-sm font-medium text-indigo-600 dark:text-indigo-400">
+            <span class="inline-block px-6 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium text-indigo-600 dark:text-indigo-400">
               Additional Expertise
             </span>
           </h3>
           
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div class="grid grid-cols-3 gap-6 md:gap-8">
             <!-- DevOps -->
-            <div class="group bg-white/70 dark:bg-dark-800/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-indigo-50/50 dark:border-indigo-900/20 hover:border-indigo-200 dark:hover:border-indigo-700/30 transition-all duration-500 flex flex-col items-center text-center transform hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5">
-              <div class="w-16 h-16 bg-gradient-to-br from-indigo-500/10 to-indigo-600/20 dark:from-indigo-500/20 dark:to-indigo-600/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-indigo-500 group-hover:to-indigo-600 transition-all duration-500">
-                <i class="fab fa-docker text-2xl text-indigo-500 dark:text-indigo-400 group-hover:text-white transition-colors duration-500"></i>
+            <div class="bg-white dark:bg-dark-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mb-4">
+                <i class="fab fa-docker text-2xl text-indigo-500 dark:text-indigo-400"></i>
               </div>
-              <h4 class="font-bold text-gray-800 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">DevOps</h4>
+              <h4 class="font-bold text-gray-800 dark:text-white mb-2">DevOps</h4>
               <p class="text-gray-600 dark:text-gray-300 text-sm">Docker, Kubernetes, CI/CD</p>
             </div>
             
-            <!-- Cloud Services -->
-            <div class="group bg-white/70 dark:bg-dark-800/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-purple-50/50 dark:border-purple-900/20 hover:border-purple-200 dark:hover:border-purple-700/30 transition-all duration-500 flex flex-col items-center text-center transform hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/5">
-              <div class="w-16 h-16 bg-gradient-to-br from-purple-500/10 to-purple-600/20 dark:from-purple-500/20 dark:to-purple-600/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:to-purple-600 transition-all duration-500">
-                <i class="fab fa-aws text-2xl text-purple-500 dark:text-purple-400 group-hover:text-white transition-colors duration-500"></i>
-              </div>
-              <h4 class="font-bold text-gray-800 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">Cloud</h4>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">AWS, GCP, Azure</p>
-            </div>
-            
             <!-- Version Control -->
-            <div class="group bg-white/70 dark:bg-dark-800/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-50/50 dark:border-pink-900/20 hover:border-pink-200 dark:hover:border-pink-700/30 transition-all duration-500 flex flex-col items-center text-center transform hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/5">
-              <div class="w-16 h-16 bg-gradient-to-br from-pink-500/10 to-pink-600/20 dark:from-pink-500/20 dark:to-pink-600/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-pink-600 transition-all duration-500">
-                <i class="fab fa-git-alt text-2xl text-pink-500 dark:text-pink-400 group-hover:text-white transition-colors duration-500"></i>
+            <div class="bg-white dark:bg-dark-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mb-4">
+                <i class="fab fa-git-alt text-2xl text-indigo-500 dark:text-indigo-400"></i>
               </div>
-              <h4 class="font-bold text-gray-800 dark:text-white mb-2 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300">Version Control</h4>
+              <h4 class="font-bold text-gray-800 dark:text-white mb-2">Version Control</h4>
               <p class="text-gray-600 dark:text-gray-300 text-sm">Git, GitHub, GitLab</p>
             </div>
             
-            <!-- UI/UX Design -->
-            <div class="group bg-white/70 dark:bg-dark-800/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-indigo-50/50 dark:border-indigo-900/20 hover:border-indigo-200 dark:hover:border-indigo-700/30 transition-all duration-500 flex flex-col items-center text-center transform hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/5">
-              <div class="w-16 h-16 bg-gradient-to-br from-indigo-500/10 to-purple-600/20 dark:from-indigo-500/20 dark:to-purple-600/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-indigo-500 group-hover:to-purple-600 transition-all duration-500">
-                <i class="fas fa-paint-brush text-2xl text-indigo-500 dark:text-indigo-400 group-hover:text-white transition-colors duration-500"></i>
+            <!-- Graphic Designer -->
+            <div class="bg-white dark:bg-dark-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mb-4">
+                <i class="fas fa-palette text-2xl text-indigo-500 dark:text-indigo-400"></i>
               </div>
-              <h4 class="font-bold text-gray-800 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">UI/UX Design</h4>
-              <p class="text-gray-600 dark:text-gray-300 text-sm">Figma, Adobe XD, Sketch</p>
+              <h4 class="font-bold text-gray-800 dark:text-white mb-2">Graphic Designer</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">Photoshop, Illustrator, InDesign</p>
             </div>
           </div>
         </div>
@@ -321,7 +308,14 @@
 
     <section id="services" class="py-20 px-4 md:px-8 lg:px-16 bg-white dark:bg-dark" data-aos="fade-up">
       <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Services</h2>
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Website Development</h3>
+          <p class="text-gray-600 dark:text-gray-300">Build responsive, high-performance websites with modern technologies that deliver exceptional user experiences across all devices.</p>
+        </div>
         <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
             <i class="fas fa-paint-brush"></i>
@@ -357,13 +351,6 @@
           <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Digital Marketing</h3>
           <p class="text-gray-600 dark:text-gray-300">Develop and implement effective digital marketing strategies to increase brand visibility, engage target audiences, and drive conversions.</p>
         </div>
-        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-            <i class="fas fa-pen"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Technical Writing</h3>
-          <p class="text-gray-600 dark:text-gray-300">Create clear, concise, and informative technical content that effectively communicates complex information to diverse audiences.</p>
-        </div>
       </div>
     </section>
 
@@ -372,87 +359,178 @@
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
           <div class="relative overflow-hidden group">
-            <img src="public/Screenshot from 2024-11-15 02-06-23.png" alt="Project 1" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <img src="public/peerfund.png" alt="PeerFund Design Project" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div class="flex space-x-4">
-                <a href="https://a1professionalcleaning.dorik.io/" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/nyagooh/a1-professional-cleaning.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                <a href="https://www.figma.com/file/peerfund-design" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/peerfund-design" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">A1 Professional Cleaning Website</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">A full-stack e-commerce solution with React and Node.js</p>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">PeerFund UI/UX Design</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A comprehensive UI/UX design project for a peer-to-peer funding platform, featuring intuitive user flows and visually engaging interfaces.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">UI Design</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Figma</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Wireframing</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Prototyping</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="relative overflow-hidden group">
+            <img src="public/javascript1.jpeg" alt="JavaScript Design Project" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="flex space-x-4">
+                <a href="https://javascript-design-project.com" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/javascript-design" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">JavaScript Design Project</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">An interactive design system built with JavaScript that showcases modern UI patterns and animations.</p>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">JavaScript</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Css</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">HTML</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">UI Design</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Animation</span>
             </div>
           </div>
         </div>
         <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
           <div class="relative overflow-hidden group">
-            <img src="public/peerfund (1).png" alt="Project 2" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <img src="public/influencer.png" alt="Influencer Marketing App" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div class="flex space-x-4">
-                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/onyango-granton/peerFund.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                <a href="https://influencer-marketing-app.com" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/influencer-app" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">PeerFund</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">A decentralized application that enables peer-to-peer funding using blockchain technology.</p>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Influencer Marketing App</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A marketing platform connecting brands with social media influencers to create effective promotional campaigns.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Blockchain</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Golang</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Javascript</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Marketing</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">UI/UX</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Mobile App</span>
             </div>
           </div>
         </div>
         <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
           <div class="relative overflow-hidden group">
-            <img src="public/git.jpg" alt="Project 3" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <img src="public/digitalducks.jpeg" alt="Digital Ducks E-commerce" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div class="flex space-x-4">
-                <a href="https://github.com/nyagooh/git.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/nyagooh/git.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                <a href="https://digitalducks.com" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/nyagooh/digital-ducks" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
               </div>
             </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Git Project</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">A collaborative platform for version control using Git that enhances team productivity.</p>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Digital Ducks E-commerce</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">A modern e-commerce website with a seamless shopping experience, responsive design, and secure payment processing.</p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Git</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">GitHub</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">E-commerce</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Web Design</span>
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">UX Design</span>
             </div>
           </div>
         </div>
-        <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <div class="relative overflow-hidden group">
-            <img src="public/caestudy..jpg" alt="Project 4" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="flex space-x-4">
-                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
-                <a href="https://github.com/nyagooh/user-research.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+
+      </div>
+      
+      <!-- Hidden projects that will be shown when clicking View More -->
+      <div id="hidden-projects" class="hidden max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <!-- A1 Professional Cleaning -->
+          <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <div class="relative overflow-hidden group">
+              <img src="public/a1p.png" alt="A1 Professional Cleaning Website" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex space-x-4">
+                  <a href="https://a1proffesional-cleaning.onrender.com/" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/nyagooh/A1proffesional-cleaning" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">A1 Professional Cleaning</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">A modern cleaning service website with responsive design built using Tailwind CSS for seamless user experience across all devices.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">JavaScript</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Responsive</span>
               </div>
             </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">User Research Case study</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">A Research on users and their needs in a user research project</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Figjam</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">User Journey</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">User Personas</span>
-              <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">User flow</span>
+          <!-- Trident Solutions -->
+          <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <div class="relative overflow-hidden group">
+              <img src="public/Trident.png" alt="Trident Website" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex space-x-4">
+                  <a href="https://tridentmillers.onrender.com/" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/nyagooh/tridentmillers" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Trident Solutions</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">A corporate website for a technology solutions provider featuring a clean, professional design implemented with Tailwind CSS.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">UI/UX</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Corporate</span>
+              </div>
+            </div>
+          </div>
+          <!-- Carbon Chama Platform -->
+          <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <div class="relative overflow-hidden group">
+              <img src="public/carbon.png" alt="Carbon Chama Platform" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex space-x-4">
+                  <a href="https://carbonchama.onrender.com/" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/nyagooh/carbon-chama" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Carbon Chama Platform</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">A sustainable carbon management platform for small-scale farmers built with Tailwind CSS for a mobile-first, responsive experience.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Sustainability</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Mobile First</span>
+              </div>
+            </div>
+          </div>
+          <!-- YouthWash Initiative -->
+          <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <div class="relative overflow-hidden group">
+              <img src="public/youthwassh.png" alt="YouthWash Initiative" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex space-x-4">
+                  <a href="https://youthwash.org" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/nyagooh/" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">YouthWash Initiative</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">A non-profit organization website with donation integration and event management, styled with Tailwind CSS for a modern look.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Non-profit</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Donation System</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="flex justify-center mt-12">
-        <a href="#" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2">View More Projects <i class="fas fa-arrow-right"></i></a>
+        <button id="view-more-btn" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2">View More Projects <i class="fas fa-arrow-right"></i></button>
       </div>
     </section>
 
@@ -638,49 +716,7 @@
         <div class="bg-gradient-to-r from-indigo-600 to-indigo-400 h-1 w-24 rounded-full hidden md:block"></div>
       </div>
     </footer>
-    <!-- Dark Mode Toggle Script -->
-    <script>
-      // Initialize AOS
-      document.addEventListener('DOMContentLoaded', () => {
-        AOS.init();
-      });
-
-      // Dark mode toggle functionality
-      const themeToggle = document.getElementById('theme-toggle');
-      const htmlElement = document.documentElement;
-      
-      // Function to update theme and icon
-      function updateTheme(isDark) {
-        // Update HTML classes for Tailwind dark mode
-        if (isDark) {
-          htmlElement.classList.add('dark');
-        } else {
-          htmlElement.classList.remove('dark');
-        }
-        
-        // Update toggle button icon
-        themeToggle.textContent = isDark ? '☀️' : '🌙';
-        
-        // Save theme preference
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      }
-      
-      // Set initial theme based on saved preference or system preference
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      
-      if (savedTheme) {
-        updateTheme(savedTheme === 'dark');
-      } else {
-        updateTheme(prefersDark);
-      }
-      
-      // Handle theme toggle click
-      themeToggle.addEventListener('click', () => {
-        const isDark = !htmlElement.classList.contains('dark');
-        updateTheme(isDark);
-      });
-    </script>
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
