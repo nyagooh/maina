@@ -55,29 +55,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const hamburgerLines = document.querySelectorAll('.hamburger-line');
-    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+    const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
     let isMenuOpen = false;
     
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
         
-        // Toggle mobile menu visibility
+        // Toggle mobile menu visibility with a smooth dropdown animation
         if (isMenuOpen) {
-            mobileMenu.classList.remove('hidden', 'translate-x-full');
-            mobileMenu.classList.add('flex', 'translate-x-0');
+            // Open the menu
+            mobileMenu.style.height = '100vh';
             document.body.classList.add('overflow-hidden'); // Prevent scrolling when menu is open
+            
+            // Animate menu items with staggered delay
+            mobileMenuItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.remove('opacity-0', 'translate-y-8');
+                    item.classList.add('opacity-100', 'translate-y-0');
+                }, 150 * (index + 1)); // Staggered animation
+            });
             
             // Animate hamburger to X
             hamburgerLines[0].classList.add('rotate-45', 'translate-y-2');
             hamburgerLines[1].classList.add('opacity-0');
             hamburgerLines[2].classList.add('-rotate-45', '-translate-y-2');
         } else {
-            mobileMenu.classList.remove('flex', 'translate-x-0');
-            mobileMenu.classList.add('translate-x-full');
+            // Reset menu items first
+            mobileMenuItems.forEach((item) => {
+                item.classList.remove('opacity-100', 'translate-y-0');
+                item.classList.add('opacity-0', 'translate-y-8');
+            });
+            
+            // Close the menu with a slight delay to allow item animations
             setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 300); // Match the transition duration
-            document.body.classList.remove('overflow-hidden');
+                mobileMenu.style.height = '0';
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
             
             // Revert hamburger from X
             hamburgerLines[0].classList.remove('rotate-45', 'translate-y-2');
@@ -92,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Close menu when a link is clicked
-    mobileMenuLinks.forEach(link => {
+    mobileMenuItems.forEach(link => {
         link.addEventListener('click', () => {
             if (isMenuOpen) toggleMenu();
         });
