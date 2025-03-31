@@ -50,29 +50,51 @@ function startSkillCounters() {
     }
 }
 
-// Hamburger Menu
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenuBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
-            mobileMenuBtn.classList.remove('active');
-            navLinks.classList.remove('active');
+// Mobile Menu Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerLines = document.querySelectorAll('.hamburger-line');
+    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+    let isMenuOpen = false;
+    
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        
+        // Toggle mobile menu visibility
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden', 'translate-x-full');
+            mobileMenu.classList.add('flex', 'translate-x-0');
+            document.body.classList.add('overflow-hidden'); // Prevent scrolling when menu is open
+            
+            // Animate hamburger to X
+            hamburgerLines[0].classList.add('rotate-45', 'translate-y-2');
+            hamburgerLines[1].classList.add('opacity-0');
+            hamburgerLines[2].classList.add('-rotate-45', '-translate-y-2');
+        } else {
+            mobileMenu.classList.remove('flex', 'translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300); // Match the transition duration
+            document.body.classList.remove('overflow-hidden');
+            
+            // Revert hamburger from X
+            hamburgerLines[0].classList.remove('rotate-45', 'translate-y-2');
+            hamburgerLines[1].classList.remove('opacity-0');
+            hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-2');
         }
-    });
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    }
+    
+    // Toggle menu when hamburger is clicked
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu);
+    }
+    
+    // Close menu when a link is clicked
+    mobileMenuLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenuBtn.classList.remove('active');
-            navLinks.classList.remove('active');
+            if (isMenuOpen) toggleMenu();
         });
     });
 
@@ -81,6 +103,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start skill counters
     startSkillCounters();
+    
+    // Toggle hidden projects when View More button is clicked
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    const hiddenProjects = document.getElementById('hidden-projects');
+    
+    if (viewMoreBtn && hiddenProjects) {
+        viewMoreBtn.addEventListener('click', function() {
+            // Toggle visibility of hidden projects
+            if (hiddenProjects.classList.contains('hidden')) {
+                hiddenProjects.classList.remove('hidden');
+                viewMoreBtn.innerHTML = 'Show Less <i class="fas fa-arrow-up"></i>';
+            } else {
+                hiddenProjects.classList.add('hidden');
+                viewMoreBtn.innerHTML = 'View More Projects <i class="fas fa-arrow-right"></i>';
+            }
+            
+            // Scroll to the newly visible projects
+            if (!hiddenProjects.classList.contains('hidden')) {
+                setTimeout(() => {
+                    hiddenProjects.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        });
+    }
 
     // Theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
