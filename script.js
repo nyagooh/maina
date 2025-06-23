@@ -272,7 +272,7 @@ if (contactForm) {
 const downloadBtn = document.querySelector('.download-cv');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
-        const cvUrl = 'public/Maina_Anne_resume.pdf';
+        const cvUrl = 'public/Maina_Ann_resume-2.pdf';
         
         // Fetch the PDF file
         fetch(cvUrl)
