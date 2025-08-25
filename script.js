@@ -120,6 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Project filtering functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const hiddenProjects = document.getElementById('hidden-projects');
+    const viewMoreBtn = document.getElementById('view-more-btn');
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -134,14 +136,25 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('text-gray-600', 'dark:text-gray-300');
             
             const filter = this.id.replace('-btn', '');
+            let visibleCount = 0;
+            
+            // Reset hidden projects visibility
+            hiddenProjects.classList.add('hidden');
+            viewMoreBtn.innerHTML = 'View More Projects <i class="fas fa-arrow-right"></i>';
             
             projectCards.forEach(card => {
                 if (filter === 'all' || card.classList.contains(filter)) {
-                    card.style.display = 'block';
-                    card.style.opacity = '0';
-                    setTimeout(() => {
+                    visibleCount++;
+                    if (visibleCount <= 4) {
+                        card.style.display = 'block';
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                        }, 100);
+                    } else {
+                        card.style.display = 'block';
                         card.style.opacity = '1';
-                    }, 100);
+                    }
                 } else {
                     card.style.opacity = '0';
                     setTimeout(() => {
@@ -149,13 +162,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 300);
                 }
             });
+            
+            // Show/hide View More button based on filtered results
+            const filteredCards = Array.from(projectCards).filter(card => 
+                filter === 'all' || card.classList.contains(filter)
+            );
+            
+            if (filteredCards.length > 4) {
+                viewMoreBtn.style.display = 'flex';
+            } else {
+                viewMoreBtn.style.display = 'none';
+            }
         });
     });
     
     // Toggle hidden projects when View More button is clicked
-    const viewMoreBtn = document.getElementById('view-more-btn');
-    const hiddenProjects = document.getElementById('hidden-projects');
-    
     if (viewMoreBtn && hiddenProjects) {
         viewMoreBtn.addEventListener('click', function() {
             // Toggle visibility of hidden projects
