@@ -73,61 +73,86 @@
       </div>
     </nav>
 
-    <section id="hero" class="min-h-screen pt-32 pb-8 px-4 md:px-8 lg:px-16">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div class="w-full md:w-1/2 mb-12 md:mb-0 md:pr-8" data-aos="fade-right" data-aos-duration="1000">
-          <span class="inline-block bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 px-4 py-2 rounded-full text-sm font-medium mb-4">Hello World! 👋</span>
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate__animated animate__fadeIn">I'm Ann Maina</h1>
-          <div class="text-2xl md:text-3xl text-indigo-500 dark:text-indigo-400 mb-6">
-            <span>I craft </span>
-            <span class="typed-text"></span>
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 text-lg mb-8" data-aos="fade-up" data-aos-delay="200">
+    <section id="hero" class="min-h-screen pt-32 pb-0 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-purple-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+      <!-- Animated Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-20 left-10 w-20 h-20 bg-purple-200/30 rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-20 w-16 h-16 bg-pink-200/30 rounded-full animate-bounce" style="animation-delay: 1s"></div>
+        <div class="absolute bottom-40 left-20 w-12 h-12 bg-blue-200/30 rounded-full animate-pulse" style="animation-delay: 2s"></div>
+        <div class="absolute bottom-20 right-40 w-24 h-24 bg-indigo-200/30 rounded-full animate-bounce" style="animation-delay: 0.5s"></div>
+        <!-- Design Icons -->
+        <div class="absolute top-32 right-10 text-purple-200/40 animate-pulse" style="animation-delay: 1.5s">
+          <i class="fas fa-palette text-4xl"></i>
+        </div>
+        <div class="absolute bottom-32 left-10 text-pink-200/40 animate-bounce" style="animation-delay: 2.5s">
+          <i class="fas fa-code text-3xl"></i>
+        </div>
+        <div class="absolute top-1/2 left-5 text-blue-200/40 animate-pulse" style="animation-delay: 3s">
+          <i class="fas fa-laptop-code text-2xl"></i>
+        </div>
+      </div>
+      
+      <div class="max-w-6xl mx-auto text-center relative z-10">
+        <!-- Header Text -->
+        <div class="mb-16">
+          <span class="inline-block bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-4">Hello World! 👋</span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <span class="text-gray-800 dark:text-white">Hi, I'm</span>
+            <span class="text-purple-600 dark:text-purple-400">Ann Maina</span>
+          </h1>
+          <p class="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto mb-8">
             A passionate software engineer and UI/UX designer, transforming ideas into elegant digital experiences. Based in Kenya, working worldwide.
           </p>
-          <div class="flex flex-wrap gap-4 mb-8" data-aos="fade-up" data-aos-delay="400">
-            <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-400 hover:from-indigo-600 hover:to-indigo-500 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">View My Work</a>
-            <a href="#contact" class="px-6 py-3 bg-transparent border-2 border-indigo-500 text-indigo-500 dark:text-indigo-400 dark:border-indigo-400 hover:bg-indigo-500 hover:text-white font-medium rounded-lg transition-all duration-300">Let's Connect</a>
+          <div class="flex justify-center mb-8">
+            <button class="bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-full font-medium transition-all duration-300">
+              Let's Connect
+            </button>
           </div>
-          <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="600">
-            <a href="https://github.com/nyagooh" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-indigo-100 text-gray-700 hover:text-indigo-600 dark:bg-gray-800 dark:hover:bg-indigo-900 dark:text-gray-300 dark:hover:text-indigo-400 transition-all duration-300"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-indigo-100 text-gray-700 hover:text-indigo-600 dark:bg-gray-800 dark:hover:bg-indigo-900 dark:text-gray-300 dark:hover:text-indigo-400 transition-all duration-300"><i class="fab fa-linkedin"></i></a>
-            <a href="https://medium.com/@nyagooh" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-indigo-100 text-gray-700 hover:text-indigo-600 dark:bg-gray-800 dark:hover:bg-indigo-900 dark:text-gray-300 dark:hover:text-indigo-400 transition-all duration-300"><i class="fab fa-medium"></i></a>
+          
+          <!-- Social Media Links -->
+          <div class="flex justify-center space-x-6">
+            <a href="https://github.com/nyagooh" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-600 dark:bg-gray-800 dark:hover:bg-purple-900 dark:text-gray-300 dark:hover:text-purple-400 transition-all duration-300">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/maina-anne-37797820b/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-600 dark:bg-gray-800 dark:hover:bg-purple-900 dark:text-gray-300 dark:hover:text-purple-400 transition-all duration-300">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://medium.com/@nyagooh" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-600 dark:bg-gray-800 dark:hover:bg-purple-900 dark:text-gray-300 dark:hover:text-purple-400 transition-all duration-300">
+              <i class="fab fa-medium text-xl"></i>
+            </a>
+            <a href="https://twitter.com/@__nyagooh" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-purple-100 text-gray-700 hover:text-purple-600 dark:bg-gray-800 dark:hover:bg-purple-900 dark:text-gray-300 dark:hover:text-purple-400 transition-all duration-300">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
           </div>
         </div>
-        <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500">
-            <img src="public/background-Q6xxD.jpg" alt="Ann Maina" class="w-full h-auto object-cover">
-          </div>
-      </div>
       </div>
     </section>
 
-    <section id="about" class="pt-12 pb-20 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-dark" data-aos="fade-up">
+    <section id="about" class="py-20 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-dark" data-aos="fade-up">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div class="relative">
-          <img src="public/IMG_0244.JPG" alt="Anne Maina" class="rounded-lg shadow-xl z-10 relative">
-          <div class="absolute -bottom-6 -right-6 w-full h-full bg-indigo-100 dark:bg-indigo-900 rounded-lg -z-10"></div>
+          <img src="public/CKS03997.jpg" alt="Anne Maina" class="rounded-lg shadow-xl z-10 relative">
+          <div class="absolute -bottom-6 -right-6 w-full h-full bg-purple-100 dark:bg-purple-900 rounded-lg -z-10"></div>
         </div>
         <div class="space-y-6">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6">About Me</h2>
           <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">I'm a passionate software engineer, UI/UX designer, and product manager with a strong commitment to creating innovative solutions that enhance user experiences and drive business success. With expertise in Go, JavaScript, and modern web technologies, I create efficient, scalable solutions and enjoy solving complex problems.</p>
           <div class="grid grid-cols-3 gap-4 my-8">
             <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">3+</span>
+              <span class="block text-3xl font-bold text-purple-600 dark:text-purple-400">3+</span>
               <span class="text-gray-600 dark:text-gray-300">Years Experience</span>
             </div>
             <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">10+</span>
+              <span class="block text-3xl font-bold text-purple-600 dark:text-purple-400">10+</span>
               <span class="text-gray-600 dark:text-gray-300">Projects Completed</span>
             </div>
             <div class="text-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
-              <span class="block text-3xl font-bold text-indigo-600 dark:text-indigo-400">5+</span>
+              <span class="block text-3xl font-bold text-purple-600 dark:text-purple-400">5+</span>
               <span class="text-gray-600 dark:text-gray-300">Technical Articles</span>
             </div>
           </div>
           <div>
-            <button class="download-cv flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+            <button class="download-cv flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
               <span class="mr-2">Download CV</span>
               <span>
                 <i class="fas fa-download"></i>
@@ -307,49 +332,67 @@
     </section>
 
     <section id="services" class="py-20 px-4 md:px-8 lg:px-16 bg-white dark:bg-dark" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Services</h2>
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Software Development</h3>
-          <p class="text-gray-600 dark:text-gray-300">Build responsive, high-performance software applications with modern technologies that deliver exceptional user experiences across all devices.</p>
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="inline-block bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-4">What I Offer</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Services</h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Comprehensive digital solutions tailored to bring your ideas to life</p>
         </div>
-        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-            <i class="fas fa-paint-brush"></i>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Software Development -->
+          <div class="group bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800">
+            <div class="w-20 h-20 bg-purple-100 dark:bg-purple-900 rounded-2xl flex items-center justify-center text-purple-600 dark:text-purple-400 text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">Software Development</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Build responsive, high-performance applications with modern technologies that deliver exceptional user experiences.</p>
           </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">UI Design</h3>
-          <p class="text-gray-600 dark:text-gray-300">Create visually appealing and intuitive user interfaces that enhance the overall user experience and brand identity.</p>
-        </div>
-        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-            <i class="fas fa-search"></i>
+
+          <!-- UI/UX Design -->
+          <div class="group bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800">
+            <div class="w-20 h-20 bg-pink-100 dark:bg-pink-900 rounded-2xl flex items-center justify-center text-pink-600 dark:text-pink-400 text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300">UI/UX Design</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Create visually appealing and intuitive interfaces that enhance user experience and strengthen brand identity.</p>
           </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">User Research</h3>
-          <p class="text-gray-600 dark:text-gray-300">Conduct comprehensive user research to understand user needs, behaviors, and pain points to inform design decisions.</p>
-        </div>
-        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-            <i class="fas fa-laptop-code"></i>
+
+          <!-- User Research -->
+          <div class="group bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800">
+            <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">User Research</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Conduct comprehensive research to understand user needs, behaviors, and pain points for informed design decisions.</p>
           </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Website Redesign</h3>
-          <p class="text-gray-600 dark:text-gray-300">Transform outdated websites into modern, responsive, and user-friendly digital experiences that align with current design trends.</p>
-        </div>
-        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-            <i class="fas fa-users"></i>
+
+          <!-- Website Redesign -->
+          <div class="group bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800">
+            <div class="w-20 h-20 bg-green-100 dark:bg-green-900 rounded-2xl flex items-center justify-center text-green-600 dark:text-green-400 text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Website Redesign</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Transform outdated websites into modern, responsive experiences that align with current design trends.</p>
           </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Community Organizer</h3>
-          <p class="text-gray-600 dark:text-gray-300">Build and nurture vibrant tech communities through events, workshops, and networking opportunities that foster collaboration and knowledge sharing.</p>
-        </div>
-        <div class="bg-gray-50 dark:bg-dark-700 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-400 text-white rounded-lg flex items-center justify-center text-2xl mb-6">
-            <i class="fas fa-bullhorn"></i>
+
+          <!-- Community Building -->
+          <div class="group bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800">
+            <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900 rounded-2xl flex items-center justify-center text-orange-600 dark:text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">Community Building</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Build and nurture vibrant tech communities through events, workshops, and networking opportunities.</p>
           </div>
-          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Digital Marketing</h3>
-          <p class="text-gray-600 dark:text-gray-300">Develop and implement effective digital marketing strategies to increase brand visibility, engage target audiences, and drive conversions.</p>
+
+          <!-- Digital Strategy -->
+          <div class="group bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800">
+            <div class="w-20 h-20 bg-indigo-100 dark:bg-indigo-900 rounded-2xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">Digital Strategy</h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Develop effective digital strategies to increase brand visibility and engage target audiences effectively.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -442,6 +485,27 @@
             </div>
           </div>  
 
+          <div class="bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <div class="relative overflow-hidden group">
+              <img src="public/bingebox-mockup2.jpeg" alt="Trident Website" class="w-full h-72 object-contain transition-all duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-indigo-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="flex space-x-4">
+                  <a href="https://tridentmillers.onrender.com/" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/nyagooh/BingeBox.git" target="_blank" class="w-10 h-10 bg-white text-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-100 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Binge Box</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">A sleek and professional movie hub website built with Tailwind CSS, designed to provide a smooth and engaging streaming experience.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">UI</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm">Next.Js</span>
+              </div>
+            </div>
+          </div>
+          
       </div>
       
       <!-- Hidden projects that will be shown when clicking View More -->
@@ -760,6 +824,20 @@
       </div>
     </footer>
     <!-- Scripts -->
+    <script>
+      // Simple hover animations for project cards
+      const projectCards = document.querySelectorAll('.cursor-pointer');
+      
+      projectCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+    </script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
