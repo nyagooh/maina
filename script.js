@@ -117,6 +117,41 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start skill counters
     startSkillCounters();
     
+    // Project filtering functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => {
+                b.classList.remove('active', 'bg-purple-600', 'text-white');
+                b.classList.add('text-gray-600', 'dark:text-gray-300');
+            });
+            
+            // Add active class to clicked button
+            this.classList.add('active', 'bg-purple-600', 'text-white');
+            this.classList.remove('text-gray-600', 'dark:text-gray-300');
+            
+            const filter = this.id.replace('-btn', '');
+            
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.classList.contains(filter)) {
+                    card.style.display = 'block';
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+    
     // Toggle hidden projects when View More button is clicked
     const viewMoreBtn = document.getElementById('view-more-btn');
     const hiddenProjects = document.getElementById('hidden-projects');
