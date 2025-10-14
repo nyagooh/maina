@@ -328,7 +328,7 @@ if (contactForm) {
 const downloadBtn = document.querySelector('.download-cv');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
-        const cvUrl = 'public/Maina-resume-1.pdf';
+        const cvUrl = 'public/Annemainaresume.pdf';
         
         // Fetch the PDF file
         fetch(cvUrl)
