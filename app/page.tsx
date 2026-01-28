@@ -7,7 +7,6 @@ import Hero from '@/components/Hero';
 import BestWork from '@/components/BestWork';
 import DesignPhilosophy from '@/components/DesignPhilosophy';
 import Capabilities from '@/components/Capabilities';
-import Impact from '@/components/Impact';
 import Writing from '@/components/Writing';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
