@@ -80,28 +80,30 @@ export default function WorkPage() {
       : allProjects.filter((project) => project.category === activeFilter);
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-charcoal-900">
       <Navigation />
-      <section className="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl font-display font-semibold text-base-dark mb-8">
-            Work
-          </h1>
-          <div className="flex flex-wrap gap-4">
-            {filters.map((filter) => (
-              <FilterChip
-                key={filter}
-                label={filter}
-                active={activeFilter === filter}
-                onClick={() => setActiveFilter(filter)}
-              />
+      <section className="pt-32 md:pt-40 pb-20 md:pb-32 px-6 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-20 md:mb-28">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white mb-12 leading-tight">
+              Work
+            </h1>
+            <div className="flex flex-wrap gap-4 md:gap-6">
+              {filters.map((filter) => (
+                <FilterChip
+                  key={filter}
+                  label={filter}
+                  active={activeFilter === filter}
+                  onClick={() => setActiveFilter(filter)}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="space-y-0">
+            {filteredProjects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
             ))}
           </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
         </div>
       </section>
       <Footer />

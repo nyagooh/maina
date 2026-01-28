@@ -9,7 +9,7 @@ A world-class product designer portfolio built with Next.js, featuring an editor
 - **Editorial layout** with strong typographic hierarchy
 - **Smooth animations** using Framer Motion
 - **Responsive design** that works beautifully on all devices
-- **Premium color palette** with neutral base and lilac accent
+- **Premium color palette** with warm cream base and soft blue-gray accent
 
 ## Tech Stack
 
@@ -69,7 +69,7 @@ npm run dev
 ### Colors
 Edit `tailwind.config.ts` to customize the color palette:
 - `base.light` / `base.dark`: Base colors
-- `lilac.*`: Accent color variations
+- `accent.*`: Accent color variations (soft blue-gray)
 
 ### Typography
 Fonts are loaded in `app/layout.tsx`. Modify the font imports to use different typefaces.

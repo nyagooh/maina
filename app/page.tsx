@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import ProjectCard from '@/components/ProjectCard';
 import Hero from '@/components/Hero';
+import BestWork from '@/components/BestWork';
 import Capabilities from '@/components/Capabilities';
 import Impact from '@/components/Impact';
 import Writing from '@/components/Writing';
@@ -47,6 +48,9 @@ export default function Home() {
       <Navigation />
       <Hero />
       
+      {/* Best Work Section - Featured showcase with popup transitions */}
+      <BestWork />
+      
       {/* Projects Section - Full width, stacked */}
       <section id="work" className="px-0">
         <div className="px-6 md:px-12 lg:px-24 py-20 md:py-32">
@@ -59,10 +63,10 @@ export default function Home() {
           >
             <p className="text-sm uppercase tracking-[0.2em] text-charcoal-400 font-medium mb-6">
               Work
-            </p>
+          </p>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white leading-tight">
               Selected Work
-            </h2>
+          </h2>
             <p className="text-lg text-charcoal-300 mt-6 max-w-2xl">
               Explore high-quality, innovative designs aimed at elevating brands and captivating audiences. Each project reflects my commitment to creativity and excellence.
             </p>

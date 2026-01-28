@@ -127,11 +127,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.1 }}
             className="flex flex-col items-center"
           >
-            <motion.div
+        <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
               className="w-10 h-10 border-2 border-white/30 rounded-full flex items-center justify-center"
-            >
+        >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 text-white"

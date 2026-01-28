@@ -9,21 +9,72 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        base: {
-          light: "#FAFAF9",
-          dark: "#0A0A0A",
+        // Orange - Primary accent color
+        orange: {
+          50: "#FFF5F0",
+          100: "#FFE8E0",
+          200: "#FFD1C0",
+          300: "#FFBAA0",
+          400: "#FFA07A",
+          500: "#FF8B5A", // Main orange
+          600: "#FF6B35", // Primary accent
+          700: "#E55A2B",
+          800: "#CC4A21",
+          900: "#B33A17",
         },
-        lilac: {
-          50: "#F5F3FF",
-          100: "#EDE9FE",
-          200: "#DDD6FE",
-          300: "#C4B5FD",
-          400: "#A78BFA",
-          500: "#8B5CF6",
-          600: "#7C3AED",
-          700: "#6D28D9",
-          800: "#5B21B6",
-          900: "#4C1D95",
+        // Black - High contrast
+        black: {
+          DEFAULT: "#000000",
+          900: "#000000",
+          800: "#1A1A1A",
+          700: "#2C2C2C",
+        },
+        // Charcoal - Dark backgrounds and depth
+        charcoal: {
+          50: "#F5F5F5",
+          100: "#E5E5E5",
+          200: "#CCCCCC",
+          300: "#999999",
+          400: "#666666",
+          500: "#4D4D4D",
+          600: "#333333",
+          700: "#2C2C2C",
+          800: "#1A1A1A",
+          900: "#0F0F0F",
+        },
+        // White - Clean backgrounds
+        white: {
+          DEFAULT: "#FFFFFF",
+          off: "#FAFAFA",
+          warm: "#F8F8F8",
+        },
+        // Neutral Greys - Subtle backgrounds and secondary text
+        grey: {
+          50: "#F5F5F5",
+          100: "#E5E5E5",
+          200: "#CCCCCC",
+          300: "#999999",
+          400: "#666666",
+          500: "#4D4D4D",
+          600: "#333333",
+        },
+        // Legacy support - map old colors to new palette
+        base: {
+          light: "#FAFAFA", // White off
+          dark: "#000000", // Black
+          muted: "#666666", // Neutral grey
+        },
+        accent: {
+          50: "#FFF5F0",
+          100: "#FFE8E0",
+          200: "#FFD1C0",
+          300: "#FFBAA0",
+          400: "#FFA07A",
+          500: "#FF8B5A",
+          600: "#FF6B35", // Primary orange accent
+          700: "#E55A2B",
+          800: "#CC4A21",
+          900: "#B33A17",
         },
       },
       fontFamily: {
