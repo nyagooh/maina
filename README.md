@@ -41,6 +41,17 @@ npm install
 ```
 
 3. **Run the development server:**
+
+**Option A - Using the run script (recommended):**
+```bash
+# Linux/Mac
+./run.sh
+
+# Windows
+run.bat
+```
+
+**Option B - Using npm directly:**
 ```bash
 npm run dev
 ```
@@ -212,10 +223,35 @@ This portfolio draws inspiration from:
 
 ## 📝 Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
+### Quick Run Script
+
+For convenience, use the included run scripts:
+
+**Linux/Mac:**
+```bash
+./run.sh
+```
+
+**Windows:**
+```bash
+run.bat
+```
+
+The script provides an interactive menu with the following options:
+1. Start Development Server
+2. Build for Production
+3. Start Production Server
+4. Install Dependencies
+5. Run Linter
+6. Clean Build Cache
+7. Exit
+
+### Manual NPM Scripts
+
+- `npm run dev` - Start development server on http://localhost:3000
+- `npm run build` - Build optimized production bundle
+- `npm start` - Start production server (requires build first)
+- `npm run lint` - Run ESLint to check code quality
 
 ## 🤝 Contributing
 
