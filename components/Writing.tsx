@@ -26,47 +26,55 @@ const articles = [
 
 export default function Writing() {
   return (
-    <section className="py-32 px-6 md:px-12 max-w-7xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mb-20"
-      >
-        <p className="text-sm uppercase tracking-wider text-base-dark/50 font-medium mb-4">
-          Writing
-        </p>
-        <h2 className="text-4xl md:text-5xl font-display font-semibold text-base-dark mb-6">
-          Design Thoughts
-        </h2>
-      </motion.div>
-      <div className="space-y-8">
-        {articles.map((article, index) => (
-          <motion.div
-            key={article.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="glass p-8 rounded-2xl hover:bg-white/90 transition-all duration-300"
-          >
-            <Link href={article.href} target="_blank" className="block group">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-                <h3 className="text-2xl font-display font-semibold text-base-dark group-hover:text-lilac-600 transition-colors">
-                  {article.title}
-                </h3>
-                <span className="text-sm text-base-dark/50">{article.date}</span>
-              </div>
-              <p className="text-base text-base-dark/70 leading-relaxed">
-                {article.excerpt}
-              </p>
-              <span className="inline-block mt-4 text-sm font-medium text-lilac-600 group-hover:translate-x-2 transition-transform">
-                Read More →
-              </span>
-            </Link>
-          </motion.div>
-        ))}
+    <section className="py-32 md:py-40 px-6 md:px-12 lg:px-24">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20 md:mb-28"
+        >
+          <p className="text-sm uppercase tracking-[0.2em] text-charcoal-400 font-medium mb-4">
+            Writing
+          </p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-light text-white mb-6 leading-tight">
+            Design Thoughts
+          </h2>
+        </motion.div>
+        <div className="space-y-8 md:space-y-10">
+          {articles.map((article, index) => (
+            <motion.div
+              key={article.title}
+              initial={{ opacity: 0, y: 50, x: -20 }}
+              whileInView={{ opacity: 1, y: 0, x: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.15,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              whileHover={{ x: 10 }}
+              className="p-10 md:p-12 bg-charcoal-800 border border-charcoal-700 hover:border-orange-600 transition-all duration-300 cursor-pointer group"
+            >
+              <Link href={article.href} target="_blank" className="block">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                  <h3 className="text-2xl md:text-3xl font-display font-light text-white group-hover:text-orange-600 transition-colors duration-300">
+                    {article.title}
+                  </h3>
+                  <span className="text-sm text-charcoal-400">{article.date}</span>
+                </div>
+                <p className="text-base text-charcoal-400 leading-relaxed mb-4">
+                  {article.excerpt}
+                </p>
+                <div className="flex items-center gap-2 text-orange-600 group-hover:gap-4 transition-all duration-300">
+                  <span className="text-sm font-medium">Read More</span>
+                  <span className="text-xl">→</span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

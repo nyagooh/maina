@@ -1,9 +1,14 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import ProjectCard from '@/components/ProjectCard';
 import Hero from '@/components/Hero';
 import Capabilities from '@/components/Capabilities';
 import Impact from '@/components/Impact';
 import Writing from '@/components/Writing';
+import About from '@/components/About';
+import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -38,35 +43,59 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative z-10 pb-20">
       <Navigation />
       <Hero />
-      <section className="py-32 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="mb-20">
-          <p className="text-sm uppercase tracking-wider text-base-dark/50 font-medium mb-4">
-            Featured Work
-          </p>
-          <h2 className="text-5xl md:text-6xl font-display font-semibold text-base-dark mb-6">
-            Selected Projects
-          </h2>
+      
+      {/* Projects Section - Full width, stacked */}
+      <section id="work" className="px-0">
+        <div className="px-6 md:px-12 lg:px-24 py-20 md:py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-20 md:mb-32"
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-charcoal-400 font-medium mb-6">
+              Work
+            </p>
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white leading-tight">
+              Selected Work
+            </h2>
+            <p className="text-lg text-charcoal-300 mt-6 max-w-2xl">
+              Explore high-quality, innovative designs aimed at elevating brands and captivating audiences. Each project reflects my commitment to creativity and excellence.
+            </p>
+          </motion.div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-6 md:px-12 lg:px-24">
           {featuredProjects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
-        <div className="mt-16 text-center">
-          <a
+
+        <div className="px-6 md:px-12 lg:px-24 py-20 text-center">
+          <motion.a
             href="/work"
-            className="inline-block px-8 py-4 glass rounded-full text-base-dark font-medium hover:bg-white/80 transition-all duration-300"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            whileHover={{ scale: 1.05, x: 5 }}
+            className="inline-flex items-center gap-3 px-10 py-5 bg-orange-600 text-white font-medium hover:bg-orange-700 transition-all duration-300 text-lg"
           >
-            View All Work →
-          </a>
+            View All Work
+            <span className="text-xl">→</span>
+          </motion.a>
         </div>
       </section>
+      
       <Capabilities />
+      <About />
       <Impact />
       <Writing />
+      <Contact />
       <Footer />
     </main>
   );
