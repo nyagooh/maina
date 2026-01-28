@@ -110,15 +110,22 @@ export default function Hero() {
       {/* Bottom Elements */}
       <div className="absolute bottom-12 left-0 right-0 px-6 md:px-12 lg:px-24 z-20">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Page Number */}
-          <motion.div
+          {/* Download Resume Button - Left Side */}
+          <motion.a
+            href="/Annemainaresume.pdf"
+            download
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="glass-medium px-5 py-2.5 rounded-full border border-white/10"
+            whileHover={{ scale: 1.05, backgroundColor: 'rgba(249, 115, 22, 1)' }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white text-charcoal-900 px-8 py-4 rounded-2xl font-bold uppercase tracking-wider text-sm shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
           >
-            <span className="text-white text-sm font-bold">01</span>
-          </motion.div>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Resume
+          </motion.a>
           
           {/* Scroll Indicator */}
           <motion.div
@@ -144,15 +151,14 @@ export default function Hero() {
             </motion.div>
           </motion.div>
           
-          {/* Leveled Up Section */}
+          {/* Page Number - Right Side */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="text-right"
+            className="glass-medium px-5 py-2.5 rounded-full border border-white/10"
           >
-            <p className="text-white/60 text-xs mb-1 tracking-wider">Leveled up at:</p>
-            <p className="text-white text-lg font-bold tracking-wider">10KDESIGNERS</p>
+            <span className="text-white text-sm font-bold">01</span>
           </motion.div>
         </div>
       </div>

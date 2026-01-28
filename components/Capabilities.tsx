@@ -3,52 +3,85 @@
 import { motion } from 'framer-motion';
 
 const capabilities = [
-  'Product Design',
-  'User Research',
-  'Design Systems',
-  'Prototyping',
-  'UI/UX Design',
-  'Design Strategy',
+  {
+    number: '01',
+    title: 'Product Design',
+    description: 'End-to-end product experiences that delight users and drive business goals'
+  },
+  {
+    number: '02',
+    title: 'User Research',
+    description: 'Deep user insights through interviews, testing, and data analysis'
+  },
+  {
+    number: '03',
+    title: 'Design Systems',
+    description: 'Scalable component libraries and design tokens for consistency'
+  },
+  {
+    number: '04',
+    title: 'Prototyping',
+    description: 'Interactive prototypes to validate ideas and test concepts'
+  },
+  {
+    number: '05',
+    title: 'UI/UX Design',
+    description: 'Beautiful interfaces with intuitive user experiences'
+  },
+  {
+    number: '06',
+    title: 'Design Strategy',
+    description: 'Strategic design thinking aligned with business objectives'
+  },
 ];
 
 export default function Capabilities() {
   return (
-    <section className="py-32 md:py-40 px-6 md:px-12 lg:px-24">
+    <section className="py-32 md:py-40 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-7xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-        className="mb-20 md:mb-28"
-      >
-          <p className="text-sm uppercase tracking-[0.2em] text-charcoal-400 font-medium mb-4">
-          Capabilities
-        </p>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-light text-white leading-tight">
-          What I Do
-        </h2>
-      </motion.div>
-      <div className="flex flex-wrap gap-4 md:gap-6">
-        {capabilities.map((capability, index) => (
-          <motion.div
-            key={capability}
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ 
-              duration: 0.6, 
-              delay: index * 0.08,
-              ease: [0.22, 1, 0.36, 1]
-            }}
-              whileHover={{ scale: 1.05, y: -4 }}
-            whileTap={{ scale: 0.95 }}
-          >
-              <div className="px-8 py-4 bg-charcoal-800 border border-charcoal-700 text-charcoal-300 font-medium hover:text-orange-600 hover:border-orange-600 transition-all duration-300 text-base md:text-lg cursor-pointer">
-              {capability}
-            </div>
-          </motion.div>
-        ))}
+          className="mb-16 md:mb-20"
+        >
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-charcoal-900 leading-tight mb-6">
+            Capabilities
+          </h2>
+          <p className="text-lg text-charcoal-700 max-w-2xl leading-relaxed">
+            From concept to execution, I bring expertise across the full design spectrum
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200">
+          {capabilities.map((capability, index) => (
+            <motion.div
+              key={capability.number}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.1,
+              }}
+              className="group bg-white p-10 md:p-12 hover:bg-gray-50 transition-colors duration-300"
+            >
+              <div className="flex items-start gap-6 md:gap-8">
+                <span className="text-sm font-light text-charcoal-400 pt-1 min-w-[2rem]">
+                  {capability.number}
+                </span>
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-normal text-charcoal-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">
+                    {capability.title}
+                  </h3>
+                  <p className="text-base text-charcoal-700 leading-relaxed">
+                    {capability.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
