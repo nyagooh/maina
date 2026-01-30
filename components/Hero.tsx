@@ -70,7 +70,7 @@ export default function Hero() {
                 <div className="absolute inset-0">
                   {/* Replace '/your-image.jpg' with the path to your image in the public folder */}
                   <Image 
-                    src="/CKS03987.jpg" 
+                    src="/ChatGPT Image Jan 30, 2026, 03_48_25 PM.png" 
                     alt="Ann Maina"
                     fill
                     className="object-cover"
@@ -112,8 +112,10 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Download Resume Button - Left Side */}
           <motion.a
-            href="/Annemainaresume.pdf"
-            download
+            href="/Maina-Ann-resume-4-1.pdf"
+            download="Maina-Ann-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
