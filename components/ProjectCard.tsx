@@ -50,7 +50,7 @@ export default function ProjectCard({
               src={image}
               alt={title}
               fill
-              className="object-cover transition-all duration-700 group-hover:scale-105"
+              className="object-contain transition-all duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             {/* Gradient Overlay */}

@@ -192,7 +192,7 @@ export default function BestWork() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover transition-all duration-700"
+                      className="object-contain transition-all duration-700"
                       sizes="(max-width: 768px) 75vw, (max-width: 1024px) 55vw, 40vw"
                       priority={index < 2}
                     />

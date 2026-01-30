@@ -152,7 +152,7 @@ export default function Writing() {
                       src={article.image}
                       alt={article.title}
                       fill
-                      className="object-cover transition-all duration-700 group-hover:scale-105"
+                      className="object-contain transition-all duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 75vw, (max-width: 1024px) 55vw, 40vw"
                     />
                     
