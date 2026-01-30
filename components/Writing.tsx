@@ -144,7 +144,7 @@ export default function Writing() {
             >
               <Link href={article.href} target="_blank">
                 <motion.div
-                  className="relative overflow-hidden glass-dark rounded-3xl cursor-pointer h-[600px] md:h-[700px]"
+                  className="relative overflow-hidden glass-dark rounded-3xl cursor-pointer h-[450px] md:h-[500px]"
                 >
                   {/* Image Container */}
                   <div className="relative w-full h-full overflow-hidden">

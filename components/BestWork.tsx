@@ -17,46 +17,46 @@ interface BestWorkProject {
 
 const bestProjects: BestWorkProject[] = [
   {
-    title: 'CervCareAI',
-    category: 'Healthcare AI Platform',
-    description: 'Revolutionary AI-powered cervical cancer prediction system delivering 94% accuracy in early detection with cutting-edge machine learning algorithms.',
-    image: '/cervcare1i.png',
-    href: '/work/cervcare',
+    title: 'Bongohub',
+    category: 'Creative Marketplace · Web App',
+    description: 'Creative marketplace designed to help creatives discover work, sell services, and build long-term professional communities. The UX focuses on trust, profile clarity, and easy service discovery.',
+    image: '/Bongohub/HOME PAGE.png',
+    href: '/work/bongohub',
     year: '2024',
-    award: 'Best Healthcare Innovation',
+    award: 'Best Community Platform',
   },
   {
-    title: 'Salama',
-    category: 'Travel Companion',
-    description: 'Intelligent travel app connecting athletes worldwide with AI-powered trip planning, real-time collaboration, and seamless document management.',
-    image: '/mockuuups-female-hand-holding-iphone-14-pro-mockup(3).png',
-    href: '/work/salama',
+    title: 'AI Tutor App',
+    category: 'EdTech · Mobile App',
+    description: 'AI-powered learning app for kids that enables curiosity-driven learning through natural language questions. Designed to be friendly, safe, and distraction-free with age-appropriate visuals.',
+    image: '/Ai tutor learning app/home1 light mode.jpg',
+    href: '/work/ai-tutor',
     year: '2024',
-    award: 'Featured App Design',
+    award: 'Featured EdTech Design',
   },
   {
-    title: 'Bongo Hub',
-    category: 'Creative Platform',
-    description: 'Comprehensive collaboration platform empowering creatives to connect, share portfolios, and build innovative projects together.',
-    image: '/mockuuups-free-macbook-pro-with-female-professional(1).jpeg',
-    href: '/work/bongo-hub',
+    title: 'CoinMarket Dashboard',
+    category: 'Fintech · Data-Heavy Dashboard',
+    description: 'Redesign of a high-traffic crypto market dashboard aimed at reducing cognitive load. Improved information hierarchy, spacing, and layout for quick scanning.',
+    image: '/Coinmarket /coinmarket.png',
+    href: '/work/coinmarket',
+    year: '2024',
+  },
+  {
+    title: 'Predix',
+    category: 'Crypto · AI-Assisted Trading',
+    description: 'AI-assisted trading app that surfaces crypto market signals to support better decision-making. Simplifies complex insights using visual indicators and clear states.',
+    image: '/predix/predix.jpeg',
+    href: '/work/predix',
     year: '2023',
-    award: 'Community Choice',
+    award: 'Innovation Award',
   },
   {
-    title: 'PeerFund',
-    category: 'Fintech Solution',
-    description: 'Modern peer-to-peer lending platform revolutionizing how people access financial services in emerging markets.',
-    image: '/peerfund.png',
-    href: '/work/peerfund',
-    year: '2023',
-  },
-  {
-    title: 'Digital Ducks',
-    category: 'Educational Platform',
-    description: 'Interactive learning platform for children featuring gamified lessons and engaging educational content.',
-    image: '/digitalducks.jpeg',
-    href: '/work/digital-ducks',
+    title: 'Mintify',
+    category: 'Web3 · NFT Marketplace',
+    description: 'Web3 platform enabling artists to mint, showcase, and sell digital artwork. Demystifies blockchain concepts with clear steps and minimal technical jargon.',
+    image: '/Mintify/MacBook Pro 16_ - 1.png',
+    href: '/work/mintify',
     year: '2023',
   },
 ];
@@ -184,7 +184,7 @@ export default function BestWork() {
             >
               <Link href={project.href}>
                 <motion.div
-                  className="relative overflow-hidden glass-dark rounded-3xl cursor-pointer h-[600px] md:h-[700px]"
+                  className="relative overflow-hidden glass-dark rounded-3xl cursor-pointer h-[450px] md:h-[500px]"
                 >
                   {/* Image Container */}
                   <div className="relative w-full h-full overflow-hidden">
