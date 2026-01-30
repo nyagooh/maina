@@ -28,7 +28,7 @@ export default function Contact() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/CKS03997.jpg"
+          src="/ChatGPT Image Jan 30, 2026, 03_48_25 PM.png"
           alt="Get in Touch"
           fill
           className="object-cover grayscale"
