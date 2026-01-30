@@ -8,32 +8,53 @@ import Image from 'next/image';
 
 const experiences = [
   {
-    company: '10K Designers',
+    company: 'Nova Technologies',
     role: 'Product Designer',
-    period: '2024 - Present',
-    description: 'Leading product design initiatives for multiple clients, creating user-centered solutions that drive business growth and enhance user satisfaction across various digital platforms.',
-    details: 'Specializing in end-to-end product design, from research and wireframing to high-fidelity prototypes and design systems.'
+    period: 'Current',
+    description: 'Designing a cross-border remittance app that enables users to send and receive money across multiple countries and currencies. Designing and refining key user flows, including onboarding, KYC, payments, fee visibility, and transaction tracking.',
+    details: 'Built and maintained a scalable design system in Figma using Auto Layout, components, variants, and design tokens, reducing UI inconsistencies by 45%. Simplified complex technical and regulatory requirements into clear, user-friendly flows, reducing user errors by 28%.'
   },
   {
-    company: 'Freelance',
+    company: 'Zone01 Kisumu',
+    role: 'Product Designer',
+    period: '2025',
+    description: 'Led end-to-end UX research and design for web and mobile products, reviewing and refining interfaces to improve task completion by 38%. Conducted user interviews and usability testing to evaluate design clarity and usability, reducing onboarding friction by 32%.',
+    details: 'Built and maintained a scalable Figma design system using components and Auto Layout, increasing cross-product consistency by 50%. Worked closely with product managers and engineers to translate technical and functional requirements into clear, usable interface designs.'
+  },
+  {
+    company: 'Rishiflow',
     role: 'UI/UX Designer',
-    period: '2020 - 2024',
-    description: 'Collaborated with startups and established brands to create impactful design solutions that aligned with business goals and effectively engaged users across various platforms.',
-    details: 'Working with diverse clients including healthcare, fintech, and education sectors to deliver innovative digital experiences.'
+    period: '2025',
+    description: 'Led end-to-end design for an AI-powered chatbot mobile application, owning key user journeys such as onboarding, session booking, and in-app content access. Reviewed and refined AI-assisted design outputs, improving usability and increasing task completion rates by 30%.',
+    details: 'Designed reusable UI components and interaction patterns in Figma, improving design-to-development handoff speed by 40%. Created wireframes, interactive prototypes, and high-fidelity designs while maintaining consistency through a scalable design system.'
   },
   {
-    company: 'Tech Innovation Hub',
-    role: 'Junior Designer',
-    period: '2019 - 2020',
-    description: 'Supported senior designers in creating user interfaces for web and mobile applications, contributing to projects for renowned brands and gaining valuable industry experience.',
-    details: 'Focused on UI design, prototyping, and collaborating with development teams to ensure seamless implementation.'
+    company: 'Bongohub',
+    role: 'UI/UX Designer',
+    period: '2024',
+    description: 'Redesigned high-impact user flows (onboarding, discovery, and project showcase), reviewing and refining layouts to improve clarity and usability, increasing user engagement by 27%. Built and maintained reusable UI components and layout patterns in Figma.',
+    details: 'Applied Material Design principles and accessibility standards to ensure consistent, usable, and inclusive interfaces across the product. Worked closely with developers and product stakeholders to balance user needs with technical constraints, reducing rework by 25%.'
   },
   {
-    company: 'Design Bootcamp',
-    role: 'Design Intern',
-    period: '2019',
-    description: 'Participated in intensive design training program, working on real-world projects and developing foundational skills in user research, wireframing, and visual design.',
-    details: 'Completed multiple client projects focusing on mobile app design and responsive web interfaces.'
+    company: 'Kisumu Youth Wash Parliament',
+    role: 'Web Developer',
+    period: '2024',
+    description: 'Designed and launched a responsive, user-centered website using Tailwind CSS, improving overall usability and increasing conversions by 35%. Evaluated and optimized frontend performance, reducing page load times by 50%.',
+    details: 'Conducted A/B testing and usability reviews to validate design decisions, resulting in a 20% increase in user engagement. Designed accessible, mobile-first interfaces to ensure consistent and reliable experiences across devices.'
+  },
+  {
+    company: 'A1 Professional Cleaning Service',
+    role: 'Web Developer',
+    period: '2023',
+    description: 'Designed and developed the A1 Cleaning Services website using Tailwind CSS. Built a responsive, mobile first, and cross browser compatible UI to ensure consistent user experience across devices.',
+    details: 'Improved customer engagement by 40% through clean, intuitive interface design aligned with brand identity.'
+  },
+  {
+    company: 'Cityright LLP',
+    role: 'UI/UX Design Intern',
+    period: '2022',
+    description: 'Reviewed and redesigned key user flows, evaluating usability and clarity, reducing task completion time by 30% and improving user satisfaction. Conducted usability testing to assess design quality, iterating on feedback.',
+    details: 'Created wireframes, interactive prototypes, and high-fidelity designs in Figma, following clear structure and naming standards. Improved navigation and interface clarity, increasing user engagement by 25% across mobile and desktop platforms.'
   },
 ];
 
@@ -46,7 +67,7 @@ export default function AboutPage() {
       <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 md:px-12 lg:px-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/CKS04016.jpg"
+            src="/ChatGPT Image Jan 30, 2026, 03_48_25 PM.png"
             alt="Ann Maina"
             fill
             className="object-cover grayscale"

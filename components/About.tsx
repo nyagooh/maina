@@ -10,7 +10,7 @@ export default function About() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/CKS04016.jpg"
+          src="/ChatGPT Image Jan 30, 2026, 03_48_25 PM.png"
           alt="Ann Maina"
           fill
           className="object-cover grayscale"
