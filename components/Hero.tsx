@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-24 pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 relative overflow-hidden z-10 bg-charcoal-900">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-24 pt-24 sm:pt-28 md:pt-32 pb-20 sm:pb-24 md:pb-20 relative overflow-hidden z-10 bg-charcoal-900">
       {/* Grid background */}
       <div 
         className="absolute inset-0 pointer-events-none"
@@ -19,26 +19,26 @@ export default function Hero() {
       />
       
       {/* Main Container */}
-      <div className="max-w-[1920px] w-full relative z-10">
+      <div className="max-w-[1920px] w-full relative z-10 h-full flex flex-col">
         {/* Top Hello Text */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="absolute top-0 left-0 text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-orange-600 z-20"
+          className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-orange-600 z-20 mb-6 sm:mb-8 md:mb-0 md:absolute md:top-0 md:left-0"
         >
           (HELLO! I'M ANN)
         </motion.div>
 
-        {/* Large Name Spanning Horizontally */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+        {/* Large Name Spanning Horizontally - Background */}
+        <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none overflow-hidden">
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-[3rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-none tracking-tighter whitespace-nowrap"
+            className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-none tracking-tighter whitespace-nowrap"
             style={{ 
-              WebkitTextStroke: '1px rgba(255, 255, 255, 0.3)',
+              WebkitTextStroke: '2px rgba(255, 255, 255, 0.3)',
               WebkitTextFillColor: 'transparent'
             }}
           >
@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
 
         {/* Center Phone Element */}
-        <div className="relative z-10 flex justify-center items-center min-h-[450px] sm:min-h-[500px] md:min-h-[600px]">
+        <div className="relative z-10 flex justify-center items-center flex-1 my-4 sm:my-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 50 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -91,14 +91,14 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Orange Tagline - Lower Right Corner */}
+        {/* Orange Tagline */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="absolute right-2 sm:right-4 md:right-6 lg:right-12 xl:right-24 bottom-20 sm:bottom-24 md:bottom-32 lg:bottom-36 max-w-[160px] sm:max-w-[200px] md:max-w-xs lg:max-w-md z-20 text-right"
+          className="text-center md:text-right md:absolute md:right-4 lg:right-12 xl:right-24 md:bottom-32 lg:bottom-36 max-w-full md:max-w-xs lg:max-w-md z-20 mb-6 sm:mb-8 md:mb-0"
         >
-          <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl font-bold text-orange-600 leading-tight tracking-wide">
+          <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl font-bold text-orange-600 leading-tight tracking-wide px-4 md:px-0">
             SOLVING PROBLEMS WITH AESTHETICS AND EMPATHY
           </p>
         </motion.div>
