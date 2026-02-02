@@ -195,45 +195,8 @@ export default function BestWork() {
                       priority={index < 2}
                     />
                     
-                    {/* Gradient Overlays */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/70 to-charcoal-900/20 opacity-90 group-hover:opacity-95 transition-opacity duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/40 to-transparent" />
-                    
-                    {/* Top Badges */}
-                    <div className="absolute top-6 left-6 right-6 flex items-start justify-between z-10">
-                      <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.3 }}
-                        className="glass-medium px-4 py-2 rounded-full backdrop-blur-xl"
-                      >
-                        <span className="text-sm font-bold text-white">{project.year}</span>
-                      </motion.div>
-                      
-                      {project.award && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1 + 0.4 }}
-                          className="glass-dark px-4 py-2 rounded-full backdrop-blur-xl border border-orange-600/30"
-                        >
-                          <span className="text-xs font-medium text-orange-600">★ {project.award}</span>
-                        </motion.div>
-                      )}
-                    </div>
-                    
-                    {/* Project Number */}
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 + 0.2 }}
-                      className="absolute top-6 right-6 text-[120px] md:text-[180px] font-bold text-white/5 leading-none pointer-events-none"
-                    >
-                      {String(index + 1).padStart(2, '0')}
-                    </motion.div>
+                    {/* Gradient Overlays - Lighter for better image visibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent opacity-80 group-hover:opacity-85 transition-opacity duration-500" />
                     
                     {/* Content Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
