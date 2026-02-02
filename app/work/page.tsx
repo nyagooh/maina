@@ -9,18 +9,6 @@ import Footer from '@/components/Footer';
 
 const allProjects = [
   {
-    title: 'Bongohub',
-    role: 'UI/UX Designer',
-    productType: 'Creative Marketplace · Web App',
-    outcome: 'Creative marketplace designed to help creatives discover work, sell services, and build long-term professional communities. The UX focuses on trust, profile clarity, and easy service discovery, making it simple for clients to evaluate talent while giving creatives tools to showcase their skills and connect with peers.',
-    image: '/Bongohub/bongo hub.png',
-    href: '/work/bongohub',
-    tags: [],
-    category: 'Apps',
-    year: '2024',
-    duration: '6 months',
-  },
-  {
     title: 'AI Tutor App',
     role: 'Product Designer',
     productType: 'EdTech · Mobile App',
@@ -41,6 +29,7 @@ const allProjects = [
     href: '/work/coinmarket',
     tags: [],
     category: 'Dashboards',
+    categories: ['Dashboards', 'Web3'],
     year: '2024',
     duration: '4 months',
   },
@@ -53,6 +42,7 @@ const allProjects = [
     href: '/work/savings-dashboard',
     tags: [],
     category: 'Dashboards',
+    categories: ['Dashboards', 'Web3'],
     year: '2024',
     duration: '3 months',
   },
@@ -77,6 +67,7 @@ const allProjects = [
     href: '/work/crypto-converter',
     tags: [],
     category: 'Dashboards',
+    categories: ['Dashboards', 'Web3'],
     year: '2023',
     duration: '2 months',
   },
@@ -174,7 +165,14 @@ export default function WorkPage() {
   const filteredProjects =
     activeFilter === 'All'
       ? allProjects
-      : allProjects.filter((project) => project.category === activeFilter);
+      : allProjects.filter((project) => {
+          // Check if project has categories array (for multiple categories)
+          if ('categories' in project && Array.isArray(project.categories)) {
+            return project.categories.includes(activeFilter);
+          }
+          // Fallback to single category
+          return project.category === activeFilter;
+        });
 
   return (
     <main className="min-h-screen bg-charcoal-900">
