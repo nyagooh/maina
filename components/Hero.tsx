@@ -31,14 +31,14 @@ export default function Hero() {
         </motion.div>
 
         {/* Large Name Spanning Horizontally - Background */}
-        <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">
+        <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none overflow-hidden">
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[20rem] font-bold leading-none tracking-tighter"
+            className="text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-bold leading-none tracking-tighter whitespace-nowrap"
             style={{ 
-              WebkitTextStroke: '2px rgba(255, 255, 255, 0.5)',
+              WebkitTextStroke: '2px rgba(255, 255, 255, 0.3)',
               WebkitTextFillColor: 'transparent'
             }}
           >

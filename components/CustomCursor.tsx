@@ -20,7 +20,7 @@ export default function CustomCursor() {
 
     const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.matches('a, button, [role="button"], .cursor-pointer')) {
+      if (target && typeof target.matches === 'function' && target.matches('a, button, [role="button"], .cursor-pointer')) {
         setIsHovering(true);
       }
     };
