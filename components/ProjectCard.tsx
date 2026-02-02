@@ -55,29 +55,6 @@ export default function ProjectCard({
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/80 via-charcoal-900/20 to-transparent opacity-60" />
-            
-            {/* Year Badge */}
-            {year && (
-              <div className="absolute top-6 left-6">
-                <span className="glass-medium px-4 py-2 text-sm font-bold text-white rounded-full backdrop-blur-xl border border-white/10">
-                  {year}
-                </span>
-              </div>
-            )}
-            
-            {/* Floating Tags */}
-            {tags.length > 0 && (
-              <div className="absolute top-6 right-6 flex flex-wrap gap-2 justify-end max-w-md">
-                {tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="glass-medium px-3 py-1.5 text-xs font-medium text-white rounded-full backdrop-blur-xl border border-white/10"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Content Section with Glass Effect */}
