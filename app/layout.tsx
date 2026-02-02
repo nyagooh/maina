@@ -18,6 +18,20 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   title: "Ann Maina | Product Designer",
   description: "Premium product design portfolio showcasing editorial, minimal, and confident design work.",
+  metadataBase: new URL('https://ann-maina.vercel.app'),
+  openGraph: {
+    title: "Ann Maina | Product Designer",
+    description: "Premium product design portfolio showcasing editorial, minimal, and confident design work.",
+    url: 'https://ann-maina.vercel.app',
+    siteName: "Ann Maina Portfolio",
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Ann Maina | Product Designer",
+    description: "Premium product design portfolio showcasing editorial, minimal, and confident design work.",
+  },
 };
 
 export default function RootLayout({
