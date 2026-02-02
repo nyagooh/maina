@@ -700,32 +700,32 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             src={caseStudy.heroImage}
             alt={caseStudy.title}
             fill
-            className="object-contain"
+            className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/60 via-charcoal-900/40 to-charcoal-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/70 via-charcoal-900/50 to-charcoal-900/95" />
         </div>
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full"
+          className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full"
         >
-          <p className="text-sm uppercase tracking-[0.3em] text-orange-600 mb-8">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-orange-600 mb-4 sm:mb-6 md:mb-8">
             Case Study
           </p>
-          <h1 className="text-6xl md:text-7xl lg:text-9xl font-light text-white mb-8 leading-[0.9]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light text-white mb-4 sm:mb-6 md:mb-8 leading-[0.9]">
             {caseStudy.title}
           </h1>
-          <p className="text-2xl md:text-3xl text-charcoal-200 font-light max-w-3xl">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-charcoal-200 font-light max-w-3xl">
             {caseStudy.subtitle}
           </p>
         </motion.div>
       </section>
 
       {/* Content - Modern Editorial Layout */}
-      <article className="py-32 px-6 md:px-12 lg:px-24">
+      <article className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto">
           
           {/* Overview */}
@@ -734,33 +734,33 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-32 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16"
+            className="mb-16 sm:mb-20 md:mb-24 lg:mb-32 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-16"
           >
             <div className="md:col-span-4">
-              <h2 className="text-3xl font-light text-white sticky top-32">
+              <h2 className="text-2xl sm:text-3xl font-light text-white md:sticky md:top-32 mb-6 md:mb-0">
                 Overview
               </h2>
             </div>
-            <div className="md:col-span-8 space-y-6">
-              <p className="text-lg text-charcoal-200 leading-relaxed">
+            <div className="md:col-span-8 space-y-4 sm:space-y-6">
+              <p className="text-base sm:text-lg text-charcoal-200 leading-relaxed">
                 {caseStudy.overview}
               </p>
-              <div className="grid grid-cols-2 gap-6 pt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-4 sm:pt-6">
                 <div>
-                  <p className="text-sm text-charcoal-500 uppercase tracking-wider mb-2">Role</p>
-                  <p className="text-white">{caseStudy.role}</p>
+                  <p className="text-xs sm:text-sm text-charcoal-500 uppercase tracking-wider mb-2">Role</p>
+                  <p className="text-white text-sm sm:text-base">{caseStudy.role}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-charcoal-500 uppercase tracking-wider mb-2">Timeline</p>
-                  <p className="text-white">{caseStudy.timeline}</p>
+                  <p className="text-xs sm:text-sm text-charcoal-500 uppercase tracking-wider mb-2">Timeline</p>
+                  <p className="text-white text-sm sm:text-base">{caseStudy.timeline}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-charcoal-500 uppercase tracking-wider mb-2">Platform</p>
-                  <p className="text-white">Mobile & Web</p>
+                  <p className="text-xs sm:text-sm text-charcoal-500 uppercase tracking-wider mb-2">Platform</p>
+                  <p className="text-white text-sm sm:text-base">Mobile & Web</p>
                 </div>
                 <div>
-                  <p className="text-sm text-charcoal-500 uppercase tracking-wider mb-2">Team</p>
-                  <p className="text-white">{caseStudy.team}</p>
+                  <p className="text-xs sm:text-sm text-charcoal-500 uppercase tracking-wider mb-2">Team</p>
+                  <p className="text-white text-sm sm:text-base">{caseStudy.team}</p>
                 </div>
               </div>
             </div>
@@ -772,22 +772,22 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-32 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16"
+            className="mb-16 sm:mb-20 md:mb-24 lg:mb-32 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-16"
           >
             <div className="md:col-span-4">
-              <h2 className="text-3xl font-light text-white sticky top-32">
+              <h2 className="text-2xl sm:text-3xl font-light text-white md:sticky md:top-32 mb-6 md:mb-0">
                 Problem
               </h2>
             </div>
-            <div className="md:col-span-8 space-y-6">
-              <p className="text-lg text-charcoal-200 leading-relaxed">
+            <div className="md:col-span-8 space-y-4 sm:space-y-6">
+              <p className="text-base sm:text-lg text-charcoal-200 leading-relaxed">
                 {caseStudy.problem}
               </p>
               {caseStudy.constraints && caseStudy.constraints.length > 0 && (
-                <div className="space-y-4 pt-4">
+                <div className="space-y-3 sm:space-y-4 pt-4">
                   {caseStudy.constraints.slice(0, 3).map((constraint: string, index: number) => (
-                    <div key={index} className="p-6 bg-charcoal-800/50 border border-white/5 rounded-xl">
-                      <h3 className="text-white font-medium mb-2">{constraint}</h3>
+                    <div key={index} className="p-4 sm:p-6 bg-charcoal-800/50 border border-white/5 rounded-lg sm:rounded-xl">
+                      <h3 className="text-white font-medium text-sm sm:text-base">{constraint}</h3>
                     </div>
                   ))}
                 </div>
@@ -801,33 +801,33 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-32 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16"
+            className="mb-16 sm:mb-20 md:mb-24 lg:mb-32 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-16"
           >
             <div className="md:col-span-4">
-              <h2 className="text-3xl font-light text-white sticky top-32">
+              <h2 className="text-2xl sm:text-3xl font-light text-white md:sticky md:top-32 mb-6 md:mb-0">
                 Approach
               </h2>
             </div>
             <div className="md:col-span-8">
-              <p className="text-lg text-charcoal-200 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-charcoal-200 leading-relaxed mb-6 sm:mb-8">
                 {caseStudy.approach}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="p-4 text-center border-l-2 border-orange-600">
-                  <div className="text-2xl text-orange-600 mb-2">01</div>
-                  <p className="text-charcoal-300 text-sm">Research</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <div className="p-3 sm:p-4 text-center border-l-2 border-orange-600">
+                  <div className="text-xl sm:text-2xl text-orange-600 mb-2">01</div>
+                  <p className="text-charcoal-300 text-xs sm:text-sm">Research</p>
                 </div>
-                <div className="p-4 text-center border-l-2 border-orange-600">
-                  <div className="text-2xl text-orange-600 mb-2">02</div>
-                  <p className="text-charcoal-300 text-sm">Design</p>
+                <div className="p-3 sm:p-4 text-center border-l-2 border-orange-600">
+                  <div className="text-xl sm:text-2xl text-orange-600 mb-2">02</div>
+                  <p className="text-charcoal-300 text-xs sm:text-sm">Design</p>
                 </div>
-                <div className="p-4 text-center border-l-2 border-orange-600">
-                  <div className="text-2xl text-orange-600 mb-2">03</div>
-                  <p className="text-charcoal-300 text-sm">Testing</p>
+                <div className="p-3 sm:p-4 text-center border-l-2 border-orange-600">
+                  <div className="text-xl sm:text-2xl text-orange-600 mb-2">03</div>
+                  <p className="text-charcoal-300 text-xs sm:text-sm">Testing</p>
                 </div>
-                <div className="p-4 text-center border-l-2 border-orange-600">
-                  <div className="text-2xl text-orange-600 mb-2">04</div>
-                  <p className="text-charcoal-300 text-sm">Iterate</p>
+                <div className="p-3 sm:p-4 text-center border-l-2 border-orange-600">
+                  <div className="text-xl sm:text-2xl text-orange-600 mb-2">04</div>
+                  <p className="text-charcoal-300 text-xs sm:text-sm">Iterate</p>
                 </div>
               </div>
             </div>
@@ -840,19 +840,19 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="mb-32 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16"
+              className="mb-16 sm:mb-20 md:mb-24 lg:mb-32 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-16"
             >
               <div className="md:col-span-4">
-                <h2 className="text-3xl font-light text-white sticky top-32">
+                <h2 className="text-2xl sm:text-3xl font-light text-white md:sticky md:top-32 mb-6 md:mb-0">
                   Key Decisions
                 </h2>
               </div>
               <div className="md:col-span-8">
-                <div className="space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   {caseStudy.decisions.map((decision: any, index: number) => (
-                    <div key={index} className="border-l-4 border-orange-600 pl-6 py-2">
-                      <h3 className="text-xl text-white font-medium mb-3">{decision.decision}</h3>
-                      <p className="text-charcoal-300 leading-relaxed">{decision.rationale}</p>
+                    <div key={index} className="border-l-4 border-orange-600 pl-4 sm:pl-6 py-2">
+                      <h3 className="text-lg sm:text-xl text-white font-medium mb-2 sm:mb-3">{decision.decision}</h3>
+                      <p className="text-charcoal-300 leading-relaxed text-sm sm:text-base">{decision.rationale}</p>
                     </div>
                   ))}
                 </div>
@@ -865,17 +865,17 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       {/* Solution - Visual Gallery */}
       {caseStudy.keyFeatures.length > 0 && (
-        <section className="mb-32 py-20 bg-charcoal-800/30">
-          <div className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+        <section className="mb-16 sm:mb-20 md:mb-24 lg:mb-32 py-12 sm:py-16 md:py-20 bg-charcoal-800/30">
+          <div className="px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl font-light text-white mb-16"
+              className="text-2xl sm:text-3xl font-light text-white mb-8 sm:mb-12 md:mb-16"
             >
               Solution
             </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               {caseStudy.keyFeatures.map((feature: any, index: number) => (
                 <motion.div
                   key={index}
@@ -883,7 +883,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="relative aspect-[4/3] bg-charcoal-800 rounded-xl overflow-hidden group"
+                  className="relative aspect-[4/3] bg-charcoal-800 rounded-lg sm:rounded-xl overflow-hidden group"
                 >
                   <Image
                     src={feature.image}
@@ -900,51 +900,51 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       )}
 
       {/* Outcome */}
-      <article className="pb-32 px-6 md:px-12 lg:px-24">
+      <article className="pb-16 sm:pb-20 md:pb-24 lg:pb-32 px-4 sm:px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16"
+            className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-16"
           >
             <div className="md:col-span-4">
-              <h2 className="text-3xl font-light text-white sticky top-32">
+              <h2 className="text-2xl sm:text-3xl font-light text-white md:sticky md:top-32 mb-6 md:mb-0">
                 Outcome
               </h2>
             </div>
             <div className="md:col-span-8">
               {Array.isArray(caseStudy.results) && caseStudy.results.length > 0 && (
-                <div className="space-y-4 mb-12">
+                <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
                   {caseStudy.results.map((result: string, index: number) => (
-                    <div key={index} className="flex items-start gap-4 p-6 bg-charcoal-800/30 border border-white/5 rounded-xl">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-600/20 border border-orange-600/30 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div key={index} className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-charcoal-800/30 border border-white/5 rounded-lg sm:rounded-xl">
+                      <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-orange-600/20 border border-orange-600/30 flex items-center justify-center">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <p className="text-charcoal-200 flex-1">{result}</p>
+                      <p className="text-charcoal-200 flex-1 text-sm sm:text-base">{result}</p>
                     </div>
                   ))}
                 </div>
               )}
               {caseStudy.reflection && (
                 <div>
-                  <h3 className="text-xl text-white font-medium mb-4">Reflection</h3>
-                  <p className="text-lg text-charcoal-200 leading-relaxed">
+                  <h3 className="text-lg sm:text-xl text-white font-medium mb-3 sm:mb-4">Reflection</h3>
+                  <p className="text-base sm:text-lg text-charcoal-200 leading-relaxed">
                     {caseStudy.reflection}
                   </p>
                 </div>
               )}
               {caseStudy.nextSteps && caseStudy.nextSteps.length > 0 && (
-                <div className="mt-12 p-8 bg-orange-600/5 border border-orange-600/10 rounded-xl">
-                  <h3 className="text-xl text-white font-medium mb-6">Next Steps</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="mt-8 sm:mt-12 p-6 sm:p-8 bg-orange-600/5 border border-orange-600/10 rounded-lg sm:rounded-xl">
+                  <h3 className="text-lg sm:text-xl text-white font-medium mb-4 sm:mb-6">Next Steps</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     {caseStudy.nextSteps.map((step: string, index: number) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <span className="text-orange-600 font-medium">{String(index + 1).padStart(2, '0')}</span>
-                        <p className="text-charcoal-300 text-sm">{step}</p>
+                      <div key={index} className="flex items-start gap-2 sm:gap-3">
+                        <span className="text-orange-600 font-medium text-sm sm:text-base">{String(index + 1).padStart(2, '0')}</span>
+                        <p className="text-charcoal-300 text-xs sm:text-sm">{step}</p>
                       </div>
                     ))}
                   </div>
