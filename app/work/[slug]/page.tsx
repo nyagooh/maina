@@ -694,7 +694,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       <Navigation />
       
       {/* Hero Section with Image Background */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0 z-0">
           <Image
             src={caseStudy.heroImage}
@@ -703,22 +703,22 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/70 via-charcoal-900/50 to-charcoal-900/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/80 via-charcoal-900/60 to-charcoal-900/95" />
         </div>
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full"
+          className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full py-8 sm:py-12 md:py-0"
         >
-          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-orange-600 mb-4 sm:mb-6 md:mb-8">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-orange-600 mb-3 sm:mb-4 md:mb-6 lg:mb-8">
             Case Study
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light text-white mb-4 sm:mb-6 md:mb-8 leading-[0.9]">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-9xl font-light text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-[0.9]">
             {caseStudy.title}
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-charcoal-200 font-light max-w-3xl">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-charcoal-200 font-light max-w-3xl">
             {caseStudy.subtitle}
           </p>
         </motion.div>
