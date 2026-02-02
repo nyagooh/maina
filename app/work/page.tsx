@@ -9,6 +9,19 @@ import Footer from '@/components/Footer';
 
 const allProjects = [
   {
+    title: 'Bongohub',
+    role: 'UI/UX Designer',
+    productType: 'Creative Marketplace · Web App',
+    outcome: 'Creative marketplace designed to help creatives discover work, sell services, and build long-term professional communities. The UX focuses on trust, profile clarity, and easy service discovery, making it simple for clients to evaluate talent while giving creatives tools to showcase their skills and connect with peers.',
+    image: '/Bongohub/bongo hub.png',
+    href: '/work/bongohub',
+    tags: [],
+    category: 'All',
+    categories: ['Dashboards', 'Web3', 'Apps'],
+    year: '2024',
+    duration: '6 months',
+  },
+  {
     title: 'AI Tutor App',
     role: 'Product Designer',
     productType: 'EdTech · Mobile App',

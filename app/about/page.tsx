@@ -101,8 +101,11 @@ export default function AboutPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
+                Hello! I'm Ann, a Product Designer and UX Researcher focused on designing clear, usable fintech and AI-driven products across Web2 and Web3.
+              </p>
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                Hello! I'm Ann, a Product Designer specializing in creating beautiful, functional digital experiences. With a strong foundation in user-centered design, I create work that elevates brand presence and drives meaningful engagement. From intuitive interfaces to comprehensive design systems, I'm passionate about crafting solutions that resonate with users and achieve business goals.
+                I specialize in translating complex technical workflows into simple, intuitive interfaces, articulating design decisions with rigor, and building scalable, production-ready design systems.
               </p>
             </motion.div>
           </div>
@@ -188,8 +191,6 @@ export default function AboutPage() {
             {[
               { name: 'Figma', color: 'from-purple-500/10 to-pink-500/10', border: 'group-hover:border-purple-500/50' },
               { name: 'FigJam', color: 'from-purple-400/10 to-pink-400/10', border: 'group-hover:border-purple-400/50' },
-              { name: 'Adobe XD', color: 'from-purple-600/10 to-purple-800/10', border: 'group-hover:border-purple-600/50' },
-              { name: 'Sketch', color: 'from-yellow-500/10 to-orange-500/10', border: 'group-hover:border-yellow-500/50' },
               { name: 'Framer', color: 'from-blue-500/10 to-cyan-500/10', border: 'group-hover:border-blue-500/50' },
               { name: 'Webflow', color: 'from-blue-600/10 to-indigo-600/10', border: 'group-hover:border-blue-600/50' },
               { name: 'Lottie', color: 'from-green-500/10 to-teal-500/10', border: 'group-hover:border-green-500/50' },
