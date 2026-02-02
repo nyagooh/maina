@@ -20,7 +20,7 @@ const caseStudies: Record<string, any> = {
     role: 'UI/UX Designer',
     timeline: '6 months (2024)',
     team: '1 Designer, 4 Engineers, 1 Product Manager',
-    heroImage: '/Bongohub/HOME PAGE.png',
+    heroImage: '/Bongohub/bongo hub.png',
     overview: 'Bongohub is a creative marketplace designed to help creatives discover work, sell services, and build long-term professional communities. The platform bridges the gap between talented creatives and clients seeking quality work, while fostering meaningful professional relationships.',
     problem: 'Creatives struggle to find consistent, quality work opportunities while clients face challenges in evaluating talent and building trust with freelancers. Existing platforms focus on transactions rather than relationships, leading to one-off engagements instead of sustainable professional partnerships.',
     constraints: [
@@ -30,10 +30,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Conducted extensive user research with 50+ creatives and clients. Created user personas and journey maps for both sides of the marketplace. Developed a design system that feels professional yet creative. Iteratively tested features with beta users to ensure the platform serves both creatives and clients effectively.',
     keyFeatures: [
-      { image: '/Bongohub/HOME PAGE.png' },
-      { image: '/Bongohub/user dashboard my places.png' },
+      { image: '/Bongohub/bongo hub.png' },
+      { image: '/Bongohub/bongo hub2.png' },
       { image: '/Bongohub/USER Place FACING PROFILE.png' },
-      { image: '/Bongohub/HOME PAGE.png' },
+      { image: '/Bongohub/bongo hub.png' },
     ],
     decisions: [
       {
@@ -70,7 +70,7 @@ const caseStudies: Record<string, any> = {
     role: 'Product Designer',
     timeline: '5 months (2024)',
     team: '1 Designer, 3 Engineers, 1 AI Specialist, 1 Education Consultant',
-    heroImage: '/Ai tutor learning app/home1 light mode.jpg',
+    heroImage: '/Ai tutor learning app/Ai Tutor app.png',
     overview: 'An AI-powered learning app for kids that enables curiosity-driven learning through natural language questions. The app transforms how children learn by allowing them to ask questions naturally and receive age-appropriate, engaging answers.',
     problem: 'Traditional learning apps follow rigid curricula that don\'t adapt to children\'s natural curiosity. Kids have questions at all times, but parents and teachers aren\'t always available. Existing educational tools are often intimidating or overwhelming for young learners.',
     constraints: [
@@ -80,10 +80,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Conducted research with parents, teachers, and children aged 6-12. Created child-friendly personas and mapped typical learning scenarios. Collaborated with education experts on content strategy. Designed with a focus on simplicity, safety, and encouragement.',
     keyFeatures: [
-      { image: '/Ai tutor learning app/home1 light mode.jpg' },
-      { image: '/Ai tutor learning app/Chat Page typing light mode.jpg' },
-      { image: '/Ai tutor learning app/History page light mode.jpg' },
-      { image: '/Ai tutor learning app/new chat light mode.jpg' },
+      { image: '/Ai tutor learning app/Ai Tutor app.png' },
+      { image: '/Ai tutor learning app/Home page.png' },
+      { image: '/Ai tutor learning app/chat page.png' },
+      { image: '/Ai tutor learning app/History page.png' },
     ],
     decisions: [
       {
@@ -120,7 +120,7 @@ const caseStudies: Record<string, any> = {
     role: 'UI/UX Designer',
     timeline: '4 months (2024)',
     team: '1 Designer, 2 Engineers',
-    heroImage: '/Coinmarket /coinmarket.png',
+    heroImage: '/Coinmarket /couinmarket.png',
     overview: 'A redesign of a high-traffic crypto market dashboard aimed at reducing cognitive load caused by dense financial data. The project focused on making complex market information scannable and actionable.',
     problem: 'The existing dashboard overwhelmed users with too much information at once. Dense data tables, poor hierarchy, and cluttered layouts made it difficult for users to quickly assess market conditions and make informed trading decisions.',
     constraints: [
@@ -130,10 +130,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Analyzed user behavior through heatmaps and session recordings. Conducted surveys with 100+ active traders to understand information priorities. Created progressive disclosure patterns and improved visual hierarchy through whitespace and typography.',
     keyFeatures: [
-      { image: '/Coinmarket /coinmarket.png' },
-      { image: '/Coinmarket /coinmarket.png' },
-      { image: '/Coinmarket /coinmarket.png' },
-      { image: '/Coinmarket /coinmarket.png' },
+      { image: '/Coinmarket /couinmarket.png' },
+      { image: '/Coinmarket /couinmarket.png' },
+      { image: '/Coinmarket /couinmarket.png' },
+      { image: '/Coinmarket /couinmarket.png' },
     ],
     decisions: [
       {
@@ -170,7 +170,7 @@ const caseStudies: Record<string, any> = {
     role: 'Product Designer',
     timeline: '3 months (2024)',
     team: '1 Designer, 3 Engineers',
-    heroImage: '/saving dashboard/Mobile Dashboard Layout(3).png',
+    heroImage: '/saving dashboard/saving dashboard.png',
     overview: 'A savings dashboard that gives users a clear overview of their financial activity, including balances, transactions, and progress toward savings goals. The design prioritizes clarity and reassurance.',
     problem: 'Users felt anxious about their finances due to scattered information across multiple apps and unclear progress toward goals. They needed a single source of truth that would make them feel in control rather than overwhelmed.',
     constraints: [
@@ -180,10 +180,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Interviewed 30 users about their financial management habits and pain points. Created emotional journey maps to understand financial anxiety triggers. Designed with calming colors, clear progress indicators, and actionable insights.',
     keyFeatures: [
-      { image: '/saving dashboard/Mobile Dashboard Layout(3).png' },
-      { image: '/saving dashboard/png(12).png' },
-      { image: '/saving dashboard/Mobile Dashboard Layout(3).png' },
-      { image: '/saving dashboard/png(12).png' },
+      { image: '/saving dashboard/saving dashboard.png' },
+      { image: '/saving dashboard/saving dashboard(1).png' },
+      { image: '/saving dashboard/saving dashboard.png' },
+      { image: '/saving dashboard/saving dashboard(1).png' },
     ],
     decisions: [
       {
@@ -220,7 +220,7 @@ const caseStudies: Record<string, any> = {
     role: 'Product Designer',
     timeline: '2 months (2023)',
     team: '1 Designer, 2 Engineers',
-    heroImage: '/crypto dashboard/png(3).png',
+    heroImage: '/crypto dashboard/crypto dashboard.png',
     overview: 'A real-time crypto dashboard designed for fast access to exchange rates and currency conversions. The experience emphasizes speed, accuracy, and readability.',
     problem: 'Existing crypto converters were either buried in complex trading platforms or were slow and unreliable. Users needed a dedicated tool for quick conversions without the clutter of full trading interfaces.',
     constraints: [
@@ -230,9 +230,9 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Analyzed conversion user flows and identified friction points. Created a stripped-down interface focused solely on conversion tasks. Optimized for speed and clarity above all else.',
     keyFeatures: [
-      { image: '/crypto dashboard/png(3).png' },
+      { image: '/crypto dashboard/crypto dashboard.png' },
       { image: '/crypto dashboard/Untitled(5).png' },
-      { image: '/crypto dashboard/png(3).png' },
+      { image: '/crypto dashboard/crypto dashboard.png' },
       { image: '/crypto dashboard/Untitled(5).png' },
     ],
     decisions: [
@@ -320,7 +320,7 @@ const caseStudies: Record<string, any> = {
     role: 'Web Designer',
     timeline: '3 months (2023)',
     team: '1 Designer, 2 Developers',
-    heroImage: '/Design Agency/Homepage(2).png',
+    heroImage: '/Design Agency/design agency.png',
     overview: 'A website for a Web3-focused design agency, built to communicate credibility, craft, and strategic thinking. The layout highlights case studies, services, and process while balancing bold Web3 aesthetics with clarity.',
     problem: 'The agency needed to appeal to both technical Web3 founders and traditional businesses exploring blockchain. The existing site looked generic and didn\'t communicate the unique value proposition of Web3-specialized design expertise.',
     constraints: [
@@ -330,10 +330,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Analyzed competitor agency websites in both Web3 and traditional design spaces. Created messaging strategy that bridges Web3 and mainstream audiences. Developed a visual system that feels innovative without being inaccessible.',
     keyFeatures: [
-      { image: '/Design Agency/Homepage(2).png' },
-      { image: '/Design Agency/Portfolio Grid.jpg' },
-      { image: '/Design Agency/Frame 2147223050.png' },
+      { image: '/Design Agency/design agency.png' },
+      { image: '/Design Agency/design agency 2.png' },
       { image: '/Design Agency/Content.png' },
+      { image: '/Design Agency/design agency.png' },
     ],
     decisions: [
       {
@@ -420,7 +420,7 @@ const caseStudies: Record<string, any> = {
     role: 'UI/UX Designer',
     timeline: '3 months (2023)',
     team: '1 Designer, 2 Engineers',
-    heroImage: '/crypto hub/Frame 1618872966(1).png',
+    heroImage: '/crypto hub/crypto hub.png',
     overview: 'A web app that aggregates crypto news, market updates, and insights into a single platform. The design focuses on content hierarchy and filtering to help users stay informed without information overload.',
     problem: 'Crypto information is scattered across Twitter, Discord, news sites, and blogs. Users waste time hunting for relevant news and struggle to filter signal from noise. They needed a curated hub that surfaces quality information.',
     constraints: [
@@ -430,10 +430,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Analyzed how crypto enthusiasts currently consume information. Studied news aggregation patterns and content discovery behaviors. Created filtering and organization systems based on user needs rather than source types.',
     keyFeatures: [
-      { image: '/crypto hub/Frame 1618872966(1).png' },
-      { image: '/crypto hub/Frame 1618872966(1).png' },
-      { image: '/crypto hub/Frame 1618872966(1).png' },
-      { image: '/crypto hub/Frame 1618872966(1).png' },
+      { image: '/crypto hub/crypto hub.png' },
+      { image: '/crypto hub/crypto hub.png' },
+      { image: '/crypto hub/crypto hub.png' },
+      { image: '/crypto hub/crypto hub.png' },
     ],
     decisions: [
       {
@@ -470,7 +470,7 @@ const caseStudies: Record<string, any> = {
     role: 'Product Designer',
     timeline: '4 months (2023)',
     team: '1 Designer, 3 Engineers',
-    heroImage: '/Home Dashboard/Improve Design.png',
+    heroImage: '/Home Dashboard/home dashboard.png',
     overview: 'A personal finance home dashboard that brings all money activity into one central view. The UX is designed around quick orientation - helping users instantly understand their financial situation.',
     problem: 'People juggle multiple bank accounts, credit cards, investments, and bills across different apps. They lack a comprehensive view of their overall financial health, leading to poor money decisions and unnecessary stress.',
     constraints: [
@@ -480,10 +480,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Conducted diary studies with 20 users tracking their financial management for 2 weeks. Identified moments of confusion and anxiety. Created a dashboard that answers key questions at a glance: Where is my money? What changed? What needs attention?',
     keyFeatures: [
-      { image: '/Home Dashboard/Improve Design.png' },
-      { image: '/Home Dashboard/Improve Design.png' },
-      { image: '/Home Dashboard/Improve Design.png' },
-      { image: '/Home Dashboard/Improve Design.png' },
+      { image: '/Home Dashboard/home dashboard.png' },
+      { image: '/Home Dashboard/home dashboard.png' },
+      { image: '/Home Dashboard/home dashboard.png' },
+      { image: '/Home Dashboard/home dashboard.png' },
     ],
     decisions: [
       {
@@ -570,7 +570,7 @@ const caseStudies: Record<string, any> = {
     role: 'Product Designer',
     timeline: '5 months (2023)',
     team: '1 Designer, 4 Engineers, 1 Blockchain Expert',
-    heroImage: '/Mintify/MacBook Pro 16_ - 1.png',
+    heroImage: '/Mintify/mintify.png',
     overview: 'A Web3 platform that enables artists to mint, showcase, and sell digital artwork. The UX is designed to demystify blockchain concepts by guiding users through minting flows with clear steps and minimal jargon.',
     problem: 'Artists wanted to participate in the NFT space but were intimidated by blockchain complexity. Existing platforms assumed technical knowledge, creating barriers to entry. Artists needed a platform that handled the technical complexity while they focused on their art.',
     constraints: [
@@ -580,10 +580,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Interviewed 30+ digital artists about NFT experiences and hesitations. Mapped the minting journey and identified confusion points. Created educational content integrated into the workflow. Designed with progressive complexity - simple for beginners, powerful for experienced users.',
     keyFeatures: [
-      { image: '/Mintify/MacBook Pro 16_ - 1.png' },
-      { image: '/Mintify/MacBook Pro 16_ - 1.png' },
-      { image: '/Mintify/MacBook Pro 16_ - 1.png' },
-      { image: '/Mintify/MacBook Pro 16_ - 1.png' },
+      { image: '/Mintify/mintify.png' },
+      { image: '/Mintify/mintify.png' },
+      { image: '/Mintify/mintify.png' },
+      { image: '/Mintify/mintify.png' },
     ],
     decisions: [
       {
@@ -620,7 +620,7 @@ const caseStudies: Record<string, any> = {
     role: 'Product Designer',
     timeline: '3 months (2022)',
     team: '1 Designer, 2 Engineers',
-    heroImage: '/subscription app/Container.png',
+    heroImage: '/subscription app/subscription app.png',
     overview: 'An app that helps users track and manage all subscriptions in one place. The design focuses on visibility and control - surfacing active subscriptions, renewal dates, and spending patterns.',
     problem: 'People lose track of subscriptions across various services, leading to surprise charges and wasted money on unused subscriptions. They needed a centralized tool to see everything they\'re paying for and easily cancel what they don\'t need.',
     constraints: [
@@ -630,10 +630,10 @@ const caseStudies: Record<string, any> = {
     ],
     approach: 'Surveyed 100+ users about subscription pain points. Found that surprise renewals and forgotten subscriptions were the biggest issues. Designed around preventing these problems through proactive alerts and clear visibility.',
     keyFeatures: [
-      { image: '/subscription app/Container.png' },
-      { image: '/subscription app/Container.png' },
-      { image: '/subscription app/Container.png' },
-      { image: '/subscription app/Container.png' },
+      { image: '/subscription app/subscription app.png' },
+      { image: '/subscription app/subscription app.png' },
+      { image: '/subscription app/subscription app.png' },
+      { image: '/subscription app/subscription app.png' },
     ],
     decisions: [
       {
@@ -700,10 +700,10 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             src={caseStudy.heroImage}
             alt={caseStudy.title}
             fill
-            className="object-cover"
+            className="object-contain"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/80 to-charcoal-900/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/60 via-charcoal-900/40 to-charcoal-900/90" />
         </div>
         
         <motion.div
