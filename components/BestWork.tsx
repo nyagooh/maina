@@ -19,7 +19,7 @@ const bestProjects: BestWorkProject[] = [
   {
     title: 'AI Tutor App',
     category: 'EdTech · Mobile App',
-    description: 'AI-powered learning app for kids enabling curiosity-driven learning.',
+    description: '',
     image: '/Ai tutor learning app/Ai Tutor app.png',
     href: '/work/ai-tutor',
     year: '2024',
@@ -28,7 +28,7 @@ const bestProjects: BestWorkProject[] = [
   {
     title: 'CoinMarket Dashboard',
     category: 'Fintech · Dashboard',
-    description: 'High-traffic crypto market dashboard reducing cognitive load.',
+    description: '',
     image: '/Coinmarket /couinmarket.png',
     href: '/work/coinmarket',
     year: '2024',
@@ -36,7 +36,7 @@ const bestProjects: BestWorkProject[] = [
   {
     title: 'Home Finance Dashboard',
     category: 'Fintech · Personal Finance',
-    description: 'Personal finance dashboard bringing all money activity into one view.',
+    description: '',
     image: '/Home Dashboard/home dashboard.png',
     href: '/work/home-finance',
     year: '2023',
@@ -44,7 +44,7 @@ const bestProjects: BestWorkProject[] = [
   {
     title: 'Savings Dashboard',
     category: 'Fintech · Web App',
-    description: 'Clear overview of financial activity with calm visuals.',
+    description: '',
     image: '/saving dashboard/saving dashboard.png',
     href: '/work/savings-dashboard',
     year: '2024',
@@ -52,7 +52,7 @@ const bestProjects: BestWorkProject[] = [
   {
     title: 'Subscription Manager',
     category: 'Fintech · Mobile App',
-    description: 'Track and manage all subscriptions in one place.',
+    description: '',
     image: '/subscription app/subscription app.png',
     href: '/work/subscription-manager',
     year: '2022',
@@ -237,42 +237,22 @@ export default function BestWork() {
                     
                     {/* Content Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
-                      <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.5 }}
-                        className="text-xs uppercase tracking-[0.3em] text-orange-600 mb-3 font-bold"
-                      >
-                        {project.category}
-                      </motion.p>
-                      
                       <motion.h3
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.6 }}
-                        className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-4 group-hover:text-orange-600 transition-colors duration-500"
+                        transition={{ delay: index * 0.1 + 0.5 }}
+                        className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-6 group-hover:text-orange-600 transition-colors duration-500"
                       >
                         {project.title}
                       </motion.h3>
-                      
-                      <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.7 }}
-                        className="text-sm md:text-base text-charcoal-200 leading-relaxed mb-6 max-w-xl line-clamp-2"
-                      >
-                        {project.description}
-                      </motion.p>
                       
                       {/* View Link */}
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.8 }}
+                        transition={{ delay: index * 0.1 + 0.6 }}
                         className="flex items-center gap-3 text-orange-600 transition-all duration-300"
                       >
                         <span className="text-base font-bold uppercase tracking-wider">Explore Project</span>
