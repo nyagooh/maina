@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,11 +38,23 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24 flex justify-between items-center">
+        {/* Logo/Name with Profile Image */}
         <Link 
           href="/" 
-          className="text-xl md:text-2xl font-display font-medium text-white hover:text-orange-600 transition-colors duration-300"
+          className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity duration-300"
         >
-          AM
+          <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-orange-600/50">
+            <Image 
+              src="/ChatGPT Image Jan 30, 2026, 03_48_25 PM.png" 
+              alt="Ann Maina"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <span className="text-lg sm:text-xl md:text-2xl font-display font-medium text-white hover:text-orange-600 transition-colors duration-300">
+            AM
+          </span>
         </Link>
         
         {/* Desktop Navigation */}
