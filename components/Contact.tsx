@@ -10,10 +10,46 @@ export default function Contact() {
     email: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setStatus('loading');
+
+    try {
+      // Create mailto link with pre-filled content
+      const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      
+      const mailtoLink = `mailto:annmaina.info@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      setStatus('success');
+      setStatusMessage('Opening your email client...');
+      
+      // Reset form after a delay
+      setTimeout(() => {
+        setFormData({ name: '', email: '', message: '' });
+        setStatus('idle');
+        setStatusMessage('');
+      }, 3000);
+      
+    } catch (error) {
+      setStatus('error');
+      setStatusMessage('Something went wrong. Please try again.');
+      setTimeout(() => {
+        setStatus('idle');
+        setStatusMessage('');
+      }, 3000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -111,12 +147,32 @@ export default function Contact() {
               </div>
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full px-10 py-4 bg-white text-charcoal-900 font-bold uppercase tracking-[0.2em] hover:bg-orange-600 hover:text-white transition-all duration-300 rounded-xl shadow-lg text-sm"
+                disabled={status === 'loading'}
+                whileHover={{ scale: status === 'loading' ? 1 : 1.02 }}
+                whileTap={{ scale: status === 'loading' ? 1 : 0.98 }}
+                className={`w-full px-10 py-4 font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-xl shadow-lg text-sm ${
+                  status === 'loading'
+                    ? 'bg-gray-400 text-white cursor-not-allowed'
+                    : status === 'success'
+                    ? 'bg-green-600 text-white'
+                    : status === 'error'
+                    ? 'bg-red-600 text-white'
+                    : 'bg-white text-charcoal-900 hover:bg-orange-600 hover:text-white'
+                }`}
               >
-                Submit
+                {status === 'loading' ? 'Sending...' : status === 'success' ? 'Sent!' : 'Submit'}
               </motion.button>
+              {statusMessage && (
+                <motion.p
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`text-center text-sm ${
+                    status === 'success' ? 'text-green-400' : 'text-red-400'
+                  }`}
+                >
+                  {statusMessage}
+                </motion.p>
+              )}
             </form>
           </motion.div>
         </div>
