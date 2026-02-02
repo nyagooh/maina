@@ -10,49 +10,49 @@ const experiences = [
   {
     company: 'Nova Technologies',
     role: 'Product Designer',
-    period: 'Current',
+    period: '',
     description: 'Designing a cross-border remittance app that enables users to send and receive money across multiple countries and currencies. Designing and refining key user flows, including onboarding, KYC, payments, fee visibility, and transaction tracking.',
     details: 'Built and maintained a scalable design system in Figma using Auto Layout, components, variants, and design tokens, reducing UI inconsistencies by 45%. Simplified complex technical and regulatory requirements into clear, user-friendly flows, reducing user errors by 28%.'
   },
   {
     company: 'Zone01 Kisumu',
     role: 'Product Designer',
-    period: '2025',
+    period: '',
     description: 'Led end-to-end UX research and design for web and mobile products, reviewing and refining interfaces to improve task completion by 38%. Conducted user interviews and usability testing to evaluate design clarity and usability, reducing onboarding friction by 32%.',
     details: 'Built and maintained a scalable Figma design system using components and Auto Layout, increasing cross-product consistency by 50%. Worked closely with product managers and engineers to translate technical and functional requirements into clear, usable interface designs.'
   },
   {
     company: 'Rishiflow',
     role: 'UI/UX Designer',
-    period: '2025',
+    period: '',
     description: 'Led end-to-end design for an AI-powered chatbot mobile application, owning key user journeys such as onboarding, session booking, and in-app content access. Reviewed and refined AI-assisted design outputs, improving usability and increasing task completion rates by 30%.',
     details: 'Designed reusable UI components and interaction patterns in Figma, improving design-to-development handoff speed by 40%. Created wireframes, interactive prototypes, and high-fidelity designs while maintaining consistency through a scalable design system.'
   },
   {
     company: 'Bongohub',
     role: 'UI/UX Designer',
-    period: '2024',
+    period: '',
     description: 'Redesigned high-impact user flows (onboarding, discovery, and project showcase), reviewing and refining layouts to improve clarity and usability, increasing user engagement by 27%. Built and maintained reusable UI components and layout patterns in Figma.',
     details: 'Applied Material Design principles and accessibility standards to ensure consistent, usable, and inclusive interfaces across the product. Worked closely with developers and product stakeholders to balance user needs with technical constraints, reducing rework by 25%.'
   },
   {
     company: 'Kisumu Youth Wash Parliament',
     role: 'Web Developer',
-    period: '2024',
+    period: '',
     description: 'Designed and launched a responsive, user-centered website using Tailwind CSS, improving overall usability and increasing conversions by 35%. Evaluated and optimized frontend performance, reducing page load times by 50%.',
     details: 'Conducted A/B testing and usability reviews to validate design decisions, resulting in a 20% increase in user engagement. Designed accessible, mobile-first interfaces to ensure consistent and reliable experiences across devices.'
   },
   {
     company: 'A1 Professional Cleaning Service',
     role: 'Web Developer',
-    period: '2023',
+    period: '',
     description: 'Designed and developed the A1 Cleaning Services website using Tailwind CSS. Built a responsive, mobile first, and cross browser compatible UI to ensure consistent user experience across devices.',
     details: 'Improved customer engagement by 40% through clean, intuitive interface design aligned with brand identity.'
   },
   {
     company: 'Cityright LLP',
     role: 'UI/UX Design Intern',
-    period: '2022',
+    period: '',
     description: 'Reviewed and redesigned key user flows, evaluating usability and clarity, reducing task completion time by 30% and improving user satisfaction. Conducted usability testing to assess design quality, iterating on feedback.',
     details: 'Created wireframes, interactive prototypes, and high-fidelity designs in Figma, following clear structure and naming standards. Improved navigation and interface clarity, increasing user engagement by 25% across mobile and desktop platforms.'
   },
@@ -144,14 +144,11 @@ export default function AboutPage() {
                   {exp.company}
                 </h3>
                 
-                {/* Role and Period */}
-                <div className="flex items-start justify-between gap-4 mb-6">
+                {/* Role */}
+                <div className="mb-6">
                   <p className="text-lg font-normal text-charcoal-900">
                     {exp.role}
                   </p>
-                  <span className="text-base text-charcoal-700 whitespace-nowrap">
-                    {exp.period}
-                  </span>
                 </div>
                 
                 {/* Description */}
@@ -190,17 +187,17 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { name: 'Figma', color: 'from-purple-500/10 to-pink-500/10', border: 'group-hover:border-purple-500/50' },
+              { name: 'FigJam', color: 'from-purple-400/10 to-pink-400/10', border: 'group-hover:border-purple-400/50' },
               { name: 'Adobe XD', color: 'from-purple-600/10 to-purple-800/10', border: 'group-hover:border-purple-600/50' },
               { name: 'Sketch', color: 'from-yellow-500/10 to-orange-500/10', border: 'group-hover:border-yellow-500/50' },
-              { name: 'Photoshop', color: 'from-blue-500/10 to-blue-700/10', border: 'group-hover:border-blue-500/50' },
-              { name: 'Illustrator', color: 'from-orange-600/10 to-orange-800/10', border: 'group-hover:border-orange-600/50' },
-              { name: 'Prototyping', color: 'from-green-500/10 to-teal-500/10', border: 'group-hover:border-green-500/50' },
-              { name: 'User Research', color: 'from-indigo-500/10 to-blue-500/10', border: 'group-hover:border-indigo-500/50' },
+              { name: 'Framer', color: 'from-blue-500/10 to-cyan-500/10', border: 'group-hover:border-blue-500/50' },
+              { name: 'Lottie', color: 'from-green-500/10 to-teal-500/10', border: 'group-hover:border-green-500/50' },
+              { name: 'Protopie', color: 'from-pink-500/10 to-red-500/10', border: 'group-hover:border-pink-500/50' },
+              { name: 'Principle', color: 'from-indigo-500/10 to-purple-500/10', border: 'group-hover:border-indigo-500/50' },
+              { name: 'GitHub', color: 'from-gray-700/10 to-black/10', border: 'group-hover:border-gray-700/50' },
+              { name: 'Miro', color: 'from-yellow-400/10 to-yellow-600/10', border: 'group-hover:border-yellow-400/50' },
               { name: 'Wireframing', color: 'from-gray-500/10 to-slate-600/10', border: 'group-hover:border-gray-500/50' },
-              { name: 'Design Systems', color: 'from-red-500/10 to-pink-500/10', border: 'group-hover:border-red-500/50' },
-              { name: 'HTML/CSS', color: 'from-blue-600/10 to-cyan-600/10', border: 'group-hover:border-blue-600/50' },
-              { name: 'React', color: 'from-cyan-500/10 to-blue-500/10', border: 'group-hover:border-cyan-500/50' },
-              { name: 'Next.js', color: 'from-black/10 to-gray-800/10', border: 'group-hover:border-black/50' }
+              { name: 'Design Systems', color: 'from-red-500/10 to-pink-500/10', border: 'group-hover:border-red-500/50' }
             ].map((skill, index) => (
               <motion.div
                 key={skill.name}
