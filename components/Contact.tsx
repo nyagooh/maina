@@ -60,7 +60,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative min-h-screen flex items-center overflow-hidden py-20">
+    <section id="contact" className="relative min-h-screen flex items-center overflow-hidden py-16 sm:py-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -75,73 +75,73 @@ export default function Contact() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Title - No Box */}
+      <div className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
+          {/* Left: Title */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-white leading-tight">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-tight">
               Get in
             </h2>
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-serif italic text-white leading-tight mt-2">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif italic text-white leading-tight mt-2">
               Touch
             </h2>
-            <p className="text-base md:text-lg text-white/90 mt-8 leading-relaxed max-w-md">
+            <p className="text-sm sm:text-base md:text-lg text-white/90 mt-6 sm:mt-8 leading-relaxed max-w-md">
               Great ideas deserve exceptional visuals.
               <br />
               Let's create something incredible together!
             </p>
           </motion.div>
 
-          {/* Right: Contact Form - Enhanced Glassmorphism */}
+          {/* Right: Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="backdrop-blur-2xl bg-white/5 border border-white/20 rounded-3xl p-10 md:p-12 shadow-2xl"
+            className="backdrop-blur-2xl bg-white/5 border border-white/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-2xl"
           >
-            <h3 className="text-xl font-bold text-white mb-8 text-center uppercase tracking-[0.3em]">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-6 sm:mb-8 text-center uppercase tracking-[0.2em] sm:tracking-[0.3em]">
               Contact
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               <div>
-                <label className="block text-white/90 text-sm mb-3 font-normal">Name</label>
+                <label className="block text-white/90 text-sm mb-2 sm:mb-3 font-normal">Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-orange-600 focus:bg-white/10 transition-all duration-300 rounded-xl"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-orange-600 focus:bg-white/10 transition-all duration-300 rounded-xl text-sm sm:text-base"
                   placeholder=""
                 />
               </div>
               <div>
-                <label className="block text-white/90 text-sm mb-3 font-normal">Email</label>
+                <label className="block text-white/90 text-sm mb-2 sm:mb-3 font-normal">Email</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-orange-600 focus:bg-white/10 transition-all duration-300 rounded-xl"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-orange-600 focus:bg-white/10 transition-all duration-300 rounded-xl text-sm sm:text-base"
                   placeholder=""
                 />
               </div>
               <div>
-                <label className="block text-white/90 text-sm mb-3 font-normal">Message</label>
+                <label className="block text-white/90 text-sm mb-2 sm:mb-3 font-normal">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-5 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-orange-600 focus:bg-white/10 transition-all duration-300 resize-none rounded-xl"
+                  rows={4}
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-orange-600 focus:bg-white/10 transition-all duration-300 resize-none rounded-xl text-sm sm:text-base"
                   placeholder=""
                 />
               </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                 disabled={status === 'loading'}
                 whileHover={{ scale: status === 'loading' ? 1 : 1.02 }}
                 whileTap={{ scale: status === 'loading' ? 1 : 0.98 }}
-                className={`w-full px-10 py-4 font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-xl shadow-lg text-sm ${
+                className={`w-full px-8 sm:px-10 py-3 sm:py-4 font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] transition-all duration-300 rounded-xl shadow-lg text-xs sm:text-sm ${
                   status === 'loading'
                     ? 'bg-gray-400 text-white cursor-not-allowed'
                     : status === 'success'
@@ -166,7 +166,7 @@ export default function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`text-center text-sm ${
+                  className={`text-center text-xs sm:text-sm ${
                     status === 'success' ? 'text-green-400' : 'text-red-400'
                   }`}
                 >
