@@ -191,13 +191,16 @@ export default function AboutPage() {
               { name: 'Adobe XD', color: 'from-purple-600/10 to-purple-800/10', border: 'group-hover:border-purple-600/50' },
               { name: 'Sketch', color: 'from-yellow-500/10 to-orange-500/10', border: 'group-hover:border-yellow-500/50' },
               { name: 'Framer', color: 'from-blue-500/10 to-cyan-500/10', border: 'group-hover:border-blue-500/50' },
+              { name: 'Webflow', color: 'from-blue-600/10 to-indigo-600/10', border: 'group-hover:border-blue-600/50' },
               { name: 'Lottie', color: 'from-green-500/10 to-teal-500/10', border: 'group-hover:border-green-500/50' },
+              { name: 'Jitter', color: 'from-purple-600/10 to-pink-600/10', border: 'group-hover:border-purple-600/50' },
               { name: 'Protopie', color: 'from-pink-500/10 to-red-500/10', border: 'group-hover:border-pink-500/50' },
               { name: 'Principle', color: 'from-indigo-500/10 to-purple-500/10', border: 'group-hover:border-indigo-500/50' },
+              { name: 'Mockuuups Studio', color: 'from-orange-500/10 to-red-500/10', border: 'group-hover:border-orange-500/50' },
+              { name: 'Angle', color: 'from-blue-400/10 to-cyan-400/10', border: 'group-hover:border-blue-400/50' },
+              { name: 'Artboard Studio', color: 'from-pink-400/10 to-purple-400/10', border: 'group-hover:border-pink-400/50' },
               { name: 'GitHub', color: 'from-gray-700/10 to-black/10', border: 'group-hover:border-gray-700/50' },
-              { name: 'Miro', color: 'from-yellow-400/10 to-yellow-600/10', border: 'group-hover:border-yellow-400/50' },
-              { name: 'Wireframing', color: 'from-gray-500/10 to-slate-600/10', border: 'group-hover:border-gray-500/50' },
-              { name: 'Design Systems', color: 'from-red-500/10 to-pink-500/10', border: 'group-hover:border-red-500/50' }
+              { name: 'Miro', color: 'from-yellow-400/10 to-yellow-600/10', border: 'group-hover:border-yellow-400/50' }
             ].map((skill, index) => (
               <motion.div
                 key={skill.name}

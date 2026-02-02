@@ -59,15 +59,10 @@ export default function ProjectCard({
 
           {/* Content Section with Glass Effect */}
           <div className="glass-medium p-8 md:p-10 border-t border-white/5">
-            <div className="flex items-center justify-between mb-3">
+            <div className="mb-3">
               <p className="text-xs uppercase tracking-[0.25em] text-orange-600 font-bold">
                 {productType}
               </p>
-              {duration && (
-                <p className="text-xs text-charcoal-400 font-medium">
-                  {duration}
-                </p>
-              )}
             </div>
             
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white leading-tight mb-4 transition-colors duration-500">
