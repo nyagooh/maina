@@ -107,26 +107,26 @@ export default function BestWork() {
   return (
     <section
       id="best-work"
-      className="relative py-20 md:py-32 overflow-hidden"
+      className="relative py-12 sm:py-16 md:py-20 lg:py-32 overflow-hidden"
     >
       {/* Header */}
-      <div className="px-6 md:px-12 lg:px-24">
+      <div className="px-4 sm:px-6 md:px-12 lg:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-12 md:mb-16"
+          className="mb-8 sm:mb-10 md:mb-12 lg:mb-16"
         >
-          <p className="text-sm uppercase tracking-[0.3em] text-orange-600 font-medium mb-4">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.3em] text-orange-600 font-medium mb-3 sm:mb-4">
             Featured Excellence
           </p>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6">
             <div>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-light text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-light text-white leading-tight">
                 Best Work
               </h2>
-              <p className="text-lg text-charcoal-300 mt-6 max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg text-charcoal-300 mt-3 sm:mt-4 md:mt-6 max-w-2xl">
                 Showcasing exceptional projects that push boundaries and create meaningful impact.
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function BestWork() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex items-center gap-3 text-charcoal-400"
+              className="hidden md:flex items-center gap-3 text-charcoal-400"
             >
               <span className="text-sm uppercase tracking-wider">Drag to explore</span>
               <motion.div
@@ -157,7 +157,7 @@ export default function BestWork() {
       <div className="relative">
         <motion.div
           ref={scrollContainerRef}
-          className="flex gap-6 md:gap-8 overflow-x-auto overflow-y-visible px-6 md:px-12 lg:px-24 pb-8 scroll-smooth snap-x snap-mandatory hide-scrollbar"
+          className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto overflow-y-visible pl-4 pr-4 sm:pl-6 sm:pr-6 md:px-12 lg:px-24 pb-6 sm:pb-8 scroll-smooth snap-x snap-mandatory hide-scrollbar"
           style={{
             scrollSnapType: 'x mandatory',
           }}
@@ -177,12 +177,12 @@ export default function BestWork() {
                 delay: index * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex-shrink-0 w-[75vw] md:w-[55vw] lg:w-[40vw] snap-start group"
-              style={{ scrollSnapAlign: 'start' }}
+              className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[60vw] lg:w-[45vw] xl:w-[40vw] snap-center group"
+              style={{ scrollSnapAlign: 'center' }}
             >
               <Link href={project.href}>
                 <motion.div
-                  className="relative overflow-hidden glass-dark rounded-3xl cursor-pointer h-[450px] md:h-[500px]"
+                  className="relative overflow-hidden glass-dark rounded-2xl sm:rounded-3xl cursor-pointer h-[400px] sm:h-[450px] md:h-[500px]"
                 >
                   {/* Image Container */}
                   <div className="relative w-full h-full overflow-hidden">

@@ -694,7 +694,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       <Navigation />
       
       {/* Hero Section with Image Background */}
-      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[85vh] lg:min-h-screen flex items-end sm:items-center justify-center overflow-hidden">
+      <section className="relative min-h-[65vh] sm:min-h-[75vh] md:min-h-[85vh] lg:min-h-screen flex items-end sm:items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={caseStudy.heroImage}
@@ -703,22 +703,22 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/70 via-charcoal-900/50 to-charcoal-900/98 sm:to-charcoal-900/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-900/60 via-charcoal-900/70 to-charcoal-900/100 sm:to-charcoal-900/98 md:to-charcoal-900/95" />
         </div>
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full pb-8 sm:pb-12 md:pb-16 lg:py-0 pt-24 sm:pt-28 md:pt-0"
+          className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full pb-10 sm:pb-12 md:pb-16 lg:py-0 pt-20 sm:pt-24 md:pt-0"
         >
-          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-orange-600 mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-8">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-orange-600 mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-8 font-semibold">
             Case Study
           </p>
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-9xl font-light text-white mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-8 leading-[1] sm:leading-[0.95] md:leading-[0.9]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-9xl font-light text-white mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-8 leading-tight sm:leading-[0.95] md:leading-[0.9]">
             {caseStudy.title}
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-charcoal-200 font-light max-w-3xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white sm:text-charcoal-200 font-light max-w-3xl leading-relaxed">
             {caseStudy.subtitle}
           </p>
         </motion.div>
